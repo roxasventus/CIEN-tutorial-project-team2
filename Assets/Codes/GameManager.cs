@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     // 게임 승리할 때 적을 정리하는 클리너 변수 선언 및 초기화
     public GameObject enemyCleaner;
 
-    private void Awake()
+    void Awake()
     {
         instance = this;
     }
