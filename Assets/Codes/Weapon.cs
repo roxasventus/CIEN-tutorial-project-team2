@@ -11,6 +11,15 @@ public class Weapon : MonoBehaviour
     public int count;
     public float speed;
 
+    float timer;
+    Player player;
+
+    private void Awake()
+    {
+        // GetComponentInParent 함수로 부모의 컴포넌트 가져오기
+        player = GetComponentInParent<Player>();
+    }
+
     private void Start()
     {
         Init();
@@ -26,13 +35,22 @@ public class Weapon : MonoBehaviour
                 transform.Rotate(Vector3.back * speed * Time.deltaTime); // Vector3.back이 시계방향
                 break;
             default:
+                timer += Time.deltaTime;
+
+                // speed 보다 커지면 초기화하면서 발사 로직 실행
+                // speed 값은 연사속도를 의미: 적을 수록 많이 발사
+                if (timer > speed)
+                {
+                    timer = 0f;
+                    Fire();
+                }
                 break;
         }
 
         // .. Test Code ..
         if (Input.GetButtonDown("Jump"))
         {
-            LevelUp(20, 5);
+            LevelUp(10, 1);
         }
     }
 
@@ -50,11 +68,14 @@ public class Weapon : MonoBehaviour
         // 무기 ID에 따라 로직을 분리
         switch (id)
         {
+            // 삽
             case 0:
                 speed = 150; // 양수가 시계방향
                 Batch();
                 break;
+            // 총탄
             default:
+                speed = 0.3f;
                 break;
         }
     }
@@ -94,7 +115,23 @@ public class Weapon : MonoBehaviour
             bullet.Translate(bullet.up * 1.5f, Space.World);
 
 
-            bullet.GetComponent<Bullet>().Init(damage, -1); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
+            bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
         }
+    }
+
+    void Fire()
+    {
+        if (!player.scanner.nearestTarget)
+            return;
+
+        Vector3 targetPos = player.scanner.nearestTarget.position;
+        Vector3 dir = targetPos - transform.position;
+        dir = dir.normalized;
+
+        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
+        bullet.position = transform.position;
+        // FromToRotation: 지정된 축을 중심으로 목표를 향해 회전하는 함수
+        bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
+        bullet.GetComponent<Bullet>().Init(damage, count, dir); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
     }
 }
