@@ -11,6 +11,8 @@ public class Weapon : MonoBehaviour
     public int count;
     public float speed;
 
+    Vector3 dir;
+
     float timer;
     Player player;
 
@@ -34,7 +36,7 @@ public class Weapon : MonoBehaviour
             case 0:
                 transform.Rotate(Vector3.back * speed * Time.deltaTime); // Vector3.back이 시계방향
                 break;
-            default:
+            case 1:
                 timer += Time.deltaTime;
 
                 // speed 보다 커지면 초기화하면서 발사 로직 실행
@@ -45,6 +47,18 @@ public class Weapon : MonoBehaviour
                     Fire();
                 }
                 break;
+            case 2:
+                timer += Time.deltaTime;
+
+                // speed 보다 커지면 초기화하면서 발사 로직 실행
+                // speed 값은 연사속도를 의미: 적을 수록 많이 발사
+                if (timer > speed && (player.inputVec.x != 0 || player.inputVec.y != 0))
+                {
+                    timer = 0f;
+                    Fire2();
+                }
+                break;
+
         }
 
         // .. Test Code ..
@@ -74,8 +88,11 @@ public class Weapon : MonoBehaviour
                 Batch();
                 break;
             // 총탄
-            default:
+            case 1:
                 speed = 0.3f;
+                break;
+            case 2:
+                speed = 1f;
                 break;
         }
     }
@@ -118,12 +135,11 @@ public class Weapon : MonoBehaviour
             bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
         }
     }
-
+    // auto targeting
     void Fire()
     {
         if (!player.scanner.nearestTarget)
             return;
-
         Vector3 targetPos = player.scanner.nearestTarget.position;
         Vector3 dir = targetPos - transform.position;
         dir = dir.normalized;
@@ -131,7 +147,30 @@ public class Weapon : MonoBehaviour
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.position = transform.position;
         // FromToRotation: 지정된 축을 중심으로 목표를 향해 회전하는 함수
-        bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
+
+        bullet.rotation = Quaternion.FromToRotation(Vector3.left, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
+    }
+    // present direction targeting
+    void Fire2()
+    {
+
+        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
+        bullet.GetComponent<Rigidbody2D>().velocity = transform.forward * speed;
+        bullet.position = transform.position;
+
+        dir = new Vector3(player.inputVec.x, player.inputVec.y, 0);
+
+        if (dir.x != 0)
+        {
+            bullet.rotation = Quaternion.FromToRotation(Vector3.right, dir);
+            bullet.GetComponent<Bullet>().Init(damage, count, dir);
+        }
+        if (dir.y != 0)
+        {
+            bullet.rotation = Quaternion.FromToRotation(Vector3.right, dir);
+            bullet.GetComponent<Bullet>().Init(damage, count, dir);
+        }
+
     }
 }
