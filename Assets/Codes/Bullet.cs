@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // 데미지, 관통 여부
+    public float damage;
+    public int per;
+
+    public void Init(float damage, int per)
     {
-        
+        this.damage = damage;
+        this.per = per;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
