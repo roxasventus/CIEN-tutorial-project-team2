@@ -942,7 +942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLive: 1
   gameTime: 0
-  maxGameTime: 100
+  maxGameTime: 30
   playerId: 0
   health: 0
   maxHealth: 100
