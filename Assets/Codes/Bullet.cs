@@ -65,6 +65,16 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    // 투사체 삭제
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // 근접 무기는 관련 없음
+        if (!collision.CompareTag("Area") || per == -100)
+            return;
+        // 원거리 무기일때
+        gameObject.SetActive(false);
+    }
+
     IEnumerator StopForSeconds(float duration)
     {
         // 현재 속도를 저장하고 속도를 0으로 설정
