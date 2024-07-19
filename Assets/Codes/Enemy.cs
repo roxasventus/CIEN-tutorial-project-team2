@@ -7,7 +7,9 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float health;
     public float maxHealth;
-    public RuntimeAnimatorController[] animCon;
+    public RuntimeAnimatorController[] animCon1; //cannot serialize 2d array so I just made 3 variables.
+    public RuntimeAnimatorController[] animCon2;
+    public RuntimeAnimatorController[] animCon3;
     public Rigidbody2D target;
     bool isLive;
 
@@ -59,7 +61,18 @@ public class Enemy : MonoBehaviour
 
     public void Init(SpawnData data)
     {
-        anim.runtimeAnimatorController = animCon[data.spriteType];
+        switch (data.spriteType)
+        {
+            case 0:
+                anim.runtimeAnimatorController = animCon1[Random.Range(0, 3)];
+                break;
+            case 1:
+                anim.runtimeAnimatorController = animCon2[Random.Range(0, 3)];
+                break;
+            default:
+                anim.runtimeAnimatorController = animCon3[Random.Range(0, 3)];
+                break;
+        }
         speed = data.speed;
         maxHealth = data.health;
         health = data.health;
