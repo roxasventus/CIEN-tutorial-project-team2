@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     Animator anim;
     SpriteRenderer spriter;
     WaitForFixedUpdate wait;
+    DamageFlash damageFlash;
 
     void Awake()
     {
@@ -25,6 +26,7 @@ public class Enemy : MonoBehaviour
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         spriter = GetComponent<SpriteRenderer>();
+        damageFlash = GetComponent<DamageFlash>();
         wait = new WaitForFixedUpdate();
     }
 
@@ -85,6 +87,9 @@ public class Enemy : MonoBehaviour
 
         health -= collision.GetComponent<Bullet>().damage;
         StartCoroutine(KnockBack());
+
+        //damage flash effect
+        damageFlash.CallDamageFlash();
 
         if (health > 0)
         {
