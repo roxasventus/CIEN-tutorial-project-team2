@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     // 게임 승리할 때 적을 정리하는 클리너 변수 선언 및 초기화
     public GameObject enemyCleaner;
 
-    void Awake()
+    private void Awake()
     {
         instance = this;
     }
@@ -106,7 +106,8 @@ public class GameManager : MonoBehaviour
     }
 
     void Update()
-    {   if (!isLive)
+    {   
+        if (!isLive)
             return;
 
         gameTime += Time.deltaTime;

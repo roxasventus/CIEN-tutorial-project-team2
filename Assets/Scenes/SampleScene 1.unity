@@ -732,6 +732,14 @@ MonoBehaviour:
     spriteType: 0
     health: 15
     speed: 2
+  - spawnTime: 0.5
+    spriteType: 1
+    health: 15
+    speed: 2
+  - spawnTime: 0.5
+    spriteType: 2
+    health: 15
+    speed: 2
   levelTime: 0
   level: 0
 --- !u!1 &1321448596
@@ -1014,6 +1022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputVec: {x: 0, y: 0}
   speed: 3
+  scanner: {fileID: 0}
 --- !u!50 &1640165708
 Rigidbody2D:
   serializedVersion: 4
