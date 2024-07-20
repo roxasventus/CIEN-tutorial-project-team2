@@ -73,6 +73,18 @@ public class Weapon : MonoBehaviour
                     Fire3();
                 }
                 break;
+            // 부메랑
+            case 4:
+                timer += Time.deltaTime;
+
+                // speed 보다 커지면 초기화하면서 발사 로직 실행
+                // speed 값은 연사속도를 의미: 적을 수록 많이 발사
+                if (timer > speed)
+                {
+                    timer = 0f;
+                    Fire4();
+                }
+                break;
         }
 
         // .. Test Code ..
@@ -111,6 +123,10 @@ public class Weapon : MonoBehaviour
                 break;
             // 고정된 방향 조준
             case 3:
+                speed = 1f;
+                break;
+            // 부메랑
+            case 4:
                 speed = 1f;
                 break;
         }
@@ -241,5 +257,20 @@ public class Weapon : MonoBehaviour
 
         }
         
+    }
+    // boomerang
+    void Fire4() {
+        if (!player.scanner.nearestTarget)
+            return;
+        Vector3 targetPos = player.scanner.nearestTarget.position;
+        Vector3 dir = targetPos - transform.position;
+        dir = dir.normalized;
+
+        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
+        bullet.position = transform.position;
+        // FromToRotation: 지정된 축을 중심으로 목표를 향해 회전하는 함수
+
+        bullet.rotation = Quaternion.FromToRotation(Vector3.left, dir);
+        bullet.GetComponent<Bullet>().Init(damage, count, dir); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
     }
 }
