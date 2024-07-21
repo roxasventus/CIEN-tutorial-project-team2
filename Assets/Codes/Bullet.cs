@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -7,10 +8,15 @@ public class Bullet : MonoBehaviour
     // 데미지, 관통, 부메랑 여부
     public float damage;
     public int per;
-    public bool isBoomerang;
-    public int BoomerangRotationSpeed;
+    public float shotspeed = 15f; // bullet's shot speed - sw
+
+    [Header("Boomerang")]
+    public bool isBoomerang = false; // default is false - sw
+    public int boomerangRotationSpeed;
+    public float decRate; //decreasing rate of shotspeed - sw
 
     Rigidbody2D rigid;
+    Vector3 dir;
 
     public void Awake()
     {
@@ -21,12 +27,39 @@ public class Bullet : MonoBehaviour
     {
         this.damage = damage;
         this.per = per;
+        this.dir = dir;
 
         // 관통이 -1(무한)보다 큰 것에 대해서는 속도 적용
         if (per > -1)
         {
             // 속력을 곱해주어 총알이 날아가는 속도 증가시키기
-            rigid.velocity = dir * 15f;
+            rigid.velocity = this.dir * shotspeed;
+            if (isBoomerang)
+            {
+                StartCoroutine(ShootBoomerang());
+            }
+        }
+    }
+
+    IEnumerator ShootBoomerang()
+    {
+        bool hitReturnPoint = false;
+        float nextShotspeed = shotspeed;
+        while(true)
+        {
+            nextShotspeed -= decRate;
+            if (shotspeed <= 0 && !hitReturnPoint)
+            {
+                nextShotspeed = 0;
+                hitReturnPoint = true;
+                rigid.velocity = dir * nextShotspeed;
+                yield return new WaitForSeconds(1.2f);
+            }
+            else
+            {
+                rigid.velocity = dir * nextShotspeed;
+                yield return new WaitForSeconds(0.1f);
+            }
         }
     }
 
@@ -34,22 +67,15 @@ public class Bullet : MonoBehaviour
     {
         if (isBoomerang == true)
         {
-            transform.Rotate(Vector3.forward * BoomerangRotationSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.forward * boomerangRotationSpeed * Time.deltaTime);
         }
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Enemy") || per == -100)
         {
             return;
-        }
-
-        // 부메랑이면 적과 부딪친 다음, 멈춰야 한다.
-        if (isBoomerang == true)
-        {
-            StartCoroutine(StopForSeconds(1.2f));
         }
 
         else
