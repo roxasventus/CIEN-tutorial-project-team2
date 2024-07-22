@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     Collider2D coll;
     Animator anim;
     SpriteRenderer spriter;
+    Transform shadow;
     WaitForFixedUpdate wait;
     DamageFlash damageFlash;
 
@@ -26,8 +27,19 @@ public class Enemy : MonoBehaviour
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         spriter = GetComponent<SpriteRenderer>();
+        shadow = GetComponentsInChildren<Transform>()[1];
         damageFlash = GetComponent<DamageFlash>();
         wait = new WaitForFixedUpdate();
+    }
+
+    private void Update()
+    {
+         if (target.position.x < rigid.position.x)
+         {
+            shadow.localPosition = new Vector3(0.1f, -0.7f, 0);
+         }
+        else
+            shadow.localPosition = new Vector3(-0.1f, -0.7f, 0);
     }
 
     void FixedUpdate()
@@ -47,6 +59,7 @@ public class Enemy : MonoBehaviour
         if (!GameManager.instance.isLive)
             return;
         if (!isLive) return;
+
         spriter.flipX = target.position.x < rigid.position.x;
     }
 
