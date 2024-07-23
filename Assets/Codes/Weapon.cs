@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class Weapon : MonoBehaviour
     public float damage;
     public int count;
     public float speed;
+    // 마법진 유지 시간
+    public float magicCircleWait;
 
     Vector3 dir;
 
@@ -85,6 +88,26 @@ public class Weapon : MonoBehaviour
                     Fire4();
                 }
                 break;
+            // 고정 마법진
+            case 5:
+                GameObject bullet = GameManager.instance.pool.prefabs[prefabId];
+                timer += Time.deltaTime;
+
+                // 마법진 쿨타임
+                if (timer > speed && bullet.activeSelf == false)
+                {
+                    timer = 0f;          
+                    bullet.SetActive(!bullet.activeSelf);
+                }
+                // 마법진 유지시간
+                if (timer > magicCircleWait && bullet.activeSelf == true)
+                {
+                    timer = 0f;
+                    bullet.SetActive(!bullet.activeSelf);
+                }
+
+                break;
+
         }
 
         // .. Test Code ..
@@ -128,6 +151,10 @@ public class Weapon : MonoBehaviour
             // 부메랑
             case 4:
                 speed = 1f;
+                break;
+            // 고정 마법진
+            case 5:
+                speed = 5f;
                 break;
         }
     }
@@ -273,4 +300,26 @@ public class Weapon : MonoBehaviour
         bullet.rotation = Quaternion.FromToRotation(Vector3.left, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
     }
+
+
+    // random magic circle
+    void Fire5()
+    {
+
+        //StartCoroutine(ToggleMagicCircle());
+
+        //bullet.position = transform.position;
+        //bullet.parent = transform;
+        //bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero);
+        /*
+        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
+        bullet.position = transform.position;
+        bullet.parent = transform; // parent 속성을 통해 부모 변경
+
+        // 탄환의 위치와 회전 초기화
+        bullet.localPosition = Vector3.zero;
+        bullet.localRotation = Quaternion.identity;
+        */
+    }
+
 }

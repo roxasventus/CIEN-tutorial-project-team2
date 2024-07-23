@@ -15,8 +15,14 @@ public class Bullet : MonoBehaviour
     public int boomerangRotationSpeed;
     public float decRate; //decreasing rate of shotspeed - sw
 
+    [Header("MagicCircle")]
+    public bool isMagicCircle = false; // default is false - sw
+    public int magicCircleRotationSpeed;
+    //public int interval;
+
     Rigidbody2D rigid;
     Vector3 dir;
+    //GameObject magicCircle;
 
     public void Awake()
     {
@@ -68,6 +74,10 @@ public class Bullet : MonoBehaviour
         if (isBoomerang == true)
         {
             transform.Rotate(Vector3.forward * boomerangRotationSpeed * Time.deltaTime);
+        }
+        if (isMagicCircle == true)
+        {
+            transform.Rotate(Vector3.forward * magicCircleRotationSpeed * Time.deltaTime);
         }
     }
 
