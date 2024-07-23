@@ -104,11 +104,14 @@ public class Bullet : MonoBehaviour
     // 투사체 삭제
     private void OnTriggerExit2D(Collider2D collision)
     {
-        // 근접 무기는 관련 없음
-        if (!collision.CompareTag("Area") || per == -100)
-            return;
-        // 원거리 무기일때
-        gameObject.SetActive(false);
+        if (!isMagicCircle)
+        {
+            // 근접 무기는 관련 없음
+            if (!collision.CompareTag("Area") || per == -100)
+                return;
+            // 원거리 무기일때
+            gameObject.SetActive(false);
+        }
     }
 
     IEnumerator StopForSeconds(float duration)
