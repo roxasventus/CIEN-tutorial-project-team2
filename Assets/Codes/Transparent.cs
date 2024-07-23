@@ -10,13 +10,11 @@ public class Transparnet : MonoBehaviour
     public float amount;
 
     SpriteRenderer sprite;
-    Transform transform;
     Player player;
 
     private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
-        transform = GetComponent<Transform>();
         player = GameManager.instance.player;
     }
 
