@@ -29,8 +29,8 @@ public class Bullet : MonoBehaviour
         this.per = per;
         this.dir = dir;
 
-        // 관통이 -1(무한)보다 큰 것에 대해서는 속도 적용
-        if (per > -1)
+        // 관통이 -100(무한)보다 큰 것에 대해서는 속도 적용
+        if (per >= 0 || isBoomerang)
         {
             // 속력을 곱해주어 총알이 날아가는 속도 증가시키기
             rigid.velocity = this.dir * shotspeed;
@@ -83,7 +83,7 @@ public class Bullet : MonoBehaviour
             // 관통 값이 하나씩 줄어들면서 -1이 되면 비활성화
             per--;
 
-            if (per == -1)
+            if (per < 0)
             {
                 rigid.velocity = Vector3.zero;
                 gameObject.SetActive(false);

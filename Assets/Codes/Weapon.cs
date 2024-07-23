@@ -167,7 +167,7 @@ public class Weapon : MonoBehaviour
             bullet.Translate(bullet.up * 1.5f, Space.World);
 
 
-            bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
+            bullet.GetComponent<Bullet>().Init(damage, -100, Vector3.zero); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -100은 무한히 관통한다는 의미로 두었다
         }
     }
 
@@ -271,6 +271,6 @@ public class Weapon : MonoBehaviour
         // FromToRotation: 지정된 축을 중심으로 목표를 향해 회전하는 함수
 
         bullet.rotation = Quaternion.FromToRotation(Vector3.left, dir);
-        bullet.GetComponent<Bullet>().Init(damage, count, dir); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
+        bullet.GetComponent<Bullet>().Init(damage, -100, dir); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
     }
 }
