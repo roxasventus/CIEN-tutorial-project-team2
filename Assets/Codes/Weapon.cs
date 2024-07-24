@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Weapon : MonoBehaviour
 {
@@ -10,6 +12,8 @@ public class Weapon : MonoBehaviour
     public float damage;
     public int count;
     public float speed;
+    // 마법진 유지 시간
+    public float magicCircleWait;
 
     Vector3 dir;
 
@@ -85,6 +89,37 @@ public class Weapon : MonoBehaviour
                     Fire4();
                 }
                 break;
+            // 고정 마법진
+            case 5:
+                GameObject bullet = GameManager.instance.pool.prefabs[prefabId];
+                timer += Time.deltaTime;
+
+                // 마법진 쿨타임
+                if (timer > speed && bullet.activeSelf == false)
+                {
+                    timer = 0f;          
+                    bullet.SetActive(!bullet.activeSelf);
+                }
+                // 마법진 유지시간
+                if (timer > magicCircleWait && bullet.activeSelf == true)
+                {
+                    timer = 0f;
+                    bullet.SetActive(!bullet.activeSelf);
+                }
+
+                break;
+            // 랜덤 마법진
+            case 6:
+                timer += Time.deltaTime;
+
+                // speed 보다 커지면 초기화하면서 발사 로직 실행
+                // speed 값은 연사속도를 의미: 적을 수록 많이 발사
+                if (timer > speed)
+                {
+                    timer = 0f;
+                    Fire5();
+                }
+                break;
         }
 
         // .. Test Code ..
@@ -128,6 +163,14 @@ public class Weapon : MonoBehaviour
             // 부메랑
             case 4:
                 speed = 1f;
+                break;
+            // 고정 마법진
+            case 5:
+                speed = 5f;
+                break;
+            // 랜덤 마법진
+            case 6:
+                speed = 5f;
                 break;
         }
     }
@@ -273,4 +316,52 @@ public class Weapon : MonoBehaviour
         bullet.rotation = Quaternion.FromToRotation(Vector3.left, dir);
         bullet.GetComponent<Bullet>().Init(damage, -100, dir); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
     }
+
+
+    void Fire5()
+    {
+        for (int index = 0; index < count; index++)
+        {
+
+            // 가져온 오브젝트의 Transform을 지역변수로 저장
+            Transform bullet;
+
+            // 기존 오브젝트를 먼저 활용하고 모자란 것은 풀링에서 가져오기
+            if (index < transform.childCount)             // 자신의 자식 오브젝트 개수 확인은 childCount 속성에서
+            {
+                // index가 아직 childCount 범위 내라면 GetChild 함수로 가져오기
+                bullet = transform.GetChild(index);
+            }
+            else
+            {
+                bullet = GameManager.instance.pool.Get(prefabId).transform;
+                // 갓 생성된 탄환의 부모는 PoolManager이다. 갓 생성된 탄환은 플레이어를 따라가야 하므로 부모를 플레이어의 자식 오브젝트인 Weapon 7로 바꿔야 한다. 
+                bullet.parent = GameObject.Find("Weapon7").transform; ; // parent 속성을 통해 부모 변경
+            }
+
+            bullet.GetComponent<Rigidbody2D>().velocity = transform.forward * speed;
+            bullet.position = transform.position;
+
+            // 탄환의 위치와 회전 초기화
+            bullet.localPosition = Vector3.zero;
+            bullet.localRotation = Quaternion.identity;
+
+            // 생성된 탄환을 적절한 위치에 배치
+            Vector3 rotVec = Vector3.forward * 360 * Random.Range(0f, 30f);
+            //index / count;
+            bullet.Rotate(rotVec);
+            // Translate 함수로 자신의 위쪽으로 이동, 이동 방향은 Space.World 기준으로
+            bullet.Translate(bullet.up * 1.5f, Space.World);
+
+            bullet.Rotate(rotVec);
+
+
+
+
+            bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
+
+      
+        }
+    }
+
 }

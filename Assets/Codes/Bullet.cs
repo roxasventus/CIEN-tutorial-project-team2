@@ -15,8 +15,14 @@ public class Bullet : MonoBehaviour
     public int boomerangRotationSpeed;
     public float decRate; //decreasing rate of shotspeed - sw
 
+    [Header("MagicCircle")]
+    public bool isMagicCircle = false; // default is false - sw
+    public int magicCircleRotationSpeed;
+    //public int interval;
+
     Rigidbody2D rigid;
     Vector3 dir;
+    //GameObject magicCircle;
 
     public void Awake()
     {
@@ -69,6 +75,10 @@ public class Bullet : MonoBehaviour
         {
             transform.Rotate(Vector3.forward * boomerangRotationSpeed * Time.deltaTime);
         }
+        if (isMagicCircle == true)
+        {
+            transform.Rotate(Vector3.forward * magicCircleRotationSpeed * Time.deltaTime);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -94,11 +104,14 @@ public class Bullet : MonoBehaviour
     // 투사체 삭제
     private void OnTriggerExit2D(Collider2D collision)
     {
-        // 근접 무기는 관련 없음
-        if (!collision.CompareTag("Area") || per == -100)
-            return;
-        // 원거리 무기일때
-        gameObject.SetActive(false);
+        if (!isMagicCircle)
+        {
+            // 근접 무기는 관련 없음
+            if (!collision.CompareTag("Area") || per == -100)
+                return;
+            // 원거리 무기일때
+            gameObject.SetActive(false);
+        }
     }
 
     IEnumerator StopForSeconds(float duration)
