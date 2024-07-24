@@ -4213,7 +4213,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 14.342105
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4395,7 +4395,7 @@ MonoBehaviour:
   damage: 3
   count: 5
   speed: 0
-  magicCircleWait: 2
+  magicCircleWait: 5
 --- !u!1 &604420251
 GameObject:
   m_ObjectHideFlags: 0

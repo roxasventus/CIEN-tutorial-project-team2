@@ -83,7 +83,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Enemy") || per == -100)
+        if (!collision.CompareTag("Enemy") || per == -100 || per == -90)
         {
             return;
         }
@@ -104,14 +104,13 @@ public class Bullet : MonoBehaviour
     // 투사체 삭제
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!isMagicCircle)
-        {
-            // 근접 무기는 관련 없음
-            if (!collision.CompareTag("Area") || per == -100)
-                return;
-            // 원거리 무기일때
-            gameObject.SetActive(false);
-        }
+
+        // 근접 무기는 관련 없음
+        if (!collision.CompareTag("Area") || per == -100)
+            return;
+        // 원거리 무기일때
+        gameObject.SetActive(false);
+        
     }
 
     IEnumerator StopForSeconds(float duration)

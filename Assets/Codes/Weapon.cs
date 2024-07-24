@@ -356,12 +356,21 @@ public class Weapon : MonoBehaviour
             bullet.Rotate(rotVec);
 
 
+            // 배치가 완료되었으므로 더 이상 탄환이 플레이어를 따라갈 필요가 없다
+            bullet.parent = GameObject.Find("PoolManager").transform; // 다시 poolManager로 부모 변경
 
 
-            bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
 
-      
+            bullet.GetComponent<Bullet>().Init(damage, -90, Vector3.zero); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
+            StartCoroutine(Disable(magicCircleWait, bullet));
+
         }
+    }
+
+    IEnumerator Disable(float duration, Transform bullet)
+    {
+        yield return new WaitForSeconds(duration);
+        bullet.localScale = Vector3.zero;
     }
 
 }
