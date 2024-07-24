@@ -70,7 +70,7 @@ public class Enemy : MonoBehaviour
         health = maxHealth;
         coll.enabled = true;
         rigid.simulated = true;
-        spriter.sortingOrder = 2;
+        spriter.sortingOrder = 1;
         anim.SetBool("Dead", false);
     }
 

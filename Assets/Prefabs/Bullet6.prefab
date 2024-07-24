@@ -99,14 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
-  per: -1
+  per: -100
   shotspeed: 13
   isBoomerang: 0
   boomerangRotationSpeed: 0
   decRate: 0
   isMagicCircle: 1
   magicCircleRotationSpeed: 300
-  interval: 2
 --- !u!70 &7335809398549814002
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
