@@ -97,7 +97,8 @@ public class Weapon : MonoBehaviour
                 // 마법진 쿨타임
                 if (timer > speed && bullet.activeSelf == false)
                 {
-                    timer = 0f;          
+                    timer = 0f;
+                    AudioManager.instance.PlaySfx(AudioManager.Sfx.final_attack);
                     bullet.SetActive(!bullet.activeSelf);
                 }
                 // 마법진 유지시간
@@ -230,7 +231,7 @@ public class Weapon : MonoBehaviour
         bullet.rotation = Quaternion.FromToRotation(Vector3.left, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
         // 효과음 재생할 부분마다 재생함수 호출
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.attack1);
     }
     // present direction targeting
     void Fire2()
@@ -252,7 +253,7 @@ public class Weapon : MonoBehaviour
             bullet.rotation = Quaternion.FromToRotation(Vector3.right, dir);
             bullet.GetComponent<Bullet>().Init(damage, count, dir);
             // 효과음 재생할 부분마다 재생함수 호출
-            AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.attack2);
         }
 
     }
@@ -301,7 +302,7 @@ public class Weapon : MonoBehaviour
             Quaternion.FromToRotation(Vector3.up, bullet.transform.up);
             bullet.GetComponent<Bullet>().Init(damage, count, bullet.transform.up);
             // 효과음 재생할 부분마다 재생함수 호출
-            AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.attack3);
 
 
         }
@@ -321,8 +322,7 @@ public class Weapon : MonoBehaviour
 
         bullet.rotation = Quaternion.FromToRotation(Vector3.left, dir);
         bullet.GetComponent<Bullet>().Init(damage, -100, dir); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
-        // 효과음 재생할 부분마다 재생함수 호출
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
+
     }
 
 
@@ -370,8 +370,6 @@ public class Weapon : MonoBehaviour
 
 
             bullet.GetComponent<Bullet>().Init(damage, -90, Vector3.zero); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
-            // 효과음 재생할 부분마다 재생함수 호출
-            AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
 
             StartCoroutine(Disable(magicCircleWait, bullet));
 
@@ -380,6 +378,7 @@ public class Weapon : MonoBehaviour
 
     IEnumerator Disable(float duration, Transform bullet)
     {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.final_attack);
         yield return new WaitForSeconds(duration);
         bullet.localScale = Vector3.zero;
     }
