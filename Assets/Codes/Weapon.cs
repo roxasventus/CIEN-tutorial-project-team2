@@ -229,6 +229,8 @@ public class Weapon : MonoBehaviour
 
         bullet.rotation = Quaternion.FromToRotation(Vector3.left, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
+        // 효과음 재생할 부분마다 재생함수 호출
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
     }
     // present direction targeting
     void Fire2()
@@ -249,6 +251,8 @@ public class Weapon : MonoBehaviour
         {
             bullet.rotation = Quaternion.FromToRotation(Vector3.right, dir);
             bullet.GetComponent<Bullet>().Init(damage, count, dir);
+            // 효과음 재생할 부분마다 재생함수 호출
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
         }
 
     }
@@ -296,6 +300,8 @@ public class Weapon : MonoBehaviour
             // 탄환이 바라보는 방향으로 발사
             Quaternion.FromToRotation(Vector3.up, bullet.transform.up);
             bullet.GetComponent<Bullet>().Init(damage, count, bullet.transform.up);
+            // 효과음 재생할 부분마다 재생함수 호출
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
 
 
         }
@@ -315,6 +321,8 @@ public class Weapon : MonoBehaviour
 
         bullet.rotation = Quaternion.FromToRotation(Vector3.left, dir);
         bullet.GetComponent<Bullet>().Init(damage, -100, dir); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
+        // 효과음 재생할 부분마다 재생함수 호출
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
     }
 
 
@@ -362,6 +370,9 @@ public class Weapon : MonoBehaviour
 
 
             bullet.GetComponent<Bullet>().Init(damage, -90, Vector3.zero); // bullet 컴포넌트 접근하여 속성 초기화 함수 호출, -1은 무한히 관통한다는 의미로 두었다
+            // 효과음 재생할 부분마다 재생함수 호출
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
+
             StartCoroutine(Disable(magicCircleWait, bullet));
 
         }

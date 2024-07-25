@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        
+        // test code
+        AudioManager.instance.PlayBgm(true);
     }
 
     public void GameStart(int id)
