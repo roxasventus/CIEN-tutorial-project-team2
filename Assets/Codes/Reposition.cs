@@ -53,14 +53,29 @@ public class Reposition : MonoBehaviour
                 if (coll.enabled)
                 {
                     Vector3 dist = playerPos - myPos;
-                    transform.Translate(GetReposPoint(dist));
+                    transform.Translate(GetEnemyReposPoint(dist));
                 }
                 break;
         }
 
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (transform.tag != "WallColl")
+            return;
 
-    private Vector3 GetReposPoint(Vector3 dist)
+        if (!collision.CompareTag("NoSpawn"))
+            return;
+
+        Transform enemy = transform.parent;
+        Vector3 playerPos = GameManager.instance.player.transform.position;
+        Vector3 dist = playerPos - enemy.position;
+        dist = dist.normalized;
+
+        enemy.Translate(dist);
+    }
+
+    private Vector3 GetEnemyReposPoint(Vector3 dist)
     {
         Vector3 reposPoint = 2 * dist;
         float angle = 0f;

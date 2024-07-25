@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     Animator anim;
     SpriteRenderer spriter;
     Transform shadow;
+    Transform wallColl;
     WaitForFixedUpdate wait;
     DamageFlash damageFlash;
 
@@ -29,18 +30,23 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         spriter = GetComponent<SpriteRenderer>();
         shadow = GetComponentsInChildren<Transform>()[1];
+        wallColl = GetComponentsInChildren<Transform>()[2];
         damageFlash = GetComponent<DamageFlash>();
         wait = new WaitForFixedUpdate();
     }
 
     private void Update()
     {
-         if (target.position.x < rigid.position.x)
-         {
+        if (target.position.x < rigid.position.x)
+        {
             shadow.localPosition = new Vector3(0.1f, -0.7f, 0);
-         }
+            wallColl.localPosition = new Vector3(0.1f, -0.7f, 0);
+        }
         else
+        {
             shadow.localPosition = new Vector3(-0.1f, -0.7f, 0);
+            wallColl.localPosition = new Vector3(-0.1f, -0.7f, 0);
+        }
     }
 
     void FixedUpdate()
