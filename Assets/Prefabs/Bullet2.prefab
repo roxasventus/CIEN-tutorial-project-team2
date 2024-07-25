@@ -185,3 +185,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   per: 0
+<<<<<<< Updated upstream
+=======
+  shotspeed: 15
+  isBoomerang: 0
+  boomerangRotationSpeed: 0
+  decRate: 0
+  isMagicCircle: 0
+  magicCircleRotationSpeed: 0
+>>>>>>> Stashed changes

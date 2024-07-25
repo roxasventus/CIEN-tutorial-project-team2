@@ -1,6 +1,11 @@
 fileFormatVersion: 2
-guid: d3adf92df39499f488df4da06290061c
+<<<<<<<< Updated upstream:Assets/Prefabs/Circle.prefab.meta
+guid: 12cf26a7998503a459dc82f87436a950
 PrefabImporter:
+========
+guid: 874c93954b7b6e5469fddf9c6682a222
+NativeFormatImporter:
+>>>>>>>> Stashed changes:Assets/Prefabs/Item 0.asset.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

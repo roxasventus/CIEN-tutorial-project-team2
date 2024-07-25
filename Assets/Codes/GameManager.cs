@@ -1,24 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Àå¸é °ü¸®
+using UnityEngine.SceneManagement; // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 public class GameManager : MonoBehaviour
 {
-    // static: Á¤ÀûÀ¸·Î »ç¿ëÇÏ°Ú´Ù´Â Å°¿öµå. ¹Ù·Î ¸Þ¸ð¸®¿¡ ¾ñ¾î¹ö¸². ¾î¶² ÀÎ½ºÅÏ½º¿¡¼­µçÁö Á¢±Ù °¡´É
-    // staticÀ¸·Î ¼±¾ðµÈ º¯¼ö´Â ÀÎ½ºÆåÅÍ¿¡ ³ªÅ¸³ªÁö ¾Ê´Â´Ù
+    // static: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°Ú´Ù´ï¿½ Å°ï¿½ï¿½ï¿½ï¿½. ï¿½Ù·ï¿½ ï¿½Þ¸ð¸®¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½î¶² ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    // staticï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½
     public static GameManager instance;
 
-    // Header: ÀÎ½ºÆåÅÍÀÇ ¼Ó¼ºµéÀ» ÀÌ»Ú°Ô ±¸ºÐ½ÃÄÑÁÖ´Â Å¸ÀÌÆ²
+    // Header: ï¿½Î½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ó¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»Ú°ï¿½ ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ Å¸ï¿½ï¿½Æ²
     [Header("# Game control")]
-    // ½Ã°£ Á¤Áö ¿©ºÎ¸¦ ¾Ë·ÁÁÖ´Â bool º¯¼ö ¼±¾ð
+    // ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¸ï¿½ ï¿½Ë·ï¿½ï¿½Ö´ï¿½ bool ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public bool isLive;
-    // °ÔÀÓ ÁøÇà ½Ã°£
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
     public float gameTime;
-    // °ÔÀÓ Á¾·á ½Ã°£
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
     public float maxGameTime = 2 * 10f;
     [Header("# Player Info")]
-    // °¢ ·¹º§ÀÇ ÇÊ¿ä°æÇèÄ¡¸¦ º¸°üÇÒ ¹è¿­ º¯¼ö ¼±¾ð ¹× ÃÊ±âÈ­
+    // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ê±ï¿½È­
     public int playerId;
     public float health;
     public float maxHealth = 100;
@@ -29,10 +29,11 @@ public class GameManager : MonoBehaviour
     [Header("# Game Object")]
     public PoolManager pool;
     public Player player;
-    //public LevelUp uiLevelUp;
-    // °ÔÀÓ °á°ú UI ¿ÀºêÁ§Æ®¸¦ ÀúÀåÇÒ º¯¼ö ¼±¾ð ¹× ÃÊ±âÈ­
+    public LevelUpInterface uiLevelUp;
+
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ UI ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ê±ï¿½È­
     //public Result uiResult;
-    // °ÔÀÓ ½Â¸®ÇÒ ¶§ ÀûÀ» Á¤¸®ÇÏ´Â Å¬¸®³Ê º¯¼ö ¼±¾ð ¹× ÃÊ±âÈ­
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½Â¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ê±ï¿½È­
     public GameObject enemyCleaner;
 
     private void Awake()
@@ -44,12 +45,12 @@ public class GameManager : MonoBehaviour
     {
         playerId = id;
         health = maxHealth;
-        // °ÔÀÓ ½ÃÀÛÇÒ ¶§ ÇÃ·¹ÀÌ¾î È°¼ºÈ­ ÈÄ ±âº» ¹«±â Áö±Þ
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ È°ï¿½ï¿½È­ ï¿½ï¿½ ï¿½âº» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         player.gameObject.SetActive(true);
-        //uiLevelUp.Selected(playerId % 2);
+        uiLevelUp.Show();
         Resume();
 
-        // È¿°úÀ½ Àç»ýÇÒ ºÎºÐ¸¶´Ù Àç»ýÇÔ¼ö È£Ãâ
+        // È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ÎºÐ¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ È£ï¿½ï¿½
         //AudioManager.instance.PlayBgm(true);
         //AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
         //AudioManager.instance.EffectBgm(false);
@@ -71,7 +72,7 @@ public class GameManager : MonoBehaviour
         //uiResult.Lose();
         Stop();
 
-        // È¿°úÀ½ Àç»ýÇÒ ºÎºÐ¸¶´Ù Àç»ýÇÔ¼ö È£Ãâ
+        // È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ÎºÐ¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ È£ï¿½ï¿½
         //AudioManager.instance.PlayBgm(false);
         //AudioManager.instance.PlaySfx(AudioManager.Sfx.Lose);
     }
@@ -84,7 +85,7 @@ public class GameManager : MonoBehaviour
     IEnumerator GameVictoryRoutine()
     {
         isLive = false;
-        // °ÔÀÓ ½Â¸® ÄÚ·çÆ¾ÀÇ Àü¹ÝºÎ¿¡ Àû Å¬¸®³Ê¸¦ È°¼ºÈ­
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½Â¸ï¿½ ï¿½Ú·ï¿½Æ¾ï¿½ï¿½ ï¿½ï¿½ï¿½ÝºÎ¿ï¿½ ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½Ê¸ï¿½ È°ï¿½ï¿½È­
         enemyCleaner.SetActive(true);
 
         yield return new WaitForSeconds(0.5f);
@@ -94,12 +95,12 @@ public class GameManager : MonoBehaviour
         //uiResult.Win();
         Stop();
 
-        // È¿°úÀ½ Àç»ýÇÒ ºÎºÐ¸¶´Ù Àç»ýÇÔ¼ö È£Ãâ
+        // È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ÎºÐ¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ È£ï¿½ï¿½
         //AudioManager.instance.PlayBgm(false);
         //AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
     }
 
-    // Àç½ÃÀÛ
+    // ï¿½ï¿½ï¿½ï¿½ï¿½
     public void GameRetry()
     {
         SceneManager.LoadScene(0);
@@ -118,7 +119,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
-    // °æÇèÄ¡ Áõ°¡ ÇÔ¼ö
+    // ï¿½ï¿½ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
     public void GetExp()
     {
         if (!isLive)
@@ -126,25 +127,25 @@ public class GameManager : MonoBehaviour
             return; 
         }
         exp++;
-        // if Á¶°ÇÀ¸·Î ÇÊ¿ä °æÇèÄ¡¿¡ µµ´ÞÇÏ¸é ·¹º§ ¾÷ÇÏµµ·Ï ÀÛ¼º
-        if (exp == nextExp[Mathf.Min(level, nextExp.Length-1)]) { // ¹«ÇÑ ·¹º§¾÷À» À§ÇÏ¿© Min ÇÔ¼ö¸¦ »ç¿ëÇÏ¿© ÃÖ°í °æÇèÄ¡¸¦ ±×´ë·Î °è¼Ó »ç¿ëÇÏµµ·Ï º¯°æ
+        // if ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½Û¼ï¿½
+        if (exp == nextExp[Mathf.Min(level, nextExp.Length-1)]) { // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ Min ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½×´ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             level++;
             exp = 0;
-            //uiLevelUp.Show();
+            uiLevelUp.Show();
         }
     }
 
     public void Stop()
     {
         isLive = false;
-        // timeScale À¯´ÏÆ¼ÀÇ ½Ã°£ ¼Óµµ(¹èÀ²)
+        // timeScale ï¿½ï¿½ï¿½ï¿½Æ¼ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½Óµï¿½(ï¿½ï¿½ï¿½ï¿½)
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
         isLive = true;
-        // timeScale À¯´ÏÆ¼ÀÇ ½Ã°£ ¼Óµµ(¹èÀ²)
+        // timeScale ï¿½ï¿½ï¿½ï¿½Æ¼ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½Óµï¿½(ï¿½ï¿½ï¿½ï¿½)
         Time.timeScale = 1;
     }
 }

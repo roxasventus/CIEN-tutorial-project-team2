@@ -18,8 +18,13 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Circle.prefab
   m_IsActive: 1
 --- !u!4 &8487675110873361647
+=======
+  m_IsActive: 0
+--- !u!4 &2508072190331844589
+>>>>>>> Stashed changes:Assets/Prefabs/Bullet6.prefab
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
