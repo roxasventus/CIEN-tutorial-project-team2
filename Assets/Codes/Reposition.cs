@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Reposition : MonoBehaviour
 {
+    
     Collider2D coll;
+   
 
     private void Awake()
     {
         coll = GetComponent<Collider2D>();
+       
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -49,11 +53,53 @@ public class Reposition : MonoBehaviour
                 if (coll.enabled)
                 {
                     Vector3 dist = playerPos - myPos;
-                    Vector3 ran = new Vector3(Random.Range(-3, 3), Random.Range(-3, 3), 0);
-                    transform.Translate(ran + dist * 2);
+                    transform.Translate(GetReposPoint(dist));
                 }
                 break;
         }
 
+    }
+
+    private Vector3 GetReposPoint(Vector3 dist)
+    {
+        Vector3 reposPoint = 2 * dist;
+        float angle = 0f;
+        float maxAngle = 360f;
+
+        int layerToNotSpawnOn = LayerMask.NameToLayer("Wall");
+        bool isReposValid = false;
+
+        //find valid reposition position
+        while(!isReposValid && angle < maxAngle)
+        {
+            reposPoint = dist + Quaternion.AngleAxis(angle, Vector3.forward) * dist;
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(reposPoint, 0.8f);
+
+            bool invalidColl = false;
+
+            //find collision with walls
+            foreach(Collider2D collider in colliders)
+            {
+                if(collider.gameObject.layer == layerToNotSpawnOn)
+                {
+                    invalidColl = true;
+                    break;
+                }
+            }
+
+            if (!invalidColl)
+            {
+                isReposValid = true;
+            }
+
+            angle++;
+        }
+
+        if (!isReposValid)
+        {
+            gameObject.SetActive(false);
+        }
+
+        return reposPoint;
     }
 }

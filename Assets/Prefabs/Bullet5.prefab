@@ -105,6 +105,8 @@ MonoBehaviour:
   isBoomerang: 1
   boomerangRotationSpeed: 300
   decRate: 3
+  isMagicCircle: 0
+  magicCircleRotationSpeed: 0
 --- !u!50 &6579473751864408436
 Rigidbody2D:
   serializedVersion: 4
@@ -147,7 +149,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 656
+    m_Bits: 640
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

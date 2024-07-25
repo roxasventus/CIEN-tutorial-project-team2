@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public RuntimeAnimatorController[] animCon2;
     public RuntimeAnimatorController[] animCon3;
     public Rigidbody2D target;
+
     bool isLive;
 
     Rigidbody2D rigid;

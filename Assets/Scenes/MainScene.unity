@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2544467
 Transform:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &22474059
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +361,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &112094655
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +379,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &112094656
 Transform:
   m_ObjectHideFlags: 0
@@ -442,7 +442,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &148965941
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +523,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1001 &169057893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -577,6 +577,10 @@ PrefabInstance:
       value: 9.19624e-38
       objectReference: {fileID: 0}
     - target: {fileID: 7546752136209717312, guid: 0ada120df9c7f1f4abb11ec4f17e9cd2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546752136209717312, guid: 0ada120df9c7f1f4abb11ec4f17e9cd2, type: 3}
       propertyPath: m_TagString
       value: NoSpawn
       objectReference: {fileID: 0}
@@ -615,7 +619,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &171486654
 Transform:
   m_ObjectHideFlags: 0
@@ -678,7 +682,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &265898735
 GameObject:
   m_ObjectHideFlags: 0
@@ -4213,7 +4217,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.907895
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4238,7 +4242,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12, y: 12, z: -10}
+  m_LocalPosition: {x: 13.42, y: 7.37, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4465,7 +4469,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 640
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -4617,7 +4621,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1001 &680685915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11673,12 +11677,20 @@ PrefabInstance:
       value: -45000000
       objectReference: {fileID: 0}
     - target: {fileID: 4256010660185016055, guid: ccc5b887b6df9344bb22006fcd00c6dd, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256010660185016055, guid: ccc5b887b6df9344bb22006fcd00c6dd, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 4256010660185016055, guid: ccc5b887b6df9344bb22006fcd00c6dd, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
       value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909660164875022545, guid: ccc5b887b6df9344bb22006fcd00c6dd, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4909660164875022545, guid: ccc5b887b6df9344bb22006fcd00c6dd, type: 3}
       propertyPath: m_TagString
@@ -11691,6 +11703,14 @@ PrefabInstance:
     - target: {fileID: 5970628047996086017, guid: ccc5b887b6df9344bb22006fcd00c6dd, type: 3}
       propertyPath: m_GenerationType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970628047996086017, guid: ccc5b887b6df9344bb22006fcd00c6dd, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970628047996086017, guid: ccc5b887b6df9344bb22006fcd00c6dd, type: 3}
+      propertyPath: m_CompositePaths.m_Paths.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6160353619742162626, guid: ccc5b887b6df9344bb22006fcd00c6dd, type: 3}
       propertyPath: m_TileSpriteArray.Array.size
@@ -14483,7 +14503,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &775195875
 Transform:
   m_ObjectHideFlags: 0
@@ -14546,7 +14566,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &801908128
 GameObject:
   m_ObjectHideFlags: 0
@@ -14614,7 +14634,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &814147691
 Transform:
   m_ObjectHideFlags: 0
@@ -14677,7 +14697,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &817917811
 GameObject:
   m_ObjectHideFlags: 0
@@ -14745,7 +14765,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &856053476
 Transform:
   m_ObjectHideFlags: 0
@@ -14808,7 +14828,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &890980513
 GameObject:
   m_ObjectHideFlags: 0
@@ -15094,7 +15114,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &993281547
 GameObject:
   m_ObjectHideFlags: 0
@@ -15295,7 +15315,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &1039859475
 GameObject:
   m_ObjectHideFlags: 0
@@ -15361,7 +15381,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1117718458
 Transform:
   m_ObjectHideFlags: 0
@@ -15424,7 +15444,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &1127215217
 GameObject:
   m_ObjectHideFlags: 0
@@ -15505,7 +15525,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &1228331598
 GameObject:
   m_ObjectHideFlags: 0
@@ -15523,7 +15543,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1228331599
 Transform:
   m_ObjectHideFlags: 0
@@ -15586,7 +15606,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &1295553445
 GameObject:
   m_ObjectHideFlags: 0
@@ -15702,7 +15722,7 @@ Transform:
   m_GameObject: {fileID: 1321448596}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12, y: 12, z: -10}
+  m_LocalPosition: {x: 13.42, y: 7.37, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15789,7 +15809,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &1471735637
 GameObject:
   m_ObjectHideFlags: 0
@@ -15870,7 +15890,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &1525835024
 GameObject:
   m_ObjectHideFlags: 0
@@ -15952,7 +15972,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1575039709
 Transform:
   m_ObjectHideFlags: 0
@@ -16015,7 +16035,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &1632913206
 GameObject:
   m_ObjectHideFlags: 0
@@ -16236,7 +16256,7 @@ Transform:
   m_GameObject: {fileID: 1640165706}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12, y: 12, z: 0}
+  m_LocalPosition: {x: 13.42, y: 7.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16371,7 +16391,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &2082228632
 GameObject:
   m_ObjectHideFlags: 0
@@ -16452,7 +16472,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1 &2113090875
 GameObject:
   m_ObjectHideFlags: 0
@@ -16533,7 +16553,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -16542,6 +16562,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 948724951}
   - {fileID: 890980515}
+  - {fileID: 1525835026}
   - {fileID: 1039859477}
   - {fileID: 1640165711}
-  - {fileID: 1525835026}

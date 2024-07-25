@@ -106,6 +106,8 @@ MonoBehaviour:
   isBoomerang: 0
   boomerangRotationSpeed: 0
   decRate: 0
+  isMagicCircle: 0
+  magicCircleRotationSpeed: 0
 --- !u!95 &7336788779248213698
 Animator:
   serializedVersion: 5
@@ -169,7 +171,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 656
+    m_Bits: 640
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
