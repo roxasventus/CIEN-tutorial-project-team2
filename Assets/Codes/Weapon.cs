@@ -36,6 +36,9 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.instance.isLive)
+            return;
+
         // 무기 ID에 따라 로직을 분리
         switch (id)
         {

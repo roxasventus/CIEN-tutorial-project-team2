@@ -14,6 +14,10 @@ public class Item : MonoBehaviour
 
     Image icon;
     Text textLevel;
+    // 이름과 설명 텍스트 변수 추가 및 초기화
+    Text textName;
+    Text textDesc;
+
 
     private void Awake()
     {
@@ -23,7 +27,38 @@ public class Item : MonoBehaviour
 
         Text[] texts = GetComponentsInChildren<Text>();
         textLevel = texts[0]; // 텍스트는 한개 밖에 없으므로 인덱스 0을 사용하도 된다
+        textName = texts[1];
+        textDesc = texts[2];
+        textName.text = data.itemName;
+
     }
+
+    private void OnEnable()
+    {
+        textLevel.text = "Lv." + (level + 1);
+
+        switch (data.itemType)
+        {
+            case ItemData.ItemType.Melee:
+            case ItemData.ItemType.Range:
+                textDesc.text = string.Format(data.itemDesc, data.damages[level] * 100, data.counts[level]);
+                break;
+            case ItemData.ItemType.MagicCircle:
+                if (data.magicCircleWaits[level] != 0)
+                    textDesc.text = string.Format(data.itemDesc, data.magicCircleWaits[level]);
+                else
+                    textDesc.text = string.Format(data.itemDesc, data.counts[level]);
+                break;
+            case ItemData.ItemType.Glove:
+            case ItemData.ItemType.Shoe:
+                textDesc.text = string.Format(data.itemDesc, data.damages[level] * 100);
+                break;
+            default:
+                textDesc.text = string.Format(data.itemDesc);
+                break;
+        }
+    }
+
 
     private void LateUpdate()
     {

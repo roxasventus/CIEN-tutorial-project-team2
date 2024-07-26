@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     [Header("# Game Object")]
     public PoolManager pool;
     public Player player;
-    //public LevelUp uiLevelUp;
+    public LevelUp uiLevelUp;
     // 게임 결과 UI 오브젝트를 저장할 변수 선언 및 초기화
     //public Result uiResult;
     // 게임 승리할 때 적을 정리하는 클리너 변수 선언 및 초기화
@@ -46,6 +46,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+
+        // 임시 스크립트 (첫번재 캐릭터 선택)
+        uiLevelUp.Selected(0);
+
     }
 
 
@@ -140,7 +144,7 @@ public class GameManager : MonoBehaviour
         if (exp == nextExp[Mathf.Min(level, nextExp.Length-1)]) { // 무한 레벨업을 위하여 Min 함수를 사용하여 최고 경험치를 그대로 계속 사용하도록 변경
             level++;
             exp = 0;
-            //uiLevelUp.Show();
+            uiLevelUp.Show();
         }
     }
 

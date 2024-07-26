@@ -23,6 +23,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.instance.isLive)
+            return;
+
         inputVec.x = Input.GetAxisRaw("Horizontal");
         inputVec.y = Input.GetAxisRaw("Vertical");
     }
@@ -30,6 +33,9 @@ public class Player : MonoBehaviour
     // 물리 연산 프레임마다 호출되는 생명주기 FixedUpdate
     void FixedUpdate()
     {
+        if (!GameManager.instance.isLive)
+            return;
+
         // 단위벡터로 만들어야 플레이어가 지나치게 빨리 움직이는 것을 막을 수 있다
         Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime; // Time.fixedDeltaTime: 물리 프레임 하나가 소비한 시간
         rigid.MovePosition(rigid.position + nextVec); // rigid.position: 현재 위치 
@@ -38,6 +44,9 @@ public class Player : MonoBehaviour
     // 프레임이 종료 되기 전 실행되는 생명주기 함수
     private void LateUpdate()
     {
+        if (!GameManager.instance.isLive)
+            return;
+
         // 애니메이터에서 설정한 파라메터 타입과 동일한 함수 작성
         anim.SetFloat("Speed", inputVec.magnitude); // (파라메터 이름, 반영할 float 값) // magnitude: 벡터의 순수한 크기 값
         // 스프라이트 방향

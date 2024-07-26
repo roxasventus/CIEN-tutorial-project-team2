@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4a8d70e4454b74983fa9ea328314d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 4.5
   per: -100
   shotspeed: 15
   isBoomerang: 0
