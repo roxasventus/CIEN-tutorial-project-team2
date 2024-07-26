@@ -156,8 +156,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  per: 0
+  per: -100
   shotspeed: 15
   isBoomerang: 0
   boomerangRotationSpeed: 0
   decRate: 0
+  isMagicCircle: 0
+  magicCircleRotationSpeed: 0

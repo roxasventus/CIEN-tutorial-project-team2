@@ -76,6 +76,11 @@ public class Enemy : MonoBehaviour
 
     public void Init(SpawnData data)
     {
+        if (anim == null)
+        {
+            return;
+        }
+
         switch (data.spriteType)
         {
             case 0:

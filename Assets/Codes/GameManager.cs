@@ -43,6 +43,12 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.PlayBgm(true);
     }
 
+    void Start()
+    {
+        health = maxHealth;
+    }
+
+
     public void GameStart(int id)
     {
         playerId = id;

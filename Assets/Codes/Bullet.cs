@@ -31,6 +31,11 @@ public class Bullet : MonoBehaviour
 
     public void Init(float damage, int per, Vector3 dir)
     {
+        if (rigid == null)
+        {
+            return;
+        }
+
         this.damage = damage;
         this.per = per;
         this.dir = dir;
