@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8026885195831095718}
   - component: {fileID: 2204406743067520244}
   m_Layer: 0
-  m_Name: MiniShop
+  m_Name: Building1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -9,12 +9,12 @@ public class Transparnet : MonoBehaviour
 {
     public float amount;
 
-    SpriteRenderer sprite;
+    SpriteRenderer[] sprites;
     Player player;
 
     private void Awake()
     {
-        sprite = GetComponent<SpriteRenderer>();
+        sprites = GetComponentsInChildren<SpriteRenderer>();
         player = GameManager.instance.player;
     }
 
@@ -26,9 +26,13 @@ public class Transparnet : MonoBehaviour
         if (player.transform.position.y < transform.position.y) //when player is in front of the pillar
             return;
 
-        Color temp = sprite.color;
-        temp.a = amount;
-        sprite.color = temp;
+
+        foreach(SpriteRenderer sprite in sprites)
+        {
+            Color temp = sprite.color;
+            temp.a = amount;
+            sprite.color = temp;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -36,11 +40,14 @@ public class Transparnet : MonoBehaviour
         if (!collision.CompareTag("Player"))
             return;
 
-        if(sprite.color.a < 1f)
+        if (sprites[0].color.a < 1f)
         {
-            Color temp = sprite.color;
-            temp.a = 1f;
-            sprite.color = temp;
+            foreach(SpriteRenderer sprite in sprites)
+            {
+                Color temp = sprite.color;
+                temp.a = 1f;
+                sprite.color = temp;
+            }
         }
     }
 }
