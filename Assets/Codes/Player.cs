@@ -56,4 +56,37 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!GameManager.instance.isLive)
+        {
+            return;
+        }
+
+        GameManager.instance.health -= Time.fixedDeltaTime * 10;
+
+        if (GameManager.instance.health < 0)
+        {
+            for (int index = 2; index < transform.childCount; index++)
+            {
+                transform.GetChild(index).gameObject.SetActive(false);
+            }
+            StartCoroutine(Dead());
+
+        }
+    }
+
+    IEnumerator Dead()
+    {
+        // 죽을 때 밀리지 않도록 
+        rigid.bodyType = RigidbodyType2D.Kinematic;
+
+        anim.SetTrigger("Dead");
+        // duration 동안 대기
+        yield return new WaitForSeconds(4.2f);
+        GameManager.instance.GameOver();
+
+    }
+
+
 }
