@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 3300689988514514137}
   - component: {fileID: 2373859220323044929}
   - component: {fileID: 8080941715846310182}
-  - component: {fileID: 4945207659544976669}
   m_Layer: 9
   m_Name: Rock1
   m_TagString: NoSpawn
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -149,16 +148,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4945207659544976669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4613832476354547242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4894343735270fb4183bf5d3158e6a67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amount: 0.3

@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour
     public float gameTime;
     // 게임 종료 시간
     public float maxGameTime = 2 * 10f;
+
+    public float stageTime; //duration of a stage -sw
+    public int maxStageNum = 3; // max number of stages -sw
+    public int stageNum = 1; //current stage -sw
+
     [Header("# Player Info")]
     // 각 레벨의 필요경험치를 보관할 배열 변수 선언 및 초기화
     public int playerId;
@@ -35,10 +40,12 @@ public class GameManager : MonoBehaviour
     // 게임 승리할 때 적을 정리하는 클리너 변수 선언 및 초기화
     public GameObject enemyCleaner;
 
+    public Stage stage; //stage script -sw
+
     private void Awake()
     {
         instance = this;
-        
+        stageTime = maxGameTime / maxStageNum; //initiate stageTime -sw
         // test code
         AudioManager.instance.PlayBgm(true);
     }
