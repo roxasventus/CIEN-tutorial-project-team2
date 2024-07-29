@@ -26,12 +26,13 @@ public class GameManager : MonoBehaviour
     public int kill;
     public int exp;
     public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
+    public bool isInvincible;
     [Header("# Game Object")]
     public PoolManager pool;
     public Player player;
-    //public LevelUp uiLevelUp;
+    public LevelUp uiLevelUp;
     // 게임 결과 UI 오브젝트를 저장할 변수 선언 및 초기화
-    //public Result uiResult;
+    public Result uiResult;
     // 게임 승리할 때 적을 정리하는 클리너 변수 선언 및 초기화
     public GameObject enemyCleaner;
 
@@ -39,9 +40,14 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         
-        // test code
-        AudioManager.instance.PlayBgm(true);
     }
+
+    void Start()
+    {
+        health = maxHealth;
+
+    }
+
 
     public void GameStart(int id)
     {
@@ -50,10 +56,14 @@ public class GameManager : MonoBehaviour
         // 게임 시작할 때 플레이어 활성화 후 기본 무기 지급
         player.gameObject.SetActive(true);
         //uiLevelUp.Selected(playerId % 2);
+
+        // 임시 스크립트 (첫번재 캐릭터 선택)
+        uiLevelUp.Selected(0);
+
         Resume();
 
         // 효과음 재생할 부분마다 재생함수 호출
-        //AudioManager.instance.PlayBgm(true);
+        AudioManager.instance.PlayBgm(true);
         //AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
         //AudioManager.instance.EffectBgm(false);
     }
@@ -69,14 +79,14 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        //uiResult.gameObject.SetActive(true);
+        uiResult.gameObject.SetActive(true);
         
-        //uiResult.Lose();
+        uiResult.Lose();
         Stop();
 
         // 효과음 재생할 부분마다 재생함수 호출
-        //AudioManager.instance.PlayBgm(false);
-        //AudioManager.instance.PlaySfx(AudioManager.Sfx.Lose);
+        AudioManager.instance.PlayBgm(false);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Lose);
     }
 
     public void GameVictory()
@@ -92,14 +102,14 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        //uiResult.gameObject.SetActive(true);
+        uiResult.gameObject.SetActive(true);
 
-        //uiResult.Win();
+        uiResult.Win();
         Stop();
 
         // 효과음 재생할 부분마다 재생함수 호출
-        //AudioManager.instance.PlayBgm(false);
-        //AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
+        AudioManager.instance.PlayBgm(false);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
     }
 
     // 재시작
@@ -134,7 +144,7 @@ public class GameManager : MonoBehaviour
         if (exp == nextExp[Mathf.Min(level, nextExp.Length-1)]) { // 무한 레벨업을 위하여 Min 함수를 사용하여 최고 경험치를 그대로 계속 사용하도록 변경
             level++;
             exp = 0;
-            //uiLevelUp.Show();
+            uiLevelUp.Show();
         }
     }
 

@@ -202,6 +202,10 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 77b978d12f9cc2348904c3f9664edf25, type: 2}
   - {fileID: 22100000, guid: 9b5e166763198cf429452c1a8c185d9f, type: 2}
   target: {fileID: 0}
+  dropItems:
+  - {fileID: 6324477595779549143, guid: 6272840c1fc0ab843848f42e0728bfde, type: 3}
+  - {fileID: 2712549645692607287, guid: e5ce818f0b4cb294e9eec9b9ca2bdf94, type: 3}
+  percentage: 0.15
 --- !u!114 &-7734972748842739425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashColor: {r: 1, g: 1, b: 1, a: 1}
-  flashTime: 0.25
+  flashTime: 0.008
 --- !u!1 &4806890501138228511
 GameObject:
   m_ObjectHideFlags: 0

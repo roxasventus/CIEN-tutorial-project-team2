@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2508072190331844589
 Transform:
   m_ObjectHideFlags: 0
@@ -105,6 +105,8 @@ MonoBehaviour:
   isBoomerang: 1
   boomerangRotationSpeed: 300
   decRate: 3
+  isMagicCircle: 0
+  magicCircleRotationSpeed: 0
 --- !u!50 &6579473751864408436
 Rigidbody2D:
   serializedVersion: 4

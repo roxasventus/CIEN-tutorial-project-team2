@@ -31,6 +31,11 @@ public class Bullet : MonoBehaviour
 
     public void Init(float damage, int per, Vector3 dir)
     {
+        if (rigid == null)
+        {
+            return;
+        }
+
         this.damage = damage;
         this.per = per;
         this.dir = dir;
@@ -106,7 +111,7 @@ public class Bullet : MonoBehaviour
     {
 
         // 근접 무기는 관련 없음
-        if (!collision.CompareTag("Area") || per == -100)
+        if (!collision.CompareTag("Area") )
             return;
         // 원거리 무기일때
         gameObject.SetActive(false);

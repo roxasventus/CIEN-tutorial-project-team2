@@ -9,16 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f32c2521a87ef1d48a72c8e1a9947498, type: 3}
+  m_Script: {fileID: 11500000, guid: 644b90f2d71fec9448f3e1abd46b8363, type: 3}
   m_Name: Item 7
   m_EditorClassIdentifier: 
-  itemType: 1
+  itemType: 2
   itemId: 6
-  itemName: 
-  itemDesc: "\uB79C\uB364\uC7A5\uD310"
-  itemIcon: {fileID: 0}
-  baseDamage: 15
-  baseCount: 0
+  itemName: "\uB79C\uB364 \uB9C8\uBC95\uC9C4"
+  itemDesc: "\uB9C8\uBC95\uC9C4 {0}\uAC1C \uC99D\uAC00"
+  itemIcon: {fileID: 21300000, guid: 1cfef84e782437c4f98747b538ade04a, type: 3}
+  baseDamage: 3
+  baseCount: 3
   damages:
   - 0.5
   - 1
@@ -26,4 +26,11 @@ MonoBehaviour:
   - 2
   - 2.5
   counts: 0100000001000000010000000100000001000000
+  baseMagicCircleWait: 3
+  magicCircleWaits:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   projectile: {fileID: 1845000503810146723, guid: 72288692123bbe2439194699ad3fc855, type: 3}
