@@ -28,6 +28,10 @@ public class HUD : MonoBehaviour
                 float curExp = GameManager.instance.exp;
                 float maxExp = GameManager.instance.nextExp[GameManager.instance.level];
                 mySlider.value = curExp / maxExp;
+                if (mySlider.value == 0 && GameObject.Find("LevelUp").transform.localScale == Vector3.one)
+                {
+                    mySlider.value = 1;
+                }
                 break;
             case InfoType.Level:
                 // Format: 각 숫자 인자값을 지정된 형태의 문자열로 만들어주는 함수 

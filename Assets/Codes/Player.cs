@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public Vector2 inputVec;
     public float speed;
     public Scanner scanner;
+    public Player player;
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
@@ -63,7 +64,8 @@ public class Player : MonoBehaviour
             return;
         }
 
-        GameManager.instance.health -= Time.fixedDeltaTime * 10;
+        if (GameManager.instance.isInvincible == false)
+            GameManager.instance.health -= Time.fixedDeltaTime * 10;
 
         if (GameManager.instance.health < 0)
         {
