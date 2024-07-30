@@ -1,0 +1,906 @@
+fileFormatVersion: 2
+guid: a2a722b226594954a9f1e460a5b2ead4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2790d66dd860ef443b55212eb3278bcf
+      internalID: -2039638349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_17
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1e1c0c03310664e852356f6487187e
+      internalID: -1250699099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf2b9fa75d6b2b4bab3c2d83b2149a6
+      internalID: -2021631862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01029ed12f5d4c04eb2a58f181c1eec6
+      internalID: -1708489428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_21
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7e9309d55c6054dad829c99b386582
+      internalID: 1229079955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_25
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e43cae5eeb70a44ad4b5e1aba751eb
+      internalID: 2030344156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7593907d94b0346aeda6816603380d
+      internalID: -684968246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42faf1f96ef02d641a40f244ca79c774
+      internalID: -518044925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c49d521a829174d966ddd5fb7bc5d6
+      internalID: -1220159050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_39
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac8892da4611dc4f821c008b89f3ff6
+      internalID: -408121288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aea88983023d6c4ea8ea63556740544
+      internalID: -1943619715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_45
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23adba8e7c5dfda4fb06714c4e773d25
+      internalID: 1600415546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_46
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2730e68e12905794a9ea0fa0d623649d
+      internalID: -440511076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_47
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0048e32d8c6e66f4cac378045065e259
+      internalID: 1402482353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e791bba0de3b7ff40ba902e1192cf046
+      internalID: -1337032926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_59
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32f3a7f2fde23c459c9e5a945f00782
+      internalID: -1741417981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_60
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82fab6167bc0060449c36d9157d07907
+      internalID: 627992206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_61
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e712ec4fe5a56444580a33c4c42e3338
+      internalID: -453121419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3be87976ce796a429ffd674eebf5b95
+      internalID: -1622210140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_73
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f9e1c474a7c0f489fb0e9331b31202
+      internalID: -1376857549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_74
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6ae97a9554de342a987ef9979fad85
+      internalID: 2097920826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e4bd80237997d47855c71cb2f81c01
+      internalID: 687130506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_89
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248e1cd2dc9b49a429f9fcb3239cd2e0
+      internalID: -193992233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_94
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a29544f3936814b83c1baa7cb223b5
+      internalID: -223258071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_95
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0384c756448499745b78cf7d2de226b6
+      internalID: -197446257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_BircksandWalls_Free_99
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954cadcf5968eaf43b0ad870e79394c8
+      internalID: 20443769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tiles_BircksandWalls_Free_0: -862882101
+      Tiles_BircksandWalls_Free_1: -14345905
+      Tiles_BircksandWalls_Free_10: -1714515040
+      Tiles_BircksandWalls_Free_100: -1169724178
+      Tiles_BircksandWalls_Free_101: -1301273204
+      Tiles_BircksandWalls_Free_102: -1611214680
+      Tiles_BircksandWalls_Free_103: 2107200545
+      Tiles_BircksandWalls_Free_104: 675868011
+      Tiles_BircksandWalls_Free_105: 1480781063
+      Tiles_BircksandWalls_Free_106: 1486591167
+      Tiles_BircksandWalls_Free_107: 804572317
+      Tiles_BircksandWalls_Free_108: -494584310
+      Tiles_BircksandWalls_Free_109: -1822330943
+      Tiles_BircksandWalls_Free_11: 346837678
+      Tiles_BircksandWalls_Free_110: -1456585424
+      Tiles_BircksandWalls_Free_111: 445070048
+      Tiles_BircksandWalls_Free_112: -469514892
+      Tiles_BircksandWalls_Free_113: 1210697037
+      Tiles_BircksandWalls_Free_114: 300780633
+      Tiles_BircksandWalls_Free_115: 1827409662
+      Tiles_BircksandWalls_Free_116: -580156476
+      Tiles_BircksandWalls_Free_117: -1510313981
+      Tiles_BircksandWalls_Free_118: -1844520432
+      Tiles_BircksandWalls_Free_119: -1023138298
+      Tiles_BircksandWalls_Free_12: -1049646045
+      Tiles_BircksandWalls_Free_120: -638819808
+      Tiles_BircksandWalls_Free_121: 899296841
+      Tiles_BircksandWalls_Free_122: 1440554932
+      Tiles_BircksandWalls_Free_123: -727884818
+      Tiles_BircksandWalls_Free_124: 747352853
+      Tiles_BircksandWalls_Free_125: -851543551
+      Tiles_BircksandWalls_Free_126: -644741011
+      Tiles_BircksandWalls_Free_127: 1846086856
+      Tiles_BircksandWalls_Free_128: -1034284695
+      Tiles_BircksandWalls_Free_129: 1864197956
+      Tiles_BircksandWalls_Free_13: -1425799245
+      Tiles_BircksandWalls_Free_130: -284174515
+      Tiles_BircksandWalls_Free_131: 781365527
+      Tiles_BircksandWalls_Free_132: 203295356
+      Tiles_BircksandWalls_Free_133: -1575666247
+      Tiles_BircksandWalls_Free_134: 2010149554
+      Tiles_BircksandWalls_Free_135: -1907616277
+      Tiles_BircksandWalls_Free_136: -1272421874
+      Tiles_BircksandWalls_Free_137: 2021433169
+      Tiles_BircksandWalls_Free_138: 556049347
+      Tiles_BircksandWalls_Free_139: 1473989615
+      Tiles_BircksandWalls_Free_14: -899595465
+      Tiles_BircksandWalls_Free_140: -827097102
+      Tiles_BircksandWalls_Free_141: -1334432186
+      Tiles_BircksandWalls_Free_142: -1323246806
+      Tiles_BircksandWalls_Free_143: 550784801
+      Tiles_BircksandWalls_Free_144: -1903420261
+      Tiles_BircksandWalls_Free_145: -187611720
+      Tiles_BircksandWalls_Free_146: 1281004433
+      Tiles_BircksandWalls_Free_147: -102479996
+      Tiles_BircksandWalls_Free_148: 1771499778
+      Tiles_BircksandWalls_Free_149: 1526812692
+      Tiles_BircksandWalls_Free_15: 499914420
+      Tiles_BircksandWalls_Free_150: 1753029436
+      Tiles_BircksandWalls_Free_151: 255629828
+      Tiles_BircksandWalls_Free_152: -2120161704
+      Tiles_BircksandWalls_Free_153: -558650863
+      Tiles_BircksandWalls_Free_154: 2083333435
+      Tiles_BircksandWalls_Free_155: -558812161
+      Tiles_BircksandWalls_Free_156: 72517385
+      Tiles_BircksandWalls_Free_157: 1048269232
+      Tiles_BircksandWalls_Free_158: 1558423492
+      Tiles_BircksandWalls_Free_159: -700158273
+      Tiles_BircksandWalls_Free_16: -2039638349
+      Tiles_BircksandWalls_Free_160: -1837417011
+      Tiles_BircksandWalls_Free_161: 1584211945
+      Tiles_BircksandWalls_Free_162: 1434622801
+      Tiles_BircksandWalls_Free_163: 1076815856
+      Tiles_BircksandWalls_Free_164: -888338921
+      Tiles_BircksandWalls_Free_165: 804657796
+      Tiles_BircksandWalls_Free_166: -1727783509
+      Tiles_BircksandWalls_Free_167: -1092491924
+      Tiles_BircksandWalls_Free_168: -406746200
+      Tiles_BircksandWalls_Free_169: -1199355660
+      Tiles_BircksandWalls_Free_17: -1250699099
+      Tiles_BircksandWalls_Free_170: -1728765930
+      Tiles_BircksandWalls_Free_171: 1212424400
+      Tiles_BircksandWalls_Free_172: -730668109
+      Tiles_BircksandWalls_Free_173: -77727378
+      Tiles_BircksandWalls_Free_174: 1286270876
+      Tiles_BircksandWalls_Free_175: 1050595780
+      Tiles_BircksandWalls_Free_176: 1499576998
+      Tiles_BircksandWalls_Free_177: -965208404
+      Tiles_BircksandWalls_Free_178: 1298172476
+      Tiles_BircksandWalls_Free_179: -725521644
+      Tiles_BircksandWalls_Free_18: -2021631862
+      Tiles_BircksandWalls_Free_180: -520228896
+      Tiles_BircksandWalls_Free_181: 1726807981
+      Tiles_BircksandWalls_Free_182: 156026854
+      Tiles_BircksandWalls_Free_183: -1558259358
+      Tiles_BircksandWalls_Free_184: 1439738626
+      Tiles_BircksandWalls_Free_185: -1975679285
+      Tiles_BircksandWalls_Free_186: 1226909596
+      Tiles_BircksandWalls_Free_187: 1733069898
+      Tiles_BircksandWalls_Free_188: 1896648757
+      Tiles_BircksandWalls_Free_189: -237756430
+      Tiles_BircksandWalls_Free_19: 1763566243
+      Tiles_BircksandWalls_Free_190: 1438977826
+      Tiles_BircksandWalls_Free_191: 1261287532
+      Tiles_BircksandWalls_Free_192: -1273835581
+      Tiles_BircksandWalls_Free_193: -2058258638
+      Tiles_BircksandWalls_Free_194: 728852220
+      Tiles_BircksandWalls_Free_195: -1611186067
+      Tiles_BircksandWalls_Free_196: -722639697
+      Tiles_BircksandWalls_Free_197: -500047223
+      Tiles_BircksandWalls_Free_198: -796250989
+      Tiles_BircksandWalls_Free_199: 1232852162
+      Tiles_BircksandWalls_Free_2: 226112553
+      Tiles_BircksandWalls_Free_20: -1708489428
+      Tiles_BircksandWalls_Free_200: 1586049771
+      Tiles_BircksandWalls_Free_201: -1135379848
+      Tiles_BircksandWalls_Free_202: 207202226
+      Tiles_BircksandWalls_Free_203: 362306046
+      Tiles_BircksandWalls_Free_204: 257463960
+      Tiles_BircksandWalls_Free_205: -1402688605
+      Tiles_BircksandWalls_Free_206: 1538021506
+      Tiles_BircksandWalls_Free_207: 1684454329
+      Tiles_BircksandWalls_Free_208: -519022550
+      Tiles_BircksandWalls_Free_209: 1815373200
+      Tiles_BircksandWalls_Free_21: 1229079955
+      Tiles_BircksandWalls_Free_210: -1967505492
+      Tiles_BircksandWalls_Free_211: 625090670
+      Tiles_BircksandWalls_Free_212: 883157991
+      Tiles_BircksandWalls_Free_213: -1835930848
+      Tiles_BircksandWalls_Free_214: 2070952740
+      Tiles_BircksandWalls_Free_215: -432625390
+      Tiles_BircksandWalls_Free_216: -1685694283
+      Tiles_BircksandWalls_Free_217: 996209303
+      Tiles_BircksandWalls_Free_218: 2019479123
+      Tiles_BircksandWalls_Free_219: -1772187897
+      Tiles_BircksandWalls_Free_22: 256765213
+      Tiles_BircksandWalls_Free_23: -854065555
+      Tiles_BircksandWalls_Free_24: -982273423
+      Tiles_BircksandWalls_Free_25: 2030344156
+      Tiles_BircksandWalls_Free_26: -543315157
+      Tiles_BircksandWalls_Free_27: -1199444363
+      Tiles_BircksandWalls_Free_28: 783682533
+      Tiles_BircksandWalls_Free_29: 1256848382
+      Tiles_BircksandWalls_Free_3: -1936557204
+      Tiles_BircksandWalls_Free_30: -684968246
+      Tiles_BircksandWalls_Free_31: -518044925
+      Tiles_BircksandWalls_Free_32: 2051671905
+      Tiles_BircksandWalls_Free_33: -1182565428
+      Tiles_BircksandWalls_Free_34: -1220159050
+      Tiles_BircksandWalls_Free_35: 1554503818
+      Tiles_BircksandWalls_Free_36: 796708308
+      Tiles_BircksandWalls_Free_37: -121534580
+      Tiles_BircksandWalls_Free_38: -1844696171
+      Tiles_BircksandWalls_Free_39: -408121288
+      Tiles_BircksandWalls_Free_4: 1473759606
+      Tiles_BircksandWalls_Free_40: -826063498
+      Tiles_BircksandWalls_Free_41: -131468549
+      Tiles_BircksandWalls_Free_42: 118327714
+      Tiles_BircksandWalls_Free_43: 1924128622
+      Tiles_BircksandWalls_Free_44: -1943619715
+      Tiles_BircksandWalls_Free_45: 1600415546
+      Tiles_BircksandWalls_Free_46: -440511076
+      Tiles_BircksandWalls_Free_47: 1402482353
+      Tiles_BircksandWalls_Free_48: -1139959619
+      Tiles_BircksandWalls_Free_49: 1666260002
+      Tiles_BircksandWalls_Free_5: 1792649425
+      Tiles_BircksandWalls_Free_50: -12991288
+      Tiles_BircksandWalls_Free_51: -206801896
+      Tiles_BircksandWalls_Free_52: 663287448
+      Tiles_BircksandWalls_Free_53: 327617306
+      Tiles_BircksandWalls_Free_54: 1704080275
+      Tiles_BircksandWalls_Free_55: -2053571696
+      Tiles_BircksandWalls_Free_56: 1726745016
+      Tiles_BircksandWalls_Free_57: -59180784
+      Tiles_BircksandWalls_Free_58: -1337032926
+      Tiles_BircksandWalls_Free_59: -1741417981
+      Tiles_BircksandWalls_Free_6: 1874973361
+      Tiles_BircksandWalls_Free_60: 627992206
+      Tiles_BircksandWalls_Free_61: -453121419
+      Tiles_BircksandWalls_Free_62: 446230686
+      Tiles_BircksandWalls_Free_63: 1351396120
+      Tiles_BircksandWalls_Free_64: -1645611958
+      Tiles_BircksandWalls_Free_65: -1267067360
+      Tiles_BircksandWalls_Free_66: 2131220268
+      Tiles_BircksandWalls_Free_67: -1516333686
+      Tiles_BircksandWalls_Free_68: 1659601201
+      Tiles_BircksandWalls_Free_69: 1490215515
+      Tiles_BircksandWalls_Free_7: 718156190
+      Tiles_BircksandWalls_Free_70: 1636321910
+      Tiles_BircksandWalls_Free_71: 1614559697
+      Tiles_BircksandWalls_Free_72: -1622210140
+      Tiles_BircksandWalls_Free_73: -1376857549
+      Tiles_BircksandWalls_Free_74: 2097920826
+      Tiles_BircksandWalls_Free_75: -1252734514
+      Tiles_BircksandWalls_Free_76: 1497856995
+      Tiles_BircksandWalls_Free_77: 198585654
+      Tiles_BircksandWalls_Free_78: 1268439026
+      Tiles_BircksandWalls_Free_79: 139172871
+      Tiles_BircksandWalls_Free_8: -117103471
+      Tiles_BircksandWalls_Free_80: 667040358
+      Tiles_BircksandWalls_Free_81: -1944022351
+      Tiles_BircksandWalls_Free_82: 81600039
+      Tiles_BircksandWalls_Free_83: 1005901730
+      Tiles_BircksandWalls_Free_84: -2092794551
+      Tiles_BircksandWalls_Free_85: -2129290840
+      Tiles_BircksandWalls_Free_86: 1129545060
+      Tiles_BircksandWalls_Free_87: 322990436
+      Tiles_BircksandWalls_Free_88: 687130506
+      Tiles_BircksandWalls_Free_89: -193992233
+      Tiles_BircksandWalls_Free_9: -1913940550
+      Tiles_BircksandWalls_Free_90: 805277061
+      Tiles_BircksandWalls_Free_91: 663589994
+      Tiles_BircksandWalls_Free_92: -121471911
+      Tiles_BircksandWalls_Free_93: -849731913
+      Tiles_BircksandWalls_Free_94: -223258071
+      Tiles_BircksandWalls_Free_95: -197446257
+      Tiles_BircksandWalls_Free_96: 645661257
+      Tiles_BircksandWalls_Free_97: 1296723427
+      Tiles_BircksandWalls_Free_98: 2046484523
+      Tiles_BircksandWalls_Free_99: 20443769
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
