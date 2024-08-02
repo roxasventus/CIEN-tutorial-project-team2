@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -7,43 +8,102 @@ public class Player : MonoBehaviour
     public Vector2 inputVec;
     public float speed;
     public Scanner scanner;
+    public Player player;
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
     Animator anim;
+    DamageFlash damageFlash;
 
-    // ½ÃÀÛÇÒ ¶§ ÇÑ¹ø¸¸ ½ÇÇàµÇ´Â »ý¸íÁÖ±â Awake
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ Awake
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         scanner = GetComponent<Scanner>();
+        damageFlash = GetComponent<DamageFlash>();
     }
 
     void Update()
     {
-        inputVec.x = Input.GetAxisRaw("Horizontal");
-        inputVec.y = Input.GetAxisRaw("Vertical");
+        if (!GameManager.instance.isLive)
+            return;
+        if (GameManager.instance.health < 0)
+        {
+            inputVec = Vector2.zero;
+        }
+        else {
+            inputVec.x = Input.GetAxisRaw("Horizontal");
+            inputVec.y = Input.GetAxisRaw("Vertical");
+        }
     }
 
-    // ¹°¸® ¿¬»ê ÇÁ·¹ÀÓ¸¶´Ù È£ÃâµÇ´Â »ý¸íÁÖ±â FixedUpdate
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ó¸ï¿½ï¿½ï¿½ È£ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ FixedUpdate
     void FixedUpdate()
     {
-        // ´ÜÀ§º¤ÅÍ·Î ¸¸µé¾î¾ß ÇÃ·¹ÀÌ¾î°¡ Áö³ªÄ¡°Ô »¡¸® ¿òÁ÷ÀÌ´Â °ÍÀ» ¸·À» ¼ö ÀÖ´Ù
-        Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime; // Time.fixedDeltaTime: ¹°¸® ÇÁ·¹ÀÓ ÇÏ³ª°¡ ¼ÒºñÇÑ ½Ã°£
-        rigid.MovePosition(rigid.position + nextVec); // rigid.position: ÇöÀç À§Ä¡ 
+        if (!GameManager.instance.isLive)
+            return;
+
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½
+        Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime; // Time.fixedDeltaTime: ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½Òºï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
+        rigid.MovePosition(rigid.position + nextVec); // rigid.position: ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ 
     }
 
-    // ÇÁ·¹ÀÓÀÌ Á¾·á µÇ±â Àü ½ÇÇàµÇ´Â »ý¸íÁÖ±â ÇÔ¼ö
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç±ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ ï¿½Ô¼ï¿½
     private void LateUpdate()
     {
-        // ¾Ö´Ï¸ÞÀÌÅÍ¿¡¼­ ¼³Á¤ÇÑ ÆÄ¶ó¸ÞÅÍ Å¸ÀÔ°ú µ¿ÀÏÇÑ ÇÔ¼ö ÀÛ¼º
-        anim.SetFloat("Speed", inputVec.magnitude); // (ÆÄ¶ó¸ÞÅÍ ÀÌ¸§, ¹Ý¿µÇÒ float °ª) // magnitude: º¤ÅÍÀÇ ¼ø¼öÇÑ Å©±â °ª
-        // ½ºÇÁ¶óÀÌÆ® ¹æÇâ
+        if (!GameManager.instance.isLive)
+            return;
+
+        // ï¿½Ö´Ï¸ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½Ô°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ ï¿½Û¼ï¿½
+        anim.SetFloat("Speed", inputVec.magnitude); // (ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½, ï¿½Ý¿ï¿½ï¿½ï¿½ float ï¿½ï¿½) // magnitude: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å©ï¿½ï¿½ ï¿½ï¿½
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
         if (inputVec.x != 0)
         {
             spriter.flipX = inputVec.x < 0;
         }
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (!GameManager.instance.isLive)
+        {
+            return;
+        }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if (GameManager.instance.isInvincible == false)
+            { 
+            GameManager.instance.health -= Time.fixedDeltaTime * 10;
+            //damage flash effect
+            damageFlash.CallDamageFlash();
+            }
+
+            if (GameManager.instance.health < 0)
+            {
+                for (int index = 2; index < transform.childCount; index++)
+                {
+                    transform.GetChild(index).gameObject.SetActive(false);
+                }
+                StartCoroutine(Dead());
+
+            }
+        }
+    }
+
+    IEnumerator Dead()
+    {
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ð¸ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ 
+        rigid.bodyType = RigidbodyType2D.Kinematic;
+
+        anim.SetTrigger("Dead");
+        // duration ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        yield return new WaitForSeconds(4.2f);
+        GameManager.instance.GameOver();
+
+    }
+
+
 }

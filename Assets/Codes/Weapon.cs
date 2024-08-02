@@ -23,17 +23,22 @@ public class Weapon : MonoBehaviour
     private void Awake()
     {
         // GetComponentInParent 함수로 부모의 컴포넌트 가져오기
-        player = GetComponentInParent<Player>();
-    }
+        //player = GetComponentInParent<Player>();
+        player = GameManager.instance.player;
 
+    }
+    /*
     private void Start()
     {
         Init();
     }
-
+    */
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.instance.isLive)
+            return;
+
         // 무기 ID에 따라 로직을 분리
         switch (id)
         {
@@ -123,24 +128,51 @@ public class Weapon : MonoBehaviour
                 break;
         }
 
-        // .. Test Code ..
-        if (Input.GetButtonDown("Jump"))
-        {
-            LevelUp(10, 1);
-        }
     }
 
-    public void LevelUp(float damage, int count)
+    public void LevelUp(float damage, int count, float magicCircleWait)
     {
         this.damage = damage;
         this.count += count;
+        this.magicCircleWait += magicCircleWait;
 
         if (id == 0)
             Batch();
+        player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
 
-    public void Init()
+    public void Init(ItemData data)
     {
+        // Basic Set
+        name = "Weapon " + data.itemId;
+        // 부모 오브젝트를 플레이어로 지정
+        transform.parent = player.transform;
+        // 지역 위치인 localPosition을 원점으로 변경
+        transform.localPosition = Vector3.zero;
+
+        // Property Set
+        // 각종 무기 속성 변수들을 스크립트블 오브젝트 데이터로 초기화
+        id = data.itemId;
+        damage = data.baseDamage;
+        count = data.baseCount;
+        magicCircleWait = data.baseMagicCircleWait;
+
+
+
+        // 고정 장판 활성화
+        if (id == 5)
+            prefabId = 6;
+
+        for (int index = 0; index < GameManager.instance.pool.prefabs.Length; index++)
+        {
+            if (data.projectile == GameManager.instance.pool.prefabs[index])
+            {
+                prefabId = index;
+                break;
+            }
+        }
+
+
         // 무기 ID에 따라 로직을 분리
         switch (id)
         {
@@ -174,6 +206,10 @@ public class Weapon : MonoBehaviour
                 speed = 5f;
                 break;
         }
+        // 나중에 추가된 무기도 레벨업 된 장비의 영향을 받아야 한다
+        // BroadcastMessage: 특정 함수호출을 모든 자식에게 방송하는 함수
+        player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
+
     }
 
     // 생성된 무기를 배치하는 함수
@@ -344,7 +380,7 @@ public class Weapon : MonoBehaviour
             {
                 bullet = GameManager.instance.pool.Get(prefabId).transform;
                 // 갓 생성된 탄환의 부모는 PoolManager이다. 갓 생성된 탄환은 플레이어를 따라가야 하므로 부모를 플레이어의 자식 오브젝트인 Weapon 7로 바꿔야 한다. 
-                bullet.parent = GameObject.Find("Weapon7").transform; ; // parent 속성을 통해 부모 변경
+                bullet.parent = GameObject.Find("Player").transform; ; // parent 속성을 통해 부모 변경
             }
 
             bullet.GetComponent<Rigidbody2D>().velocity = transform.forward * speed;
@@ -378,7 +414,8 @@ public class Weapon : MonoBehaviour
 
     IEnumerator Disable(float duration, Transform bullet)
     {
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.final_attack);
+        if(bullet.localScale != Vector3.zero)
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.final_attack);
         yield return new WaitForSeconds(duration);
         bullet.localScale = Vector3.zero;
     }

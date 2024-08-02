@@ -23,6 +23,9 @@ public class Enemy : MonoBehaviour
     WaitForFixedUpdate wait;
     DamageFlash damageFlash;
 
+    public GameObject[] dropItems;
+    public float percentage;
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -83,6 +86,11 @@ public class Enemy : MonoBehaviour
 
     public void Init(SpawnData data)
     {
+        if (anim == null)
+        {
+            return;
+        }
+
         switch (data.spriteType)
         {
             case 0:
@@ -127,6 +135,10 @@ public class Enemy : MonoBehaviour
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
             GameManager.instance.GetExp();
+
+            if (Random.Range(0.0f, 1.0f) <= percentage) {
+                Instantiate(dropItems[Random.Range(0, 2)], transform.position, Quaternion.identity);
+            }
             // 효과음 재생할 부분마다 재생함수 호출
             if (GameManager.instance.isLive)
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);

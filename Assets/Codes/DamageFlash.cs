@@ -7,33 +7,37 @@ using UnityEngine.UIElements;
 //use coroutine to make gradual effect (not one time flash)
 
 public class DamageFlash : MonoBehaviour
-{
-    [SerializeField] private Color flashColor = Color.white;
-    [SerializeField] private float flashTime = 0.25f;
+{   
+    [ColorUsage(true, true)]
+    [SerializeField] private Color _flashColor = Color.white;
+    [SerializeField] private float _flashTime = 0.25f;
+    [SerializeField] private AnimationCurve _flashSpeedCurve;
 
-    private SpriteRenderer[] spriteRenderers;
-    private Material[] materials;
+    private SpriteRenderer[] _spriteRenderers;
+    private Material[] _materials;
+
+    private Coroutine _damageFlashCoroutine;
 
     private void Awake()
     {
-        spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+        _spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
 
         Init();
     }
 
     private void Init()
     {
-        materials = new Material[spriteRenderers.Length];
+        _materials = new Material[_spriteRenderers.Length];
 
-        for(int i = 0; i < spriteRenderers.Length; i++)
+        for(int i = 0; i < _spriteRenderers.Length; i++)
         {
-            materials[i] = spriteRenderers[i].material;
+            _materials[i] = _spriteRenderers[i].material;
         }
     }
 
     public void CallDamageFlash()
     {
-        StartCoroutine(DamageFlasher());
+        _damageFlashCoroutine = StartCoroutine(DamageFlasher());
     }
 
     private IEnumerator DamageFlasher()
@@ -43,12 +47,12 @@ public class DamageFlash : MonoBehaviour
         //Lerp the flash amount
         float currentFlashAmount = 0f;
         float elapsedTime = 0f;
-        while(elapsedTime < flashTime)
+        while(elapsedTime < _flashTime)
         {
             //iterate elapsedTime
             elapsedTime += Time.deltaTime;
             //lerp the flash amount
-            currentFlashAmount = Mathf.Lerp(1f, 0f, (elapsedTime / flashTime));
+            currentFlashAmount = Mathf.Lerp(1f, _flashSpeedCurve.Evaluate(elapsedTime), (elapsedTime / _flashTime));
             SetFlashAmount(currentFlashAmount);
 
             yield return null;
@@ -58,18 +62,18 @@ public class DamageFlash : MonoBehaviour
     private void SetFlashColor()
     {
         //set the color
-        for(int i = 0; i < materials.Length; i++)
+        for(int i = 0; i < _materials.Length; i++)
         {
-            materials[i].SetColor("_FlashColor", flashColor);
+            _materials[i].SetColor("_FlashColor", _flashColor);
         }
     }
 
     private void SetFlashAmount(float amount)
     {
         //set the flash amount
-        for(int i = 0; i < materials.Length; i++)
+        for(int i = 0; i < _materials.Length; i++)
         {
-            materials[i].SetFloat("_FlashAmount", amount);
+            _materials[i].SetFloat("_FlashAmount", amount);
         }
     }
 }
