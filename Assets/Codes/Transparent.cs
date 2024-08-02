@@ -4,17 +4,26 @@ using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Transparnet : MonoBehaviour
 {
     public float amount;
 
     SpriteRenderer[] sprites;
+    Tilemap tilemap;
     Player player;
 
     private void Awake()
     {
-        sprites = GetComponentsInChildren<SpriteRenderer>();
+        if(transform.tag == "Foreground")
+        {
+            tilemap = GetComponent<Tilemap>();
+        }
+        else
+        {
+            sprites = GetComponentsInChildren<SpriteRenderer>();
+        }
         player = GameManager.instance.player;
     }
 
@@ -26,12 +35,20 @@ public class Transparnet : MonoBehaviour
         if (player.transform.position.y < transform.position.y) //when player is in front of the pillar
             return;
 
-
-        foreach(SpriteRenderer sprite in sprites)
+        if(transform.tag == "Foreground")
         {
-            Color temp = sprite.color;
+            Color temp = tilemap.color;
             temp.a = amount;
-            sprite.color = temp;
+            tilemap.color = temp;
+        }
+        else
+        {
+            foreach (SpriteRenderer sprite in sprites)
+            {
+                Color temp = sprite.color;
+                temp.a = amount;
+                sprite.color = temp;
+            }
         }
     }
 
@@ -40,7 +57,13 @@ public class Transparnet : MonoBehaviour
         if (!collision.CompareTag("Player"))
             return;
 
-        if (sprites[0].color.a < 1f)
+        if(transform.tag == "Foreground")
+        {
+            Color temp = tilemap.color;
+            temp.a = 1f;
+            tilemap.color = temp;
+        }
+        else
         {
             foreach(SpriteRenderer sprite in sprites)
             {
