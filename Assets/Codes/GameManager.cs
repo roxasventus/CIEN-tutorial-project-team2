@@ -53,18 +53,16 @@ public class GameManager : MonoBehaviour
     {
         playerId = id;
         health = maxHealth;
-        // 게임 시작할 때 플레이어 활성화 후 기본 무기 지급
         player.gameObject.SetActive(true);
-        //uiLevelUp.Selected(playerId % 2);
-
-        // 임시 스크립트 (첫번재 캐릭터 선택)
-        uiLevelUp.Selected(0);
+        
+        // 게임 시작할 때 플레이어 활성화 후 기본 무기 지급
+        uiLevelUp.Selected(playerId);
 
         Resume();
 
         // 효과음 재생할 부분마다 재생함수 호출
         AudioManager.instance.PlayBgm(true);
-        //AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
         //AudioManager.instance.EffectBgm(false);
     }
 

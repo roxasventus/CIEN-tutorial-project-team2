@@ -20,12 +20,24 @@ public class LevelUp : MonoBehaviour
         Next();
         rect.localScale = Vector3.one;
         GameManager.instance.Stop();
+        // 효과음 재생할 부분마다 재생함수 호출
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.LevelUp);
+        // 레벨 업 UI가 나타날 때 필터를 키도록하는 함수
+        AudioManager.instance.EffectBgm(true);
+
+
     }
 
     public void Hide()
     {
         rect.localScale = Vector3.zero;
         GameManager.instance.Resume();
+        // 효과음 재생할 부분마다 재생함수 호출
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
+        // 레벨 업 UI가 사라지면 끄도록하는 함수
+        AudioManager.instance.EffectBgm(false);
+
+
     }
 
     // 버튼을 대신 눌러주는 함수 작성

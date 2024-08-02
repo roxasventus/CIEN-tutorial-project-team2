@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -12,6 +13,7 @@ public class Player : MonoBehaviour
     Rigidbody2D rigid;
     SpriteRenderer spriter;
     Animator anim;
+    DamageFlash damageFlash;
 
     // 시작할 때 한번만 실행되는 생명주기 Awake
     void Awake()
@@ -20,15 +22,21 @@ public class Player : MonoBehaviour
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         scanner = GetComponent<Scanner>();
+        damageFlash = GetComponent<DamageFlash>();
     }
 
     void Update()
     {
         if (!GameManager.instance.isLive)
             return;
-
-        inputVec.x = Input.GetAxisRaw("Horizontal");
-        inputVec.y = Input.GetAxisRaw("Vertical");
+        if (GameManager.instance.health < 0)
+        {
+            inputVec = Vector2.zero;
+        }
+        else {
+            inputVec.x = Input.GetAxisRaw("Horizontal");
+            inputVec.y = Input.GetAxisRaw("Vertical");
+        }
     }
 
     // 물리 연산 프레임마다 호출되는 생명주기 FixedUpdate
@@ -57,24 +65,31 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (!GameManager.instance.isLive)
         {
             return;
         }
 
-        if (GameManager.instance.isInvincible == false)
-            GameManager.instance.health -= Time.fixedDeltaTime * 10;
-
-        if (GameManager.instance.health < 0)
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            for (int index = 2; index < transform.childCount; index++)
-            {
-                transform.GetChild(index).gameObject.SetActive(false);
+            if (GameManager.instance.isInvincible == false)
+            { 
+            GameManager.instance.health -= Time.fixedDeltaTime * 10;
+            //damage flash effect
+            damageFlash.CallDamageFlash();
             }
-            StartCoroutine(Dead());
 
+            if (GameManager.instance.health < 0)
+            {
+                for (int index = 2; index < transform.childCount; index++)
+                {
+                    transform.GetChild(index).gameObject.SetActive(false);
+                }
+                StartCoroutine(Dead());
+
+            }
         }
     }
 
