@@ -33,7 +33,6 @@ Transform:
   - {fileID: 7618109131821098200}
   - {fileID: 7167960500760840702}
   - {fileID: 4533711919016609579}
-  - {fileID: 4426015787986703448}
   m_Father: {fileID: 580788116465849103}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &732505147657831169
@@ -28293,7 +28292,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -28353,7 +28352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3282998070352820273}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -28362,7 +28361,7 @@ Transform:
   - {fileID: 6684847693593580506}
   - {fileID: 113473186770860800}
   - {fileID: 5941178439642913275}
-  m_Father: {fileID: 1950082306098167438}
+  m_Father: {fileID: 5368310108584639962}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3326921263511040577
 GameObject:
@@ -29735,6 +29734,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4739330485781880971}
+  - {fileID: 4426015787986703448}
   m_Father: {fileID: 580788116465849103}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &4298531182428864416

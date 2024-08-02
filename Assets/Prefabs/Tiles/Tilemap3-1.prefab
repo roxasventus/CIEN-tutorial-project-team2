@@ -1577,14 +1577,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892741306369524676}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3042841777143398724}
   - {fileID: 475146220990890583}
-  m_Father: {fileID: 6842638024919404830}
+  m_Father: {fileID: 2971527550570776245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2732160675026729190
 GameObject:
@@ -24217,7 +24217,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -29971,6 +29971,7 @@ Transform:
   - {fileID: 2147941020245101968}
   - {fileID: 3033626105928641650}
   - {fileID: 5328399990002932126}
+  - {fileID: 7103057135868712754}
   m_Father: {fileID: 580788116465849103}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7399575053275795685
@@ -31174,7 +31175,6 @@ Transform:
   - {fileID: 3931018903757334484}
   - {fileID: 882831631582062484}
   - {fileID: 2969733171455850131}
-  - {fileID: 7103057135868712754}
   - {fileID: 6003568026656982337}
   m_Father: {fileID: 580788116465849103}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31746,7 +31746,7 @@ Tilemap:
       - {fileID: 21300000, guid: 990da9e5f58c5eb4e95dad754349a49f, type: 3}
       - {fileID: 21300000, guid: b9e6d0b4f63a2ad4da7fffa243111855, type: 3}
       - {fileID: 21300000, guid: 845b47e9634348144aa93e6064a3d1e0, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 10, y: 7, z: 0}
