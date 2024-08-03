@@ -1,29 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // ��� ����
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // static: �������� ����ϰڴٴ� Ű����. �ٷ� �޸𸮿� ������. � �ν��Ͻ��������� ���� ����
-    // static���� ����� ������ �ν����Ϳ� ��Ÿ���� �ʴ´�
+   
     public static GameManager instance;
 
-    // Header: �ν������� �Ӽ����� �̻ڰ� ���н����ִ� Ÿ��Ʋ
+    
     [Header("# Game control")]
-    // �ð� ���� ���θ� �˷��ִ� bool ���� ����
     public bool isLive;
-    // ���� ���� �ð�
     public float gameTime;
-    // ���� ���� �ð�
     public float maxGameTime = 2 * 10f;
-
     public float stageTime; //duration of a stage -sw
     public int maxStageNum = 3; // max number of stages -sw
     public int stageNum = 1; //current stage -sw
 
     [Header("# Player Info")]
-    // �� ������ �ʿ����ġ�� ������ �迭 ���� ���� �� �ʱ�ȭ
     public int playerId;
     public float health;
     public float maxHealth = 100;
@@ -32,13 +26,12 @@ public class GameManager : MonoBehaviour
     public int exp;
     public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
     public bool isInvincible;
+
     [Header("# Game Object")]
     public PoolManager pool;
     public Player player;
     public LevelUp uiLevelUp;
-    // ���� ��� UI ������Ʈ�� ������ ���� ���� �� �ʱ�ȭ
     public Result uiResult;
-    // ���� �¸��� �� ���� �����ϴ� Ŭ���� ���� ���� �� �ʱ�ȭ
     public GameObject enemyCleaner;
 
     public Stage stage; //stage script -sw
@@ -64,12 +57,12 @@ public class GameManager : MonoBehaviour
         health = maxHealth;
         player.gameObject.SetActive(true);
         
-        // ���� ������ �� �÷��̾� Ȱ��ȭ �� �⺻ ���� ����
+       
         uiLevelUp.Selected(playerId);
 
         Resume();
 
-        // ȿ���� ����� �κи��� ����Լ� ȣ��
+        
         AudioManager.instance.PlayBgm(true);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
         //AudioManager.instance.EffectBgm(false);
@@ -91,7 +84,7 @@ public class GameManager : MonoBehaviour
         uiResult.Lose();
         Stop();
 
-        // ȿ���� ����� �κи��� ����Լ� ȣ��
+        
         AudioManager.instance.PlayBgm(false);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Lose);
     }
@@ -104,7 +97,7 @@ public class GameManager : MonoBehaviour
     IEnumerator GameVictoryRoutine()
     {
         isLive = false;
-        // ���� �¸� �ڷ�ƾ�� ���ݺο� �� Ŭ���ʸ� Ȱ��ȭ
+       
         enemyCleaner.SetActive(true);
 
         yield return new WaitForSeconds(0.5f);
@@ -114,12 +107,12 @@ public class GameManager : MonoBehaviour
         uiResult.Win();
         Stop();
 
-        // ȿ���� ����� �κи��� ����Լ� ȣ��
+        
         AudioManager.instance.PlayBgm(false);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
     }
 
-    // �����
+   
     public void GameRetry()
     {
         SceneManager.LoadScene(0);
@@ -139,7 +132,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
-    // ����ġ ���� �Լ�
+   
     public void GetExp()
     {
         if (!isLive)
@@ -147,8 +140,8 @@ public class GameManager : MonoBehaviour
             return; 
         }
         exp++;
-        // if �������� �ʿ� ����ġ�� �����ϸ� ���� ���ϵ��� �ۼ�
-        if (exp == nextExp[Mathf.Min(level, nextExp.Length-1)]) { // ���� �������� ���Ͽ� Min �Լ��� ����Ͽ� �ְ� ����ġ�� �״�� ��� ����ϵ��� ����
+        
+        if (exp == nextExp[Mathf.Min(level, nextExp.Length-1)]) { 
             level++;
             exp = 0;
             uiLevelUp.Show();
@@ -158,14 +151,14 @@ public class GameManager : MonoBehaviour
     public void Stop()
     {
         isLive = false;
-        // timeScale ����Ƽ�� �ð� �ӵ�(����)
+        
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
         isLive = true;
-        // timeScale ����Ƽ�� �ð� �ӵ�(����)
+        
         Time.timeScale = 1;
     }
 }

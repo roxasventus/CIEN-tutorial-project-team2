@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
     Animator anim;
     DamageFlash damageFlash;
 
-    // ������ �� �ѹ��� ����Ǵ� �����ֱ� Awake
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -39,26 +38,22 @@ public class Player : MonoBehaviour
         }
     }
 
-    // ���� ���� �����Ӹ��� ȣ��Ǵ� �����ֱ� FixedUpdate
     void FixedUpdate()
     {
         if (!GameManager.instance.isLive)
             return;
 
-        // �������ͷ� ������ �÷��̾ ����ġ�� ���� �����̴� ���� ���� �� �ִ�
-        Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime; // Time.fixedDeltaTime: ���� ������ �ϳ��� �Һ��� �ð�
-        rigid.MovePosition(rigid.position + nextVec); // rigid.position: ���� ��ġ 
+        Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime; 
+        rigid.MovePosition(rigid.position + nextVec); 
     }
 
-    // �������� ���� �Ǳ� �� ����Ǵ� �����ֱ� �Լ�
     private void LateUpdate()
     {
         if (!GameManager.instance.isLive)
             return;
 
-        // �ִϸ����Ϳ��� ������ �Ķ���� Ÿ�԰� ������ �Լ� �ۼ�
-        anim.SetFloat("Speed", inputVec.magnitude); // (�Ķ���� �̸�, �ݿ��� float ��) // magnitude: ������ ������ ũ�� ��
-        // ��������Ʈ ����
+        anim.SetFloat("Speed", inputVec.magnitude); 
+        
         if (inputVec.x != 0)
         {
             spriter.flipX = inputVec.x < 0;
@@ -72,7 +67,7 @@ public class Player : MonoBehaviour
             return;
         }
 
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyBullet"))
         {
             if (GameManager.instance.isInvincible == false)
             { 
@@ -95,11 +90,11 @@ public class Player : MonoBehaviour
 
     IEnumerator Dead()
     {
-        // ���� �� �и��� �ʵ��� 
+        
         rigid.bodyType = RigidbodyType2D.Kinematic;
 
         anim.SetTrigger("Dead");
-        // duration ���� ���
+        
         yield return new WaitForSeconds(4.2f);
         GameManager.instance.GameOver();
 

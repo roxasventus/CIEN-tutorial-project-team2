@@ -43,10 +43,14 @@ public class Reposition : MonoBehaviour
                     transform.Translate(Vector3.right * dirX * 47);
                 }
                 // 두 오브젝트의 거리 차이에서, Y축이 X축보다 크면 수직 이동
-                if (diffX < diffY)
+                else if (diffX < diffY)
                 {
                     // Translate: 지정된 값만큼 현재 위치에서 이동
                     transform.Translate(Vector3.up * dirY * 47);
+                }
+                else
+                {
+                    transform.Translate(Vector3.right * dirX * 47 + Vector3.up * dirY * 47);
                 }
                 break;
             case "Enemy":
