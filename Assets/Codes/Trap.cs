@@ -8,6 +8,13 @@ public class Trap : MonoBehaviour
     public TrapType type;
     public float stopTime;
 
+    Animator anim;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();   
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("CharBase"))
@@ -19,7 +26,8 @@ public class Trap : MonoBehaviour
                 StartCoroutine(BeartrapAttack());
                 break;
             case TrapType.Spikes:
-                StartCoroutine(SpikeAttack());
+                if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+                    StartCoroutine(SpikeAttack());
                 break;
         }
         
@@ -28,16 +36,16 @@ public class Trap : MonoBehaviour
     IEnumerator BeartrapAttack()
     {
         GetComponent<SpringJoint2D>().connectedBody = GameManager.instance.player.GetComponentsInChildren<Rigidbody2D>()[1];
-        GetComponent<Animator>().SetTrigger("Catch");
+        anim.SetTrigger("Catch");
         yield return new WaitForSeconds(stopTime);
         gameObject.SetActive(false);
     }
 
     IEnumerator SpikeAttack()
     {
-        GetComponent<Animator>().SetTrigger("Detect");
+        anim.SetTrigger("Detect");
         yield return new WaitForSeconds(stopTime);
-        GetComponent<Animator>().SetTrigger("Attack");
+        anim.SetTrigger("Attack");
         gameObject.tag = "EnemyBullet";
     }
 

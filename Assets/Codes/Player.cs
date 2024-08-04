@@ -67,24 +67,29 @@ public class Player : MonoBehaviour
             return;
         }
 
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyBullet"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            if (GameManager.instance.isInvincible == false)
-            { 
+            GetHit();
+        }
+    }
+
+    public void GetHit()
+    {
+        if (GameManager.instance.isInvincible == false)
+        {
             GameManager.instance.health -= Time.fixedDeltaTime * 10;
             //damage flash effect
             damageFlash.CallDamageFlash();
-            }
+        }
 
-            if (GameManager.instance.health < 0)
+        if (GameManager.instance.health < 0)
+        {
+            for (int index = 2; index < transform.childCount; index++)
             {
-                for (int index = 2; index < transform.childCount; index++)
-                {
-                    transform.GetChild(index).gameObject.SetActive(false);
-                }
-                StartCoroutine(Dead());
-
+                transform.GetChild(index).gameObject.SetActive(false);
             }
+            StartCoroutine(Dead());
+
         }
     }
 

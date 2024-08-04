@@ -7,7 +7,6 @@ public class Reposition : MonoBehaviour
 {
     
     Collider2D coll;
-   
 
     private void Awake()
     {
@@ -23,7 +22,7 @@ public class Reposition : MonoBehaviour
         // 정적 변수(instance)는 즉시 클래스에서 부를 수 있다
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 myPos = transform.position;
-
+        
         switch (transform.tag)
         {
             case "Ground":
@@ -36,16 +35,20 @@ public class Reposition : MonoBehaviour
                 diffX = Mathf.Abs(diffX);
                 diffY = Mathf.Abs(diffY); 
 
-                // 두 오브젝트의 거리 차이에서, X축이 Y축보다 크면 수평 이동
-                if (diffX > diffY)
+                
+                if (Mathf.Abs(diffX - diffY) <= 0.1f)
                 {
-                    // Translate: 지정된 값만큼 현재 위치에서 이동
+                    transform.Translate(Vector3.right * dirX * 47 + Vector3.up * dirY * 47);
+
+                }
+                
+                else if (diffX > diffY)
+                {
+
                     transform.Translate(Vector3.right * dirX * 47);
                 }
-                // 두 오브젝트의 거리 차이에서, Y축이 X축보다 크면 수직 이동
                 else if (diffX < diffY)
                 {
-                    // Translate: 지정된 값만큼 현재 위치에서 이동
                     transform.Translate(Vector3.up * dirY * 47);
                 }
                 else
@@ -65,7 +68,7 @@ public class Reposition : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (transform.tag != "Enemy" || !collision.CompareTag("NoSpawn"))
+        if (transform.tag != "CharBase" || !collision.CompareTag("NoSpawn"))
             return;
 
         Transform enemy = transform.parent;
