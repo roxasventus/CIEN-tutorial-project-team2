@@ -8,10 +8,7 @@ public class Stage : MonoBehaviour
 {
     public Transform[] stages;
 
-    private void Awake()
-    {
-        stages = GetComponentsInChildren<Transform>();
-    }
+
 
     public void DisableStage()
     {

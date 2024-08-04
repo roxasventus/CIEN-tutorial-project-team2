@@ -47,8 +47,8 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         stageTime = maxGameTime / maxStageNum; //initiate stageTime -sw
-        // test code
-        AudioManager.instance.PlayBgm(true);
+        maxGameTime = stageTime;
+
     }
 
     void Start()
@@ -60,12 +60,39 @@ public class GameManager : MonoBehaviour
 
     public void GameStart(int id)
     {
+        stage.ActivateStage();
+
         playerId = id;
         health = maxHealth;
         player.gameObject.SetActive(true);
         
         // ���� ������ �� �÷��̾� Ȱ��ȭ �� �⺻ ���� ����
         uiLevelUp.Selected(playerId);
+
+        Resume();
+
+        // ȿ���� ����� �κи��� ����Լ� ȣ��
+        AudioManager.instance.PlayBgm(true);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
+        //AudioManager.instance.EffectBgm(false);
+    }
+
+    public void GameContinue()
+    {
+        health = maxHealth;
+        player.gameObject.SetActive(true);
+
+        // 오브젝트 위치 재조정
+        GameManager.instance.player.transform.position = new Vector3(13.42f, 7.37f, 0);
+        GameObject.FindGameObjectWithTag("MainCamera").transform.position = new Vector3(13.42f, 7.37f, 0);
+
+        // 결과창 숨김
+        GameObject.Find("GameResult").SetActive(false);
+        // 시간 초기화
+        GameManager.instance.gameTime = 0;
+
+        // 스테이지 바꾸기
+        stage.ChangeStage();
 
         Resume();
 
@@ -111,7 +138,14 @@ public class GameManager : MonoBehaviour
 
         uiResult.gameObject.SetActive(true);
 
-        uiResult.Win();
+        if (stageNum == maxStageNum-1)
+        {
+            uiResult.Win();
+        }
+        else
+        {
+            uiResult.Continue();
+        }
         Stop();
 
         // ȿ���� ����� �κи��� ����Լ� ȣ��
