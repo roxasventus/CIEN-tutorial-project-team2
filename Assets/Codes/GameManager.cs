@@ -84,6 +84,8 @@ public class GameManager : MonoBehaviour
         // 시간 초기화
         GameManager.instance.gameTime = 0;
 
+        enemyCleaner.SetActive(false);
+
         // 스테이지 바꾸기
         stage.ChangeStage();
 
@@ -127,7 +129,7 @@ public class GameManager : MonoBehaviour
        
         enemyCleaner.SetActive(true);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
 
         uiResult.gameObject.SetActive(true);
 
@@ -162,6 +164,7 @@ public class GameManager : MonoBehaviour
         if (gameTime > maxGameTime)
         {
             gameTime = maxGameTime;
+            enemyCleaner.SetActive(true);
             GameVictory();
         }
 
@@ -192,7 +195,7 @@ public class GameManager : MonoBehaviour
     public void Resume()
     {
         isLive = true;
-        
+
         Time.timeScale = 1;
     }
 }
