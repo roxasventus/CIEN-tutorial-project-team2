@@ -31264,6 +31264,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5025626098420487859}
     m_Modifications:
+    - target: {fileID: 60508273010720117, guid: 76a3886d278c31547b082326d484d9f9, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 60508273010720117, guid: 76a3886d278c31547b082326d484d9f9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.625
+      objectReference: {fileID: 0}
     - target: {fileID: 1029037668939785945, guid: 76a3886d278c31547b082326d484d9f9, type: 3}
       propertyPath: m_Name
       value: Rock3
@@ -31370,6 +31378,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GTree1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2754841750458005524, guid: b5d7b60493b013049b54026c182c1ff4, type: 3}
+      propertyPath: m_Size.x
+      value: 3.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754841750458005524, guid: b5d7b60493b013049b54026c182c1ff4, type: 3}
+      propertyPath: m_Size.y
+      value: 5.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310099914084835884, guid: b5d7b60493b013049b54026c182c1ff4, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310099914084835884, guid: b5d7b60493b013049b54026c182c1ff4, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.9375
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31432,6 +31456,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GTree1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2754841750458005524, guid: b5d7b60493b013049b54026c182c1ff4, type: 3}
+      propertyPath: m_Size.x
+      value: 3.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754841750458005524, guid: b5d7b60493b013049b54026c182c1ff4, type: 3}
+      propertyPath: m_Size.y
+      value: 5.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310099914084835884, guid: b5d7b60493b013049b54026c182c1ff4, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310099914084835884, guid: b5d7b60493b013049b54026c182c1ff4, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.9375
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31453,6 +31493,14 @@ PrefabInstance:
     - target: {fileID: 3312123906051909834, guid: b7d48cfeb44d50f4ea9d4e2cfea7e728, type: 3}
       propertyPath: m_Name
       value: Rock2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417206148376300116, guid: b7d48cfeb44d50f4ea9d4e2cfea7e728, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417206148376300116, guid: b7d48cfeb44d50f4ea9d4e2cfea7e728, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3125
       objectReference: {fileID: 0}
     - target: {fileID: 8897221354104240384, guid: b7d48cfeb44d50f4ea9d4e2cfea7e728, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31512,6 +31560,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5025626098420487859}
     m_Modifications:
+    - target: {fileID: 134044835219190619, guid: 3fe3fbad4ec4bde49b8a336625045118, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 134044835219190619, guid: 3fe3fbad4ec4bde49b8a336625045118, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.8125
+      objectReference: {fileID: 0}
     - target: {fileID: 5763846025945849136, guid: 3fe3fbad4ec4bde49b8a336625045118, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.32
@@ -31556,6 +31612,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: YTree2
       objectReference: {fileID: 0}
+    - target: {fileID: 9141825295162436464, guid: 3fe3fbad4ec4bde49b8a336625045118, type: 3}
+      propertyPath: m_Size.x
+      value: 3.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141825295162436464, guid: 3fe3fbad4ec4bde49b8a336625045118, type: 3}
+      propertyPath: m_Size.y
+      value: 5.8125
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31574,6 +31638,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5025626098420487859}
     m_Modifications:
+    - target: {fileID: 513552121754261769, guid: 705c284ccaeb9cc47aac2597617efb5d, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 513552121754261769, guid: 705c284ccaeb9cc47aac2597617efb5d, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 740062248507761509, guid: 705c284ccaeb9cc47aac2597617efb5d, type: 3}
+      propertyPath: m_Size.x
+      value: 3.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 740062248507761509, guid: 705c284ccaeb9cc47aac2597617efb5d, type: 3}
+      propertyPath: m_Size.y
+      value: 5.9375
+      objectReference: {fileID: 0}
     - target: {fileID: 5104057312741087801, guid: 705c284ccaeb9cc47aac2597617efb5d, type: 3}
       propertyPath: m_Name
       value: YTree1
@@ -31676,9 +31756,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6135856105355637613, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
+      propertyPath: m_Size.x
+      value: 3.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 6135856105355637613, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
+      propertyPath: m_Size.y
+      value: 5.8125
+      objectReference: {fileID: 0}
     - target: {fileID: 7704625497266430328, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
       propertyPath: m_Name
       value: GTree2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037968490270589117, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037968490270589117, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.8125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31742,6 +31838,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9151078630825698573, guid: 1d6f87d084db222418bd8e16076d5ce9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151078630825698573, guid: 1d6f87d084db222418bd8e16076d5ce9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31760,6 +31864,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5025626098420487859}
     m_Modifications:
+    - target: {fileID: 513552121754261769, guid: 705c284ccaeb9cc47aac2597617efb5d, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 513552121754261769, guid: 705c284ccaeb9cc47aac2597617efb5d, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 740062248507761509, guid: 705c284ccaeb9cc47aac2597617efb5d, type: 3}
+      propertyPath: m_Size.x
+      value: 3.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 740062248507761509, guid: 705c284ccaeb9cc47aac2597617efb5d, type: 3}
+      propertyPath: m_Size.y
+      value: 5.9375
+      objectReference: {fileID: 0}
     - target: {fileID: 5104057312741087801, guid: 705c284ccaeb9cc47aac2597617efb5d, type: 3}
       propertyPath: m_Name
       value: YTree1 (1)
@@ -31866,6 +31986,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9151078630825698573, guid: 1d6f87d084db222418bd8e16076d5ce9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151078630825698573, guid: 1d6f87d084db222418bd8e16076d5ce9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31924,9 +32052,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6135856105355637613, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
+      propertyPath: m_Size.x
+      value: 3.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 6135856105355637613, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
+      propertyPath: m_Size.y
+      value: 5.8125
+      objectReference: {fileID: 0}
     - target: {fileID: 7704625497266430328, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
       propertyPath: m_Name
       value: GTree2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037968490270589117, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037968490270589117, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.8125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31990,6 +32134,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern1
       objectReference: {fileID: 0}
+    - target: {fileID: 9151078630825698573, guid: 1d6f87d084db222418bd8e16076d5ce9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151078630825698573, guid: 1d6f87d084db222418bd8e16076d5ce9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32047,6 +32199,14 @@ PrefabInstance:
     - target: {fileID: 2731494333760551355, guid: c30909669021ef04baab0bd37a60f675, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579105888409276698, guid: c30909669021ef04baab0bd37a60f675, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579105888409276698, guid: c30909669021ef04baab0bd37a60f675, type: 3}
+      propertyPath: m_Size.y
+      value: 1.625
       objectReference: {fileID: 0}
     - target: {fileID: 7947018023594376828, guid: c30909669021ef04baab0bd37a60f675, type: 3}
       propertyPath: m_Name
@@ -32114,6 +32274,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9151078630825698573, guid: 1d6f87d084db222418bd8e16076d5ce9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151078630825698573, guid: 1d6f87d084db222418bd8e16076d5ce9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32172,9 +32340,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6135856105355637613, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
+      propertyPath: m_Size.x
+      value: 3.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 6135856105355637613, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
+      propertyPath: m_Size.y
+      value: 5.8125
+      objectReference: {fileID: 0}
     - target: {fileID: 7704625497266430328, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
       propertyPath: m_Name
       value: GTree2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037968490270589117, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037968490270589117, guid: 411f16b4fa9238b42bca58bcf4cabfa2, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.8125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32237,6 +32421,22 @@ PrefabInstance:
     - target: {fileID: 2190318655884390477, guid: b5d7b60493b013049b54026c182c1ff4, type: 3}
       propertyPath: m_Name
       value: GTree1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754841750458005524, guid: b5d7b60493b013049b54026c182c1ff4, type: 3}
+      propertyPath: m_Size.x
+      value: 3.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754841750458005524, guid: b5d7b60493b013049b54026c182c1ff4, type: 3}
+      propertyPath: m_Size.y
+      value: 5.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310099914084835884, guid: b5d7b60493b013049b54026c182c1ff4, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310099914084835884, guid: b5d7b60493b013049b54026c182c1ff4, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.9375
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

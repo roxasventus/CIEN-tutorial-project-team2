@@ -13,7 +13,6 @@ public class Trap : MonoBehaviour
 
     [Header("Lava")]
     public float slowPercentage;
-    public float damageTime;
 
     private float timer = 0f;
 
@@ -53,8 +52,6 @@ public class Trap : MonoBehaviour
             case TrapType.Lava:
                
                 GameManager.instance.player.slowPercent = slowPercentage;
-                
-                
                 
                 break;
             case TrapType.Turret:
