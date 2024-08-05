@@ -5843,7 +5843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &296594768
 Transform:
   m_ObjectHideFlags: 0
@@ -12433,6 +12433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 754940146}
+  - component: {fileID: 754940147}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -12460,6 +12461,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 12, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &754940147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754940145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d69ff6f983f1194c99c08154359df65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &760817259
 GameObject:
   m_ObjectHideFlags: 0
@@ -21108,7 +21121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLive: 0
   gameTime: 0
-  maxGameTime: 25
+  maxGameTime: 300
   stageTime: 0
   maxStageNum: 3
   stageNum: 0
@@ -35156,7 +35169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1640165707
 MonoBehaviour:
   m_ObjectHideFlags: 0
