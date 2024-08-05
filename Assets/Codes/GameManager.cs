@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public float maxGameTime = 2 * 10f;
     public float stageTime; //duration of a stage -sw
     public int maxStageNum = 3; // max number of stages -sw
-    public int stageNum = 1; //current stage -sw
+    public int stageNum = 0; //current stage -sw
 
     [Header("# Player Info")]
     public int playerId;

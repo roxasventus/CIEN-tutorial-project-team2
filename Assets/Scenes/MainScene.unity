@@ -6077,8 +6077,6 @@ MonoBehaviour:
     spriteType: 2
     health: 60
     speed: 2.8
-  levelTime: 0
-  level: 0
 --- !u!1 &309780311
 GameObject:
   m_ObjectHideFlags: 0
@@ -21568,7 +21566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLive: 0
   gameTime: 0
-  maxGameTime: 30
+  maxGameTime: 300
   stageTime: 0
   maxStageNum: 3
   stageNum: 0
