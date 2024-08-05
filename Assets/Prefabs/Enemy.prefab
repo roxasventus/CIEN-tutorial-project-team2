@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 7934941110938534366}
   m_Layer: 0
   m_Name: ReposTrigger
-  m_TagString: CharBase
+  m_TagString: EnemyBase
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

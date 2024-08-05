@@ -68,7 +68,7 @@ public class Reposition : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (transform.tag != "CharBase" || !collision.CompareTag("NoSpawn"))
+        if (transform.tag != "EnemyBase" || !collision.CompareTag("NoSpawn"))
             return;
 
         Transform enemy = transform.parent;

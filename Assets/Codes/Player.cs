@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public Vector2 inputVec;
     public float speed;
+    public float slowPercent = 0f;
     public Scanner scanner;
     public Player player;
 
@@ -43,7 +44,7 @@ public class Player : MonoBehaviour
         if (!GameManager.instance.isLive)
             return;
 
-        Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime; 
+        Vector2 nextVec = inputVec.normalized * speed * (1f - slowPercent) * Time.fixedDeltaTime; 
         rigid.MovePosition(rigid.position + nextVec); 
     }
 

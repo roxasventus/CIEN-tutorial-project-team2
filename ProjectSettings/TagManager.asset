@@ -15,6 +15,7 @@ TagManager:
   - Foreground
   - CharBase
   - EnemyBullet
+  - EnemyBase
   layers:
   - Default
   - TransparentFX
