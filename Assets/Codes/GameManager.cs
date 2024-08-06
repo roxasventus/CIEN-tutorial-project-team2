@@ -89,6 +89,10 @@ public class GameManager : MonoBehaviour
         // 스테이지 바꾸기
         stage.ChangeStage();
 
+        // bgm 바꾸기
+        AudioManager.instance.bgmIndex += 1;
+        AudioManager.instance.Init();
+
         Resume();
 
         // ȿ���� ����� �κи��� ����Լ� ȣ��
