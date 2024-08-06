@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 644b90f2d71fec9448f3e1abd46b8363, type: 3}
+  m_Name: Item 5
+  m_EditorClassIdentifier: 
+  itemType: 1
+  itemId: 4
+  itemName: "\uBD80\uBA54\uB791"
+  itemDesc: "\uB370\uBBF8\uC9C0 {0}% \uC99D\uAC00\n\uBD80\uBA54\uB791 {1}\uAC1C \uCD94\uAC00"
+  itemIcon: {fileID: 2093964484, guid: 6ae1799b339a0694d859281dbc0e25b7, type: 3}
+  baseDamage: 3
+  baseCount: 0
+  damages:
+  - 0.5
+  - 1
+  - 1.5
+  - 2
+  - 2.5
+  counts: 0100000001000000010000000100000001000000
+  baseMagicCircleWait: 0
+  magicCircleWaits: []
+  projectile: {fileID: 1845000503810146723, guid: ac2e24e724ede774f8e9ff0ca789b1ac, type: 3}

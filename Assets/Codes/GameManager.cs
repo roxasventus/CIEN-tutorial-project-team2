@@ -1,24 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Àå¸é °ü¸®
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // static: Á¤ÀûÀ¸·Î »ç¿ëÇÏ°Ú´Ù´Â Å°¿öµå. ¹Ù·Î ¸Þ¸ð¸®¿¡ ¾ñ¾î¹ö¸². ¾î¶² ÀÎ½ºÅÏ½º¿¡¼­µçÁö Á¢±Ù °¡´É
-    // staticÀ¸·Î ¼±¾ðµÈ º¯¼ö´Â ÀÎ½ºÆåÅÍ¿¡ ³ªÅ¸³ªÁö ¾Ê´Â´Ù
+   
     public static GameManager instance;
 
-    // Header: ÀÎ½ºÆåÅÍÀÇ ¼Ó¼ºµéÀ» ÀÌ»Ú°Ô ±¸ºÐ½ÃÄÑÁÖ´Â Å¸ÀÌÆ²
+    
     [Header("# Game control")]
-    // ½Ã°£ Á¤Áö ¿©ºÎ¸¦ ¾Ë·ÁÁÖ´Â bool º¯¼ö ¼±¾ð
     public bool isLive;
-    // °ÔÀÓ ÁøÇà ½Ã°£
     public float gameTime;
-    // °ÔÀÓ Á¾·á ½Ã°£
     public float maxGameTime = 2 * 10f;
+    public float stageTime; //duration of a stage -sw
+    public int maxStageNum = 3; // max number of stages -sw
+    public int stageNum = 0; //current stage -sw
+
     [Header("# Player Info")]
-    // °¢ ·¹º§ÀÇ ÇÊ¿ä°æÇèÄ¡¸¦ º¸°üÇÒ ¹è¿­ º¯¼ö ¼±¾ð ¹× ÃÊ±âÈ­
     public int playerId;
     public float health;
     public float maxHealth = 100;
@@ -26,32 +25,79 @@ public class GameManager : MonoBehaviour
     public int kill;
     public int exp;
     public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
+    public bool isInvincible;
+
     [Header("# Game Object")]
     public PoolManager pool;
     public Player player;
-    //public LevelUp uiLevelUp;
-    // °ÔÀÓ °á°ú UI ¿ÀºêÁ§Æ®¸¦ ÀúÀåÇÒ º¯¼ö ¼±¾ð ¹× ÃÊ±âÈ­
-    //public Result uiResult;
-    // °ÔÀÓ ½Â¸®ÇÒ ¶§ ÀûÀ» Á¤¸®ÇÏ´Â Å¬¸®³Ê º¯¼ö ¼±¾ð ¹× ÃÊ±âÈ­
+    public LevelUp uiLevelUp;
+    public Result uiResult;
     public GameObject enemyCleaner;
 
-    void Awake()
+    public Stage stage; //stage script -sw
+
+    private void Awake()
     {
         instance = this;
+        stageTime = maxGameTime / maxStageNum; //initiate stageTime -sw
+        maxGameTime = stageTime;
+
     }
+
+    void Start()
+    {
+        health = maxHealth;
+
+    }
+
 
     public void GameStart(int id)
     {
+        stage.ActivateStage();
+
         playerId = id;
         health = maxHealth;
-        // °ÔÀÓ ½ÃÀÛÇÒ ¶§ ÇÃ·¹ÀÌ¾î È°¼ºÈ­ ÈÄ ±âº» ¹«±â Áö±Þ
         player.gameObject.SetActive(true);
-        //uiLevelUp.Selected(playerId % 2);
+        
+       
+        uiLevelUp.Selected(playerId);
+
         Resume();
 
-        // È¿°úÀ½ Àç»ýÇÒ ºÎºÐ¸¶´Ù Àç»ýÇÔ¼ö È£Ãâ
-        //AudioManager.instance.PlayBgm(true);
-        //AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
+        
+        AudioManager.instance.PlayBgm(true);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
+        //AudioManager.instance.EffectBgm(false);
+    }
+
+    public void GameContinue()
+    {
+        health = maxHealth;
+        player.gameObject.SetActive(true);
+
+        // ì˜¤ë¸Œì íŠ¸ ìœ„ì¹˜ ìž¬ì¡°ì •
+        GameManager.instance.player.transform.position = new Vector3(13.42f, 7.37f, 0);
+        GameObject.FindGameObjectWithTag("MainCamera").transform.position = new Vector3(13.42f, 7.37f, 0);
+
+        // ê²°ê³¼ì°½ ìˆ¨ê¹€
+        GameObject.Find("GameResult").SetActive(false);
+        // ì‹œê°„ ì´ˆê¸°í™”
+        GameManager.instance.gameTime = 0;
+
+        enemyCleaner.SetActive(false);
+
+        // ìŠ¤í…Œì´ì§€ ë°”ê¾¸ê¸°
+        stage.ChangeStage();
+
+        // bgm ë°”ê¾¸ê¸°
+        AudioManager.instance.bgmIndex += 1;
+        AudioManager.instance.Init();
+
+        Resume();
+
+        // È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ÎºÐ¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ È£ï¿½ï¿½
+        AudioManager.instance.PlayBgm(true);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
         //AudioManager.instance.EffectBgm(false);
     }
 
@@ -66,14 +112,14 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        //uiResult.gameObject.SetActive(true);
+        uiResult.gameObject.SetActive(true);
         
-        //uiResult.Lose();
+        uiResult.Lose();
         Stop();
 
-        // È¿°úÀ½ Àç»ýÇÒ ºÎºÐ¸¶´Ù Àç»ýÇÔ¼ö È£Ãâ
-        //AudioManager.instance.PlayBgm(false);
-        //AudioManager.instance.PlaySfx(AudioManager.Sfx.Lose);
+        
+        AudioManager.instance.PlayBgm(false);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Lose);
     }
 
     public void GameVictory()
@@ -84,29 +130,37 @@ public class GameManager : MonoBehaviour
     IEnumerator GameVictoryRoutine()
     {
         isLive = false;
-        // °ÔÀÓ ½Â¸® ÄÚ·çÆ¾ÀÇ Àü¹ÝºÎ¿¡ Àû Å¬¸®³Ê¸¦ È°¼ºÈ­
+       
         enemyCleaner.SetActive(true);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
 
-        //uiResult.gameObject.SetActive(true);
+        uiResult.gameObject.SetActive(true);
 
-        //uiResult.Win();
+        if (stageNum == maxStageNum-1)
+        {
+            uiResult.Win();
+        }
+        else
+        {
+            uiResult.Continue();
+        }
         Stop();
 
-        // È¿°úÀ½ Àç»ýÇÒ ºÎºÐ¸¶´Ù Àç»ýÇÔ¼ö È£Ãâ
-        //AudioManager.instance.PlayBgm(false);
-        //AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
+        
+        AudioManager.instance.PlayBgm(false);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
     }
 
-    // Àç½ÃÀÛ
+   
     public void GameRetry()
     {
         SceneManager.LoadScene(0);
     }
 
     void Update()
-    {   if (!isLive)
+    {   
+        if (!isLive)
             return;
 
         gameTime += Time.deltaTime;
@@ -114,11 +168,12 @@ public class GameManager : MonoBehaviour
         if (gameTime > maxGameTime)
         {
             gameTime = maxGameTime;
+            enemyCleaner.SetActive(true);
             GameVictory();
         }
 
     }
-    // °æÇèÄ¡ Áõ°¡ ÇÔ¼ö
+   
     public void GetExp()
     {
         if (!isLive)
@@ -126,25 +181,25 @@ public class GameManager : MonoBehaviour
             return; 
         }
         exp++;
-        // if Á¶°ÇÀ¸·Î ÇÊ¿ä °æÇèÄ¡¿¡ µµ´ÞÇÏ¸é ·¹º§ ¾÷ÇÏµµ·Ï ÀÛ¼º
-        if (exp == nextExp[Mathf.Min(level, nextExp.Length-1)]) { // ¹«ÇÑ ·¹º§¾÷À» À§ÇÏ¿© Min ÇÔ¼ö¸¦ »ç¿ëÇÏ¿© ÃÖ°í °æÇèÄ¡¸¦ ±×´ë·Î °è¼Ó »ç¿ëÇÏµµ·Ï º¯°æ
+        
+        if (exp == nextExp[Mathf.Min(level, nextExp.Length-1)]) { 
             level++;
             exp = 0;
-            //uiLevelUp.Show();
+            uiLevelUp.Show();
         }
     }
 
     public void Stop()
     {
         isLive = false;
-        // timeScale À¯´ÏÆ¼ÀÇ ½Ã°£ ¼Óµµ(¹èÀ²)
+        
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
         isLive = true;
-        // timeScale À¯´ÏÆ¼ÀÇ ½Ã°£ ¼Óµµ(¹èÀ²)
+
         Time.timeScale = 1;
     }
 }

@@ -7,15 +7,24 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float health;
     public float maxHealth;
-    public RuntimeAnimatorController[] animCon;
+    public RuntimeAnimatorController[] animCon1; //cannot serialize 2d array so I just made 3 variables.
+    public RuntimeAnimatorController[] animCon2;
+    public RuntimeAnimatorController[] animCon3;
     public Rigidbody2D target;
+
     bool isLive;
 
     Rigidbody2D rigid;
     Collider2D coll;
     Animator anim;
     SpriteRenderer spriter;
+    Transform shadow;
+    Transform wallColl;
     WaitForFixedUpdate wait;
+    DamageFlash damageFlash;
+
+    public GameObject[] dropItems;
+    public float percentage;
 
     void Awake()
     {
@@ -23,7 +32,24 @@ public class Enemy : MonoBehaviour
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         spriter = GetComponent<SpriteRenderer>();
+        shadow = GetComponentsInChildren<Transform>()[1];
+        wallColl = GetComponentsInChildren<Transform>()[2];
+        damageFlash = GetComponent<DamageFlash>();
         wait = new WaitForFixedUpdate();
+    }
+
+    private void Update()
+    {
+        if (target.position.x < rigid.position.x)
+        {
+            shadow.localPosition = new Vector3(0.1f, -0.7f, 0);
+            wallColl.localPosition = new Vector3(0.1f, -0.7f, 0);
+        }
+        else
+        {
+            shadow.localPosition = new Vector3(-0.1f, -0.7f, 0);
+            wallColl.localPosition = new Vector3(-0.1f, -0.7f, 0);
+        }
     }
 
     void FixedUpdate()
@@ -43,6 +69,7 @@ public class Enemy : MonoBehaviour
         if (!GameManager.instance.isLive)
             return;
         if (!isLive) return;
+
         spriter.flipX = target.position.x < rigid.position.x;
     }
 
@@ -53,13 +80,29 @@ public class Enemy : MonoBehaviour
         health = maxHealth;
         coll.enabled = true;
         rigid.simulated = true;
-        spriter.sortingOrder = 2;
+        spriter.sortingOrder = 1;
         anim.SetBool("Dead", false);
     }
 
     public void Init(SpawnData data)
     {
-        anim.runtimeAnimatorController = animCon[data.spriteType];
+        if (anim == null)
+        {
+            return;
+        }
+
+        switch (data.spriteType)
+        {
+            case 0:
+                anim.runtimeAnimatorController = animCon1[Random.Range(0, 3)];
+                break;
+            case 1:
+                anim.runtimeAnimatorController = animCon2[Random.Range(0, 3)];
+                break;
+            default:
+                anim.runtimeAnimatorController = animCon3[Random.Range(0, 3)];
+                break;
+        }
         speed = data.speed;
         maxHealth = data.health;
         health = data.health;
@@ -73,9 +116,15 @@ public class Enemy : MonoBehaviour
         health -= collision.GetComponent<Bullet>().damage;
         StartCoroutine(KnockBack());
 
+        //damage flash effect
+        damageFlash.CallDamageFlash();
+
         if (health > 0)
         {
             anim.SetTrigger("Hit");
+            // 효과음 재생할 부분마다 재생함수 호출
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);
+
         }
         else
         {
@@ -86,6 +135,13 @@ public class Enemy : MonoBehaviour
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
             GameManager.instance.GetExp();
+
+            if (Random.Range(0.0f, 1.0f) <= percentage) {
+                Instantiate(dropItems[Random.Range(0, 2)], transform.position, Quaternion.identity);
+            }
+            // 효과음 재생할 부분마다 재생함수 호출
+            if (GameManager.instance.isLive)
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
 
         }
     }
