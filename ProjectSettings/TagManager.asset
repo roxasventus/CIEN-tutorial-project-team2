@@ -16,6 +16,7 @@ TagManager:
   - CharBase
   - EnemyBullet
   - EnemyBase
+  - Trap
   layers:
   - Default
   - TransparentFX

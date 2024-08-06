@@ -14,13 +14,19 @@ public class Trap : MonoBehaviour
     [Header("Lava")]
     public float slowPercentage;
 
-    private float timer = 0f;
-
     Animator anim;
 
     private void Awake()
     {
-        anim = GetComponent<Animator>();   
+        if(type == TrapType.Turret)
+        {
+            anim = GetComponentInParent<Animator>();  
+        }
+        else
+        {
+            anim = GetComponent<Animator>();
+        }
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,9 +43,10 @@ public class Trap : MonoBehaviour
                 if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
                     StartCoroutine(SpikeAttack());
                 break;
-          
+            case TrapType.Turret:
+                anim.SetBool("Attack", true);
+                break;
         }
-        
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -54,8 +61,6 @@ public class Trap : MonoBehaviour
                 GameManager.instance.player.slowPercent = slowPercentage;
                 
                 break;
-            case TrapType.Turret:
-                break;
         }
     }
 
@@ -68,9 +73,10 @@ public class Trap : MonoBehaviour
         {
             case TrapType.Lava:
                 GameManager.instance.player.slowPercent = 0f;
-                
                 break;
-            
+            case TrapType.Turret:
+                anim.SetBool("Attack", false);
+                break;
         }
     }
 
@@ -87,7 +93,7 @@ public class Trap : MonoBehaviour
         anim.SetTrigger("Detect");
         yield return new WaitForSeconds(stopTime);
         anim.SetTrigger("Attack");
-        gameObject.tag = "EnemyBullet";
+        gameObject.tag = "Trap";
     }
 
     public void Finish()

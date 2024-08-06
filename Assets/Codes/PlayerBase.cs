@@ -11,7 +11,7 @@ public class PlayerBase : MonoBehaviour
             return;
         }
 
-        if (collision.gameObject.CompareTag("EnemyBullet"))
+        if (collision.gameObject.CompareTag("Trap"))
         {
             GameManager.instance.player.GetHit();
         }
