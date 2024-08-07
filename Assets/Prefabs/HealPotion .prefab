@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6647288484579647979}
   - component: {fileID: 4706670603602213614}
   - component: {fileID: 4155242047725693191}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'HealPotion '
   m_TagString: HealPotion
   m_Icon: {fileID: 0}
@@ -155,6 +155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e5d5eeb2afa724ab12c48d1b77cd22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barrier: {fileID: 0}
   Heal: 0.2
   potionType: 1
