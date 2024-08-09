@@ -22766,7 +22766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trapParent: {fileID: 6854011510220325000}
-  trapActivePer: 1
+  trapActivePer: 0.3
   breakableParent: {fileID: 8787428249486324685}
 --- !u!1 &1398973399541423554
 GameObject:
