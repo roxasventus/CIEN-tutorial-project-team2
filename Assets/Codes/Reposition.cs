@@ -5,13 +5,26 @@ using UnityEngine.UIElements;
 
 public class Reposition : MonoBehaviour
 {
-    
+    [Header("Tilemap")]
+    public GameObject trapParent;
+    Transform[] traps; 
+    public float trapActivePer;
+
+    public GameObject breakableParent;
+    Transform[] breakables;
+
     Collider2D coll;
+
 
     private void Awake()
     {
         coll = GetComponent<Collider2D>();
-       
+        
+        if(transform.tag == "Ground")
+        {
+            traps = trapParent.GetComponentsInChildren<Transform>(true);
+            breakables = breakableParent.GetComponentsInChildren<Transform>(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -55,6 +68,25 @@ public class Reposition : MonoBehaviour
                 {
                     transform.Translate(Vector3.right * dirX * 47 + Vector3.up * dirY * 47);
                 }
+
+                //trap random activate
+                for(int i = 1; i < traps.Length; i++)
+                {
+                    traps[i].gameObject.SetActive(false);
+
+                    if(Random.Range(0f, 1f) <= trapActivePer)
+                    {
+                        traps[i].gameObject.SetActive(true);
+                    }
+                }
+
+                //breakables reactivate
+                for(int i = 1; i < breakables.Length; i++)
+                {
+                    breakables[i].gameObject.SetActive(false);
+                    breakables[i].gameObject.SetActive(true);
+                }
+
                 break;
             case "Enemy":
                 if (coll.enabled)

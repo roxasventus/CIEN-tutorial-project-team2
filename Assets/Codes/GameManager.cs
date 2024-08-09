@@ -91,7 +91,6 @@ public class GameManager : MonoBehaviour
 
         Resume();
 
-        // ȿ���� ����� �κи��� ����Լ� ȣ��
         AudioManager.instance.PlayBgm(true);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
         //AudioManager.instance.EffectBgm(false);

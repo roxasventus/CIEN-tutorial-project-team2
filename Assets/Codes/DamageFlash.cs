@@ -68,7 +68,7 @@ public class DamageFlash : MonoBehaviour
         }
     }
 
-    private void SetFlashAmount(float amount)
+    public void SetFlashAmount(float amount)
     {
         //set the flash amount
         for(int i = 0; i < _materials.Length; i++)

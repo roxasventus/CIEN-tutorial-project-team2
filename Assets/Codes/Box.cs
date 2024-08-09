@@ -33,6 +33,9 @@ public class Box : MonoBehaviour
         health = maxHealth;
         coll.enabled = true;
         spriter.sortingOrder = 1;
+
+        if(spriter.material.GetFloat("_FlashAmount") > 0)
+            damageFlash.SetFlashAmount(0);
     }
 
     public void Init(SpawnData data)

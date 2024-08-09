@@ -7,13 +7,17 @@ public class EnemyBullet : MonoBehaviour
 {
     public int per = 0;
     public float shotspeed = 7f;
+    bool flashing = false;
 
     Rigidbody2D rigid;
     Vector3 dir;
+    DamageFlash damageFlash;
+    
 
     public void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        damageFlash = GetComponent<DamageFlash>(); 
     }
 
     public void Init(int per, Vector3 dir)
@@ -61,5 +65,15 @@ public class EnemyBullet : MonoBehaviour
      
         gameObject.SetActive(false);
 
+    }
+
+    private void Update()
+    {
+        if (!GameManager.instance.isLive || flashing)
+            return;
+        flashing = true;
+        damageFlash.CallDamageFlash();
+        flashing = false;
+        
     }
 }
