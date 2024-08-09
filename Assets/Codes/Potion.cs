@@ -34,6 +34,7 @@ public class Potion : MonoBehaviour
                 else
                     GameManager.instance.health += GameManager.instance.maxHealth * Heal;
             }
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.potion);
             Destroy(gameObject);
         }
     }

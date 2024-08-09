@@ -79,6 +79,18 @@ public class GameManager : MonoBehaviour
         GameManager.instance.player.transform.position = new Vector3(13.42f, 7.37f, 0);
         GameObject.FindGameObjectWithTag("MainCamera").transform.position = new Vector3(13.42f, 7.37f, 0);
 
+        // 필드에 생성된 아이템들 삭제
+        GameObject[] objectsToDestroy = GameObject.FindGameObjectsWithTag("BarrierPotion");
+        foreach (GameObject obj in objectsToDestroy)
+        {
+            Destroy(obj);
+        }
+        objectsToDestroy = GameObject.FindGameObjectsWithTag("HealPotion");
+        foreach (GameObject obj in objectsToDestroy)
+        {
+            Destroy(obj);
+        }
+
         // 결과창 숨김
         GameObject.Find("GameResult").SetActive(false);
         // 시간 초기화
@@ -88,6 +100,10 @@ public class GameManager : MonoBehaviour
 
         // 스테이지 바꾸기
         stage.ChangeStage();
+
+        // bgm 바꾸기
+        AudioManager.instance.bgmIndex += 1;
+        AudioManager.instance.Init();
 
         Resume();
 

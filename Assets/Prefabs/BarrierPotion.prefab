@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8083523855298942625}
   - component: {fileID: 2571256248006387354}
   - component: {fileID: 4274370264554998926}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BarrierPotion
   m_TagString: BarrierPotion
   m_Icon: {fileID: 0}
@@ -155,6 +155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e5d5eeb2afa724ab12c48d1b77cd22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barrier: {fileID: 0}
   Heal: 0
   potionType: 0

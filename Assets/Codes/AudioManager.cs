@@ -10,10 +10,11 @@ public class AudioManager : MonoBehaviour
 
     [Header("#BGM")]
     // 배경음과 관련된 클립, 볼륨, 오디오소스 변수 선언
-    public AudioClip bgmClip;
+    public AudioClip[] bgmClips;
     public float bgmVolume;
     AudioSource bgmPlayer;
     AudioHighPassFilter bgmEffect;
+    public int bgmIndex;
 
     [Header("#SFX")]
     // 효과음과 관련된 클립, 볼륨, 오디오소스 변수 선언
@@ -24,7 +25,7 @@ public class AudioManager : MonoBehaviour
     AudioSource[] sfxPlayers;
     int channelIndex;
 
-    public enum Sfx { Dead, Hit, LevelUp = 3, Lose, Melee, Range = 7, Select, Win, attack1, attack2, attack3, boomerang, final_attack }
+    public enum Sfx { Dead, Hit, LevelUp = 3, Lose, Melee, Range = 7, Select, Win, attack1, attack2, attack3, boomerang, final_attack, potion }
 
     private void Awake()
     {
@@ -32,7 +33,7 @@ public class AudioManager : MonoBehaviour
         Init();
     }
 
-    void Init()
+    public void Init()
     {
         // 배경음 플레이어 초기화
         GameObject bgmObject = new GameObject("BgmPlayer");
@@ -41,7 +42,7 @@ public class AudioManager : MonoBehaviour
         bgmPlayer.playOnAwake = false;
         bgmPlayer.loop = true;
         bgmPlayer.volume = bgmVolume;
-        bgmPlayer.clip = bgmClip;
+        bgmPlayer.clip = bgmClips[bgmIndex];
         bgmEffect = Camera.main.GetComponent<AudioHighPassFilter>();
 
         // 효과음 플레이어 초기화
