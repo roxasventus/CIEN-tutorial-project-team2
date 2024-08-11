@@ -74,13 +74,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (!GameManager.instance.isLive)
         {
             return;
         }
-
+       
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
             GetHit();

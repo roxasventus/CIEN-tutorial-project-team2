@@ -40,6 +40,9 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.instance.isLive || !isLive)
+            return;
+
         if (target.position.x < rigid.position.x)
         {
             shadow.localPosition = new Vector3(0.1f, -0.7f, 0);
