@@ -6,8 +6,10 @@ using UnityEngine;
 public class Boss1_Atk : MonoBehaviour
 {
     public GameObject beamParent;
+    public GameObject bomb;
 
     private Vector2 dir;
+    private float originSpeed;
 
     Boss boss;
     SpriteRenderer sprite;
@@ -31,13 +33,20 @@ public class Boss1_Atk : MonoBehaviour
 
     public void CallAtk2()
     {
-        StartCoroutine(Atk2());
+        originSpeed = boss.speed;
+
+        boss.speed = 0f;
+        boss.isAttacking = true;
+        GetComponent<Rigidbody2D>().isKinematic = true;
+        anim.SetTrigger("Atk2");
+
+        StartCoroutine(SpawnBomb());
     }
 
     private IEnumerator Atk1()
     {
         float timer = 0f;
-        float originSpeed = boss.speed;
+        originSpeed = boss.speed;
 
         Vector3 targetPos;
         float targetAngle;
@@ -128,8 +137,21 @@ public class Boss1_Atk : MonoBehaviour
         GetComponent<Rigidbody2D>().isKinematic = false;
     }
 
-    private IEnumerator Atk2()
+    private IEnumerator SpawnBomb()
     {
-        yield return new WaitForFixedUpdate();
+        for (int i = 0; i < boss.atk2ArrowNum; i++)
+        {
+            GameObject o = Instantiate(bomb, transform);
+            o.transform.position = GameManager.instance.player.transform.position;
+            o.GetComponent<Bombing>().CallTargetNBomb();
+            yield return new WaitForSeconds(0.7f);
+        }
+    }
+
+    public void StartMoving()
+    {
+        boss.speed = originSpeed;
+        boss.isAttacking = false;
+        GetComponent<Rigidbody2D>().isKinematic = false;
     }
 }

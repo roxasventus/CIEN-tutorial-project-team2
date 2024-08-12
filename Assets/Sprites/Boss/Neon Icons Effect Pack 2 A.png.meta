@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,7 +121,1771 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_12
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09c990fe971b9d4ca6a5e9b7b6a9f0e
+      internalID: 133361033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_13
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00f9ab2186753144bf1a47c84ade297
+      internalID: 1080406750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_14
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb1d7eeba397a64daa571d3e623d2f4
+      internalID: -1652887962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_15
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889d5577a67f36044835b5ca156c3375
+      internalID: 739600087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_16
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b780eb2b8267a8648a89d95829db58aa
+      internalID: 1566668981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_17
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3b15556081e6d449d392c42e6a8da7
+      internalID: -116729340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_18
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4d29af36b882d4b9b4727a93bea4b1
+      internalID: 1294817753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_19
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 624
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35db381edcfcc14b8bb9409f873625f
+      internalID: -1777766152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e64e88ae75e78843b42be87d8d4db66
+      internalID: 2123193735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a1a433377dc00409022f26dbec3875
+      internalID: 1776965571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bfe81c861db9c04fa8fa9362774ceaf
+      internalID: 251739391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_23
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1965ac5512576a47b9f9c27517a9387
+      internalID: -1097391873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_24
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d928730914275d64da3ba2ce69a3c5aa
+      internalID: -126427673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_25
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba1e5961fdb78641a9a18309700f177
+      internalID: -2145803590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_26
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2bea496c11bbb4489d5b7b38fecfa9
+      internalID: -294794390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45b8acb7c941c742ba1b99a26ccffca
+      internalID: -1697723541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_72
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1c2f63b01dcd04fbac96851074324d
+      internalID: 75300850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_73
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2960346885a1dc46a6ba9df4c8c9805
+      internalID: -902749532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_74
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad658d26b5d09084584a8eb0ebce52eb
+      internalID: 1340443214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_75
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59de5d5038f97be44a8ca0617e3bb84f
+      internalID: 129768337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_76
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2a0de774d856148b919a4678097dd1
+      internalID: -1171700960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_77
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60bc94d199d50ca4da12260195b6bd71
+      internalID: 1375468887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_78
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e73c2c401e8a6459c767e6421a5423
+      internalID: 188744864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_79
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9c017e1f1411a43a172fccc03965fd
+      internalID: 1263751922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_84
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49314c400e6e2f43b4f246f340fb4ca
+      internalID: 1865904080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_85
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 447a4d87f611ec04da9e35db7093e8d8
+      internalID: -581550387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_86
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1d6e69bd92fd94cb4b7b49338aecee
+      internalID: -195108837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_87
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0180623fbe2ebec4ea712b891b19e1a8
+      internalID: -1214509140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_92
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f902a453995174394fc0e246688a1b
+      internalID: 1170541566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_93
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44cffe4d1f35ea74fb75247f83076fd3
+      internalID: 1496107230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_94
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1af18b28f70c3c46afa14830580ce46
+      internalID: -420884848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_95
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7a64c813dff024f9780cfcd902efca
+      internalID: 674587744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_108
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3cc627f6597b7546b464a51256bbabf
+      internalID: -1754516952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_109
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22223f5dcd943764ca5f94d08d93b6ee
+      internalID: 2142862402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_110
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ad2a799e3943a42aeec3358cc3980c
+      internalID: 1084956417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_111
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbe9b30417c2b146bb92851f31332d8
+      internalID: -1222385787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_112
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a56541e78c6dcb4c96696a1c067bb3e
+      internalID: 1891813047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_113
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c4b8a58ea0df9439c2dd65e7f92ba8
+      internalID: 1239497332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_114
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e89d10bae4c9a49af266bb88127986
+      internalID: -2017222831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_115
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d2c96f93e5ed14f96744b80294ed80
+      internalID: 1364018716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_116
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff924cde673350469d11763ff98c788
+      internalID: 876372463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_117
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56b92bb8c16843409d722aecd88b0a6
+      internalID: -1025593835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_118
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa37b9160d8ec904da0fb7137a51fb53
+      internalID: 1499541532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_119
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf2ab685cf9e5548940aa6fc98dd744
+      internalID: 110749950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_132
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67abc989fe0d53429f66c3e09a74bfe
+      internalID: -2072505689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_133
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ba7596c4b92244480043d73eada5b7
+      internalID: 703141669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_134
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d840f4d64d7b12446a9e45943d1558e5
+      internalID: 2051544608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_135
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001d8c17681bb554e93889d602798472
+      internalID: 1120564016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_144
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e748f0963785392428c87602d83fdf38
+      internalID: 1500845050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_145
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037bdf334a8569a4c90fb5acf944ae58
+      internalID: -1512893977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_146
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0c9adc96b0aa5499201edba9066f40
+      internalID: 528740923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_147
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411e3a46d3466eb4c8475d870dc15879
+      internalID: 1185231237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_196
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306c1befb7acf65419f7b86d3f113a84
+      internalID: 1232453354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_197
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6f7722feb5bba49878c430a631f5c8
+      internalID: -744646516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_198
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509cd9891dbd1f24c9c3bafc97dbb19f
+      internalID: -1558862427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_199
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b5a13fee335734eabcb669c817c630
+      internalID: 2066014518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_220
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5ed1887ff06f947851c8eed27b3232
+      internalID: -397491133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_221
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8afcb0d785b5f428e9ffb15c6bbe81
+      internalID: -577776555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_222
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5660952f05ed89a49a6ec30003111a94
+      internalID: 440828724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_223
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4484c3f9454051145afd420268deb94e
+      internalID: 332524871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_228
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e15f21b4261064cbd41c7690044381
+      internalID: -1964902232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_229
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c936029c4c5c68489569af9f3aaa499
+      internalID: 1784438644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_230
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94846447080f6db478bb192dd4150741
+      internalID: -1457299213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_231
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267d4c434572fbc4eb968f8c4f09ab91
+      internalID: 2134961340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_232
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b3a56eb3be70b428f077e221a8845e
+      internalID: -1238615022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_233
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a7cfb75950df24cb869c038d4ae724
+      internalID: -263819466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_234
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eda949a24ad27a4dafccf1cfa7ccb36
+      internalID: 946462156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_235
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c30088f205eda48b606014556ce0ab
+      internalID: -1505499054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_236
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be707bac7c9ca1149b4cfb7c06810c17
+      internalID: -1209063011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_237
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8d9a9a76f4dc9499cb4e7519c4846e
+      internalID: 1462103799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_238
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ae39a1c5bd02847b703407b51dc614
+      internalID: -1696880741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_239
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38cbb09fac7da64b864cb77493bb04c
+      internalID: 1659929416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_248
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba2e16ad4eab014c84aa506d03ac36c
+      internalID: 1032224193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_249
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d2f7e8f68df3d47aa2b0e06dae41b1
+      internalID: -1092058282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_250
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158cfaa5719ca5146b7ac0f7a1503d96
+      internalID: 1391922494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_251
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec0e94a98d643c489009703ad8adc02
+      internalID: -2014669743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_252
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f580bda9c890644af29f644e17f749
+      internalID: 350248383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_253
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7782aff6649b6ac4b8a6c819a8c1239b
+      internalID: -1220320400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_254
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8d1e9ce51186c4eb88e50e0d6750bf
+      internalID: 818337451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_255
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e988aef9874c6c1459378d53293ec907
+      internalID: -496479163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_268
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3e5934d58d6484e86415f09bc95e79
+      internalID: -1323172464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_269
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16b1ddc6fb350d459217987dc4a1228
+      internalID: -1418519277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_270
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682c03d8db2911d4c89245406cbe947b
+      internalID: 19619929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neon Icons Effect Pack 2 A_271
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af7f5d5ece75cd4f8586abe144cc2e8
+      internalID: -1032337886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +1896,283 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Neon Icons Effect Pack 2 A_0: 549370521
+      Neon Icons Effect Pack 2 A_1: -186965250
+      Neon Icons Effect Pack 2 A_10: 746157777
+      Neon Icons Effect Pack 2 A_100: -2089720602
+      Neon Icons Effect Pack 2 A_101: 264487200
+      Neon Icons Effect Pack 2 A_102: -2025185278
+      Neon Icons Effect Pack 2 A_103: 1638782687
+      Neon Icons Effect Pack 2 A_104: 1459822693
+      Neon Icons Effect Pack 2 A_105: -1096946528
+      Neon Icons Effect Pack 2 A_106: -74189879
+      Neon Icons Effect Pack 2 A_107: -2052471335
+      Neon Icons Effect Pack 2 A_108: -1754516952
+      Neon Icons Effect Pack 2 A_109: 2142862402
+      Neon Icons Effect Pack 2 A_11: -65209282
+      Neon Icons Effect Pack 2 A_110: 1084956417
+      Neon Icons Effect Pack 2 A_111: -1222385787
+      Neon Icons Effect Pack 2 A_112: 1891813047
+      Neon Icons Effect Pack 2 A_113: 1239497332
+      Neon Icons Effect Pack 2 A_114: -2017222831
+      Neon Icons Effect Pack 2 A_115: 1364018716
+      Neon Icons Effect Pack 2 A_116: 876372463
+      Neon Icons Effect Pack 2 A_117: -1025593835
+      Neon Icons Effect Pack 2 A_118: 1499541532
+      Neon Icons Effect Pack 2 A_119: 110749950
+      Neon Icons Effect Pack 2 A_12: 133361033
+      Neon Icons Effect Pack 2 A_120: -765162241
+      Neon Icons Effect Pack 2 A_121: 1832697009
+      Neon Icons Effect Pack 2 A_122: 815383979
+      Neon Icons Effect Pack 2 A_123: -16928296
+      Neon Icons Effect Pack 2 A_124: 553450171
+      Neon Icons Effect Pack 2 A_125: -286372627
+      Neon Icons Effect Pack 2 A_126: 1504331925
+      Neon Icons Effect Pack 2 A_127: 135762472
+      Neon Icons Effect Pack 2 A_128: 1807671907
+      Neon Icons Effect Pack 2 A_129: -1712954066
+      Neon Icons Effect Pack 2 A_13: 1080406750
+      Neon Icons Effect Pack 2 A_130: 2121867678
+      Neon Icons Effect Pack 2 A_131: -1022629808
+      Neon Icons Effect Pack 2 A_132: -2072505689
+      Neon Icons Effect Pack 2 A_133: 703141669
+      Neon Icons Effect Pack 2 A_134: 2051544608
+      Neon Icons Effect Pack 2 A_135: 1120564016
+      Neon Icons Effect Pack 2 A_136: 115906702
+      Neon Icons Effect Pack 2 A_137: -1650583504
+      Neon Icons Effect Pack 2 A_138: 673545675
+      Neon Icons Effect Pack 2 A_139: 1548249581
+      Neon Icons Effect Pack 2 A_14: -1652887962
+      Neon Icons Effect Pack 2 A_140: -1221123108
+      Neon Icons Effect Pack 2 A_141: 355891324
+      Neon Icons Effect Pack 2 A_142: -1421082642
+      Neon Icons Effect Pack 2 A_143: -140535106
+      Neon Icons Effect Pack 2 A_144: 1500845050
+      Neon Icons Effect Pack 2 A_145: -1512893977
+      Neon Icons Effect Pack 2 A_146: 528740923
+      Neon Icons Effect Pack 2 A_147: 1185231237
+      Neon Icons Effect Pack 2 A_148: -557662247
+      Neon Icons Effect Pack 2 A_149: 314353922
+      Neon Icons Effect Pack 2 A_15: 739600087
+      Neon Icons Effect Pack 2 A_150: -1189775842
+      Neon Icons Effect Pack 2 A_151: -771327393
+      Neon Icons Effect Pack 2 A_152: -1056743931
+      Neon Icons Effect Pack 2 A_153: 435269761
+      Neon Icons Effect Pack 2 A_154: 2007581650
+      Neon Icons Effect Pack 2 A_155: -2114868185
+      Neon Icons Effect Pack 2 A_156: 115694708
+      Neon Icons Effect Pack 2 A_157: -108739064
+      Neon Icons Effect Pack 2 A_158: 1923142420
+      Neon Icons Effect Pack 2 A_159: 868215510
+      Neon Icons Effect Pack 2 A_16: 1566668981
+      Neon Icons Effect Pack 2 A_160: 504981188
+      Neon Icons Effect Pack 2 A_161: 74349939
+      Neon Icons Effect Pack 2 A_162: -387634128
+      Neon Icons Effect Pack 2 A_163: 92713982
+      Neon Icons Effect Pack 2 A_164: 1984416315
+      Neon Icons Effect Pack 2 A_165: -143238707
+      Neon Icons Effect Pack 2 A_166: 1988074491
+      Neon Icons Effect Pack 2 A_167: 2002460028
+      Neon Icons Effect Pack 2 A_168: 1037854052
+      Neon Icons Effect Pack 2 A_169: -347066740
+      Neon Icons Effect Pack 2 A_17: -116729340
+      Neon Icons Effect Pack 2 A_170: 862197378
+      Neon Icons Effect Pack 2 A_171: 719070875
+      Neon Icons Effect Pack 2 A_172: -1064848501
+      Neon Icons Effect Pack 2 A_173: -2056398042
+      Neon Icons Effect Pack 2 A_174: -693880557
+      Neon Icons Effect Pack 2 A_175: 1460652828
+      Neon Icons Effect Pack 2 A_176: 1278414229
+      Neon Icons Effect Pack 2 A_177: 1159499124
+      Neon Icons Effect Pack 2 A_178: 900610459
+      Neon Icons Effect Pack 2 A_179: 1737690349
+      Neon Icons Effect Pack 2 A_18: 1294817753
+      Neon Icons Effect Pack 2 A_180: 2097948877
+      Neon Icons Effect Pack 2 A_181: -1522478855
+      Neon Icons Effect Pack 2 A_182: 851657277
+      Neon Icons Effect Pack 2 A_183: 1042132002
+      Neon Icons Effect Pack 2 A_184: -238122869
+      Neon Icons Effect Pack 2 A_185: 1124142242
+      Neon Icons Effect Pack 2 A_186: -529784360
+      Neon Icons Effect Pack 2 A_187: 1403747425
+      Neon Icons Effect Pack 2 A_188: -434287458
+      Neon Icons Effect Pack 2 A_189: -207794652
+      Neon Icons Effect Pack 2 A_19: -1777766152
+      Neon Icons Effect Pack 2 A_190: 565253525
+      Neon Icons Effect Pack 2 A_191: -751192105
+      Neon Icons Effect Pack 2 A_192: 1866718256
+      Neon Icons Effect Pack 2 A_193: -776942767
+      Neon Icons Effect Pack 2 A_194: -850660030
+      Neon Icons Effect Pack 2 A_195: -400050965
+      Neon Icons Effect Pack 2 A_196: 1232453354
+      Neon Icons Effect Pack 2 A_197: -744646516
+      Neon Icons Effect Pack 2 A_198: -1558862427
+      Neon Icons Effect Pack 2 A_199: 2066014518
+      Neon Icons Effect Pack 2 A_2: -883622231
+      Neon Icons Effect Pack 2 A_20: 2123193735
+      Neon Icons Effect Pack 2 A_200: 1794763626
+      Neon Icons Effect Pack 2 A_201: -15772563
+      Neon Icons Effect Pack 2 A_202: -1408161766
+      Neon Icons Effect Pack 2 A_203: -430458566
+      Neon Icons Effect Pack 2 A_204: -1877407725
+      Neon Icons Effect Pack 2 A_205: -120949823
+      Neon Icons Effect Pack 2 A_206: 2125764014
+      Neon Icons Effect Pack 2 A_207: 1061348846
+      Neon Icons Effect Pack 2 A_208: -25123535
+      Neon Icons Effect Pack 2 A_209: -383544364
+      Neon Icons Effect Pack 2 A_21: 1776965571
+      Neon Icons Effect Pack 2 A_210: -449712578
+      Neon Icons Effect Pack 2 A_211: -1993954675
+      Neon Icons Effect Pack 2 A_212: -1437177202
+      Neon Icons Effect Pack 2 A_213: 1028063180
+      Neon Icons Effect Pack 2 A_214: 281892990
+      Neon Icons Effect Pack 2 A_215: 1449555753
+      Neon Icons Effect Pack 2 A_216: 80433606
+      Neon Icons Effect Pack 2 A_217: -60446707
+      Neon Icons Effect Pack 2 A_218: 2123807502
+      Neon Icons Effect Pack 2 A_219: 543573002
+      Neon Icons Effect Pack 2 A_22: 251739391
+      Neon Icons Effect Pack 2 A_220: -397491133
+      Neon Icons Effect Pack 2 A_221: -577776555
+      Neon Icons Effect Pack 2 A_222: 440828724
+      Neon Icons Effect Pack 2 A_223: 332524871
+      Neon Icons Effect Pack 2 A_224: -372319236
+      Neon Icons Effect Pack 2 A_225: 1489895162
+      Neon Icons Effect Pack 2 A_226: 996524876
+      Neon Icons Effect Pack 2 A_227: -1387247015
+      Neon Icons Effect Pack 2 A_228: -1964902232
+      Neon Icons Effect Pack 2 A_229: 1784438644
+      Neon Icons Effect Pack 2 A_23: -1097391873
+      Neon Icons Effect Pack 2 A_230: -1457299213
+      Neon Icons Effect Pack 2 A_231: 2134961340
+      Neon Icons Effect Pack 2 A_232: -1238615022
+      Neon Icons Effect Pack 2 A_233: -263819466
+      Neon Icons Effect Pack 2 A_234: 946462156
+      Neon Icons Effect Pack 2 A_235: -1505499054
+      Neon Icons Effect Pack 2 A_236: -1209063011
+      Neon Icons Effect Pack 2 A_237: 1462103799
+      Neon Icons Effect Pack 2 A_238: -1696880741
+      Neon Icons Effect Pack 2 A_239: 1659929416
+      Neon Icons Effect Pack 2 A_24: -126427673
+      Neon Icons Effect Pack 2 A_240: -972635474
+      Neon Icons Effect Pack 2 A_241: 1684799620
+      Neon Icons Effect Pack 2 A_242: 871597959
+      Neon Icons Effect Pack 2 A_243: -2097649700
+      Neon Icons Effect Pack 2 A_244: -543240154
+      Neon Icons Effect Pack 2 A_245: -624736440
+      Neon Icons Effect Pack 2 A_246: -286619841
+      Neon Icons Effect Pack 2 A_247: 1636814270
+      Neon Icons Effect Pack 2 A_248: 1032224193
+      Neon Icons Effect Pack 2 A_249: -1092058282
+      Neon Icons Effect Pack 2 A_25: -2145803590
+      Neon Icons Effect Pack 2 A_250: 1391922494
+      Neon Icons Effect Pack 2 A_251: -2014669743
+      Neon Icons Effect Pack 2 A_252: 350248383
+      Neon Icons Effect Pack 2 A_253: -1220320400
+      Neon Icons Effect Pack 2 A_254: 818337451
+      Neon Icons Effect Pack 2 A_255: -496479163
+      Neon Icons Effect Pack 2 A_256: -1200456748
+      Neon Icons Effect Pack 2 A_257: 1169297854
+      Neon Icons Effect Pack 2 A_258: 1314587790
+      Neon Icons Effect Pack 2 A_259: 23287245
+      Neon Icons Effect Pack 2 A_26: -294794390
+      Neon Icons Effect Pack 2 A_260: -1063081892
+      Neon Icons Effect Pack 2 A_261: -970097668
+      Neon Icons Effect Pack 2 A_262: 33852621
+      Neon Icons Effect Pack 2 A_263: -34285835
+      Neon Icons Effect Pack 2 A_264: 13814864
+      Neon Icons Effect Pack 2 A_265: 1266908891
+      Neon Icons Effect Pack 2 A_266: -1800947802
+      Neon Icons Effect Pack 2 A_267: 1807544718
+      Neon Icons Effect Pack 2 A_268: -1323172464
+      Neon Icons Effect Pack 2 A_269: -1418519277
+      Neon Icons Effect Pack 2 A_27: -1697723541
+      Neon Icons Effect Pack 2 A_270: 19619929
+      Neon Icons Effect Pack 2 A_271: -1032337886
+      Neon Icons Effect Pack 2 A_272: 217706329
+      Neon Icons Effect Pack 2 A_273: 564600070
+      Neon Icons Effect Pack 2 A_274: -360451387
+      Neon Icons Effect Pack 2 A_275: -109575464
+      Neon Icons Effect Pack 2 A_28: -282400736
+      Neon Icons Effect Pack 2 A_29: -993575849
+      Neon Icons Effect Pack 2 A_3: -95354236
+      Neon Icons Effect Pack 2 A_30: 567274767
+      Neon Icons Effect Pack 2 A_31: -2112674975
+      Neon Icons Effect Pack 2 A_32: -2130282988
+      Neon Icons Effect Pack 2 A_33: -878284154
+      Neon Icons Effect Pack 2 A_34: 420328496
+      Neon Icons Effect Pack 2 A_35: 62800512
+      Neon Icons Effect Pack 2 A_36: -1129043521
+      Neon Icons Effect Pack 2 A_37: 2047540421
+      Neon Icons Effect Pack 2 A_38: 346746418
+      Neon Icons Effect Pack 2 A_39: 1149559799
+      Neon Icons Effect Pack 2 A_4: 681575151
+      Neon Icons Effect Pack 2 A_40: -767893994
+      Neon Icons Effect Pack 2 A_41: 194334401
+      Neon Icons Effect Pack 2 A_42: 819323431
+      Neon Icons Effect Pack 2 A_43: 1076443092
+      Neon Icons Effect Pack 2 A_44: -161615171
+      Neon Icons Effect Pack 2 A_45: 575602680
+      Neon Icons Effect Pack 2 A_46: 1156679900
+      Neon Icons Effect Pack 2 A_47: -259660644
+      Neon Icons Effect Pack 2 A_48: 1200110968
+      Neon Icons Effect Pack 2 A_49: 1518369058
+      Neon Icons Effect Pack 2 A_5: 1533711675
+      Neon Icons Effect Pack 2 A_50: 53180152
+      Neon Icons Effect Pack 2 A_51: 1870880563
+      Neon Icons Effect Pack 2 A_52: 1820389628
+      Neon Icons Effect Pack 2 A_53: -1742571101
+      Neon Icons Effect Pack 2 A_54: 498742727
+      Neon Icons Effect Pack 2 A_55: 1718634667
+      Neon Icons Effect Pack 2 A_56: -15431356
+      Neon Icons Effect Pack 2 A_57: -1080416970
+      Neon Icons Effect Pack 2 A_58: 1988731153
+      Neon Icons Effect Pack 2 A_59: -1912911427
+      Neon Icons Effect Pack 2 A_6: -607612755
+      Neon Icons Effect Pack 2 A_60: 1558098457
+      Neon Icons Effect Pack 2 A_61: 509793685
+      Neon Icons Effect Pack 2 A_62: -1696509036
+      Neon Icons Effect Pack 2 A_63: 939484120
+      Neon Icons Effect Pack 2 A_64: 1065257724
+      Neon Icons Effect Pack 2 A_65: -817788947
+      Neon Icons Effect Pack 2 A_66: -1588261921
+      Neon Icons Effect Pack 2 A_67: -674545600
+      Neon Icons Effect Pack 2 A_68: -185171232
+      Neon Icons Effect Pack 2 A_69: 1642373999
+      Neon Icons Effect Pack 2 A_7: 663851314
+      Neon Icons Effect Pack 2 A_70: -1764758773
+      Neon Icons Effect Pack 2 A_71: -1510700838
+      Neon Icons Effect Pack 2 A_72: 75300850
+      Neon Icons Effect Pack 2 A_73: -902749532
+      Neon Icons Effect Pack 2 A_74: 1340443214
+      Neon Icons Effect Pack 2 A_75: 129768337
+      Neon Icons Effect Pack 2 A_76: -1171700960
+      Neon Icons Effect Pack 2 A_77: 1375468887
+      Neon Icons Effect Pack 2 A_78: 188744864
+      Neon Icons Effect Pack 2 A_79: 1263751922
+      Neon Icons Effect Pack 2 A_8: -1370489744
+      Neon Icons Effect Pack 2 A_80: -2115555379
+      Neon Icons Effect Pack 2 A_81: 1667652798
+      Neon Icons Effect Pack 2 A_82: -774335978
+      Neon Icons Effect Pack 2 A_83: 1733745664
+      Neon Icons Effect Pack 2 A_84: 1865904080
+      Neon Icons Effect Pack 2 A_85: -581550387
+      Neon Icons Effect Pack 2 A_86: -195108837
+      Neon Icons Effect Pack 2 A_87: -1214509140
+      Neon Icons Effect Pack 2 A_88: 1335709140
+      Neon Icons Effect Pack 2 A_89: -1075073790
+      Neon Icons Effect Pack 2 A_9: 1070296290
+      Neon Icons Effect Pack 2 A_90: 1524605579
+      Neon Icons Effect Pack 2 A_91: -795915527
+      Neon Icons Effect Pack 2 A_92: 1170541566
+      Neon Icons Effect Pack 2 A_93: 1496107230
+      Neon Icons Effect Pack 2 A_94: -420884848
+      Neon Icons Effect Pack 2 A_95: 674587744
+      Neon Icons Effect Pack 2 A_96: -942030748
+      Neon Icons Effect Pack 2 A_97: 273387841
+      Neon Icons Effect Pack 2 A_98: 411301247
+      Neon Icons Effect Pack 2 A_99: 669109045
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

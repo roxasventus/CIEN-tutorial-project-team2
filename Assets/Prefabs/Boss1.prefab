@@ -38,7 +38,6 @@ Transform:
   m_Children:
   - {fileID: 543841868839119239}
   - {fileID: 6959968409114256606}
-  - {fileID: 3528160330353720742}
   - {fileID: 1593821941619809270}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -195,8 +194,9 @@ MonoBehaviour:
   target: {fileID: 0}
   isAttacking: 0
   bossNum: 0
-  atkTimer: 10
+  atkTimer: 9
   atk1WaitTime: 5
+  atk2WaitTime: 1
   atk2ArrowNum: 5
 --- !u!114 &7881873046938687265
 MonoBehaviour:
@@ -258,6 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beamParent: {fileID: 5619856697586666664}
+  bomb: {fileID: 5830544059900516951, guid: d54e8d7bfdee6e04ab3ae78b5614fc95, type: 3}
 --- !u!1 &987020358951880309
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,37 +342,6 @@ MonoBehaviour:
   trapParent: {fileID: 0}
   trapActivePer: 0
   breakableParent: {fileID: 0}
---- !u!1 &4132115285272772417
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3528160330353720742}
-  m_Layer: 0
-  m_Name: Bombs
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3528160330353720742
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4132115285272772417}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1501579180626943437}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4806890501138228511
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class Boss : MonoBehaviour
 
     [Header("Boss1")]
     public float atk1WaitTime;
+    public float atk2WaitTime;
     public int atk2ArrowNum;
 
     [Header("Boss2")]
@@ -82,8 +83,8 @@ public class Boss : MonoBehaviour
             switch (bossNum)
             {
                 case 0:
-                    //int patternNum = Random.Range(0, 2);
-                    int patternNum = 0;
+                    int patternNum = Random.Range(0, 2);
+                    //int patternNum = 1;
 
                     if (patternNum == 0)
                         boss1.CallAtk1();
