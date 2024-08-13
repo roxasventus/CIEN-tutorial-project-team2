@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class Boss1_Atk : MonoBehaviour
 {
+    public float shootWaitTime;
+    public float explodeWaitTime;
+    public int bombNum;
+
     public GameObject beamParent;
     public GameObject bomb;
 
@@ -81,7 +85,7 @@ public class Boss1_Atk : MonoBehaviour
         //targeting player
 
         anim.SetTrigger("Atk1");
-        while(timer <= boss.atk1WaitTime - 1f)
+        while(timer <= shootWaitTime - 1f)
         {
             timer += Time.fixedDeltaTime;
 
@@ -139,7 +143,7 @@ public class Boss1_Atk : MonoBehaviour
 
     private IEnumerator SpawnBomb()
     {
-        for (int i = 0; i < boss.atk2ArrowNum; i++)
+        for (int i = 0; i < bombNum; i++)
         {
             GameObject o = Instantiate(bomb, transform);
             o.transform.position = GameManager.instance.player.transform.position;
@@ -148,6 +152,7 @@ public class Boss1_Atk : MonoBehaviour
         }
     }
 
+    //used as animation event
     public void StartMoving()
     {
         boss.speed = originSpeed;

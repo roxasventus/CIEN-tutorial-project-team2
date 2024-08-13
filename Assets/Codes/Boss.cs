@@ -14,18 +14,12 @@ public class Boss : MonoBehaviour
     public int bossNum;
     public float atkTimer;
 
-    [Header("Boss1")]
-    public float atk1WaitTime;
-    public float atk2WaitTime;
-    public int atk2ArrowNum;
-
     [Header("Boss2")]
-
-    [Header("Boss3")]
-
+    public Transform thrownHammerPos;
 
     bool isLive;
     float timer;
+    private int patternNum;
 
     Rigidbody2D rigid;
     Collider2D coll;
@@ -36,7 +30,7 @@ public class Boss : MonoBehaviour
     DamageFlash damageFlash;
 
     Boss1_Atk boss1;
-
+    Boss2_Atk boss2;
 
     void Awake()
     {
@@ -52,6 +46,10 @@ public class Boss : MonoBehaviour
         {
             boss1 = GetComponent<Boss1_Atk>();
         }
+        else if(bossNum == 1)
+        {
+            boss2 = GetComponent<Boss2_Atk>();
+        }
     }
 
     private void Update()
@@ -66,11 +64,15 @@ public class Boss : MonoBehaviour
             {
                 shadow.localPosition = new Vector3(0.1f, -0.7f, 0);
                 wallColl.localPosition = new Vector3(0.1f, -0.7f, 0);
+                if(bossNum == 1)
+                    thrownHammerPos.localPosition = new Vector3(-3.9f, -0.7f, 0);
             }
             else
             {
                 shadow.localPosition = new Vector3(-0.1f, -0.7f, 0);
                 wallColl.localPosition = new Vector3(-0.1f, -0.7f, 0);
+                if (bossNum == 1)
+                    thrownHammerPos.localPosition = new Vector3(3.9f, -0.7f, 0);
             }
         }
        
@@ -83,8 +85,8 @@ public class Boss : MonoBehaviour
             switch (bossNum)
             {
                 case 0:
-                    int patternNum = Random.Range(0, 2);
-                    //int patternNum = 1;
+                    patternNum = Random.Range(0, 2);
+                    //patternNum = 1;
 
                     if (patternNum == 0)
                         boss1.CallAtk1();
@@ -93,6 +95,13 @@ public class Boss : MonoBehaviour
 
                     break;
                 case 1:
+                    //patternNum = Random.Range(0, 2);
+                    patternNum = 0;
+
+                    if (patternNum == 0)
+                        boss2.CallAtk1();
+                    else if (patternNum == 1)
+                        boss2.CallAtk2();
                     break;
                 case 2:
                     break;

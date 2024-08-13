@@ -195,9 +195,6 @@ MonoBehaviour:
   isAttacking: 0
   bossNum: 0
   atkTimer: 9
-  atk1WaitTime: 5
-  atk2WaitTime: 1
-  atk2ArrowNum: 5
 --- !u!114 &7881873046938687265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +254,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 039797e7b15d7b84ead3f412014608c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootWaitTime: 2.3
+  explodeWaitTime: 0.7
+  bombNum: 5
   beamParent: {fileID: 5619856697586666664}
   bomb: {fileID: 5830544059900516951, guid: d54e8d7bfdee6e04ab3ae78b5614fc95, type: 3}
 --- !u!1 &987020358951880309

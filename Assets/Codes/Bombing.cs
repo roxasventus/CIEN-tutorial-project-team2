@@ -6,13 +6,13 @@ public class Bombing : MonoBehaviour
 {
     Transform timerCircle;
     Animator anim;
-    Boss boss;
+    Boss1_Atk bossAtk;
 
     private void Awake()
     {
         timerCircle = GetComponentsInChildren<Transform>()[1];
         anim = GetComponent<Animator>();
-        boss = GetComponentInParent<Boss>();
+        bossAtk = GetComponentInParent<Boss1_Atk>();
     }
 
     public void CallTargetNBomb()
@@ -22,9 +22,9 @@ public class Bombing : MonoBehaviour
 
     IEnumerator TargetNBomb()
     {
-        for(float i = 0; i < boss.atk2WaitTime; i += 0.1f)
+        for(float i = 0; i < bossAtk.explodeWaitTime; i += 0.1f)
         {
-            timerCircle.localScale = Vector3.one * (i / boss.atk2WaitTime) * 1.31f;
+            timerCircle.localScale = Vector3.one * (i / bossAtk.explodeWaitTime) * 1.31f;
             yield return new WaitForSeconds(0.1f);
         }
 
