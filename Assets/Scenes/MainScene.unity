@@ -11157,7 +11157,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.736842
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -21716,7 +21716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLive: 0
   gameTime: 0
-  maxGameTime: 60
+  maxGameTime: 300
   stageTime: 0
   maxStageNum: 3
   stageNum: 0
@@ -21733,6 +21733,7 @@ MonoBehaviour:
   uiLevelUp: {fileID: 528382275}
   uiResult: {fileID: 1076082517}
   enemyCleaner: {fileID: 352779079}
+  hitEffect: {fileID: 8727724134533345640, guid: f18b897561d437c409ee244163b3fc2c, type: 3}
   stage: {fileID: 857720752}
 --- !u!4 &948724951
 Transform:

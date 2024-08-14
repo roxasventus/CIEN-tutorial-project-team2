@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public LevelUp uiLevelUp;
     public Result uiResult;
     public GameObject enemyCleaner;
+    public GameObject hitEffect;
 
     public Stage stage; //stage script -sw
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,17 @@ public class Potion : MonoBehaviour
     public float Heal;
     public enum PotionType { Barrier, Heal }
     public PotionType potionType;
-   
+    GameObject hit;
+
+    private void Start()
+    {
+        if (GameManager.instance == null)
+        {
+            Debug.Log(GameManager.instance);
+            return;
+        }
+        hit = GameManager.instance.hitEffect;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,7 +46,18 @@ public class Potion : MonoBehaviour
                     GameManager.instance.health += GameManager.instance.maxHealth * Heal;
             }
             AudioManager.instance.PlaySfx(AudioManager.Sfx.potion);
-            Destroy(gameObject);
+
+            //Instantiate(hit, transform);
+            StartCoroutine(ItemGet(hit));
+            //Destroy(gameObject);
         }
     }
+    
+    IEnumerator ItemGet(GameObject hit)
+    {
+        Instantiate(hit, transform);
+        yield return new WaitForSeconds(0.4f);
+        Destroy(gameObject);
+    }
+    
 }
