@@ -5990,7 +5990,7 @@ FixedJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -0.47000027}
+  m_ConnectedAnchor: {x: 0, y: -0.47000003}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!50 &290422946
@@ -11090,7 +11090,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.736842
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11115,7 +11115,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.17, y: 8.62, z: -10}
+  m_LocalPosition: {x: 3.95, y: 1.04, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18053,6 +18053,10 @@ PrefabInstance:
       propertyPath: m_SleepingMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8703904984301125140, guid: d1e5acc0d98272c40b4255b4b2036a04, type: 3}
+      propertyPath: shootWaitTime
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21520,6 +21524,7 @@ MonoBehaviour:
   - {fileID: 604420251}
   - {fileID: 1845000503810146723, guid: 72288692123bbe2439194699ad3fc855, type: 3}
   - {fileID: 3716436991326688919, guid: cec68cb3c14889b428dfb8392d87e6b3, type: 3}
+  - {fileID: 3716436991326688919, guid: aefc4ce59ab8f2647b3962bb794fd36a, type: 3}
 --- !u!4 &890980515
 Transform:
   m_ObjectHideFlags: 0
@@ -24772,7 +24777,7 @@ Transform:
   m_GameObject: {fileID: 1321448596}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.17, y: 8.62, z: -10}
+  m_LocalPosition: {x: 3.95, y: 1.04, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36168,7 +36173,7 @@ Transform:
   m_GameObject: {fileID: 1640165706}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.17, y: 8.62, z: 0}
+  m_LocalPosition: {x: 3.95, y: 1.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -43000,7 +43005,7 @@ FixedJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -0.47000027}
+  m_ConnectedAnchor: {x: 0, y: -0.47000003}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!50 &1992191439
@@ -44102,24 +44107,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2125251358311585744, guid: 5923ebf8dc83201499c0b1c6f44b1efb, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2125251358311585744, guid: 5923ebf8dc83201499c0b1c6f44b1efb, type: 3}
       propertyPath: m_Name
       value: Boss2
       objectReference: {fileID: 0}
-    - target: {fileID: 2125251358311585744, guid: 5923ebf8dc83201499c0b1c6f44b1efb, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 4728645123114103572, guid: 5923ebf8dc83201499c0b1c6f44b1efb, type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4728645123114103572, guid: 5923ebf8dc83201499c0b1c6f44b1efb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 4728645123114103572, guid: 5923ebf8dc83201499c0b1c6f44b1efb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.91
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4728645123114103572, guid: 5923ebf8dc83201499c0b1c6f44b1efb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -44153,17 +44150,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5643009709258267616, guid: 5923ebf8dc83201499c0b1c6f44b1efb, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 286352590, guid: c07fa32def9134a479c8bf073c5ecd6d, type: 3}
-    - target: {fileID: 9071389566426825156, guid: 5923ebf8dc83201499c0b1c6f44b1efb, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 9f9c22d26fda0ec42b465c6821c16a87, type: 2}
+    - target: {fileID: 9155121837527535451, guid: 5923ebf8dc83201499c0b1c6f44b1efb, type: 3}
+      propertyPath: explodeWaitTime
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 9155121837527535451, guid: 5923ebf8dc83201499c0b1c6f44b1efb, type: 3}
       propertyPath: explosionRingNum
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

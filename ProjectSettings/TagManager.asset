@@ -17,6 +17,7 @@ TagManager:
   - EnemyBullet
   - EnemyBase
   - Trap
+  - AttractField
   layers:
   - Default
   - TransparentFX

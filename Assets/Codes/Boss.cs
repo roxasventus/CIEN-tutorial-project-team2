@@ -95,8 +95,8 @@ public class Boss : MonoBehaviour
 
                     break;
                 case 1:
-                    //patternNum = Random.Range(0, 2);
-                    patternNum = 0;
+                    patternNum = Random.Range(0, 2);
+                    //patternNum = 0;
 
                     if (patternNum == 0)
                         boss2.CallAtk1();
@@ -114,7 +114,7 @@ public class Boss : MonoBehaviour
     {
         if (!GameManager.instance.isLive)
             return;
-        if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
+        if (!isLive)
             return;
         Vector2 dirVec = target.position - rigid.position;
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;

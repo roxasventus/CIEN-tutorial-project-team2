@@ -11,10 +11,14 @@ public class Player : MonoBehaviour
     public Scanner scanner;
     public Player player;
 
+    private bool attracted = false;
+
     Rigidbody2D rigid;
     SpriteRenderer spriter;
     Animator anim;
     DamageFlash damageFlash;
+
+    Rigidbody2D attractingTarget;
 
     void Awake()
     {
@@ -44,8 +48,15 @@ public class Player : MonoBehaviour
         if (!GameManager.instance.isLive)
             return;
 
-        Vector2 nextVec = inputVec.normalized * speed * (1f - slowPercent) * Time.fixedDeltaTime; 
-        rigid.MovePosition(rigid.position + nextVec); 
+        Vector2 nextVec = inputVec.normalized * speed * (1f - slowPercent) * Time.fixedDeltaTime;
+        Vector2 dirVec = Vector2.zero;
+        if (attracted)
+        {
+            dirVec = attractingTarget.position - rigid.position;
+            dirVec = dirVec.normalized * 1.5f * Time.fixedDeltaTime;
+        }
+        rigid.MovePosition(rigid.position + nextVec + dirVec);
+
     }
 
     private void LateUpdate()
@@ -84,6 +95,38 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
             GetHit();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!GameManager.instance.isLive)
+        {
+            return;
+        }
+
+        if (collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            GetHit();
+        }
+        else if (collision.gameObject.CompareTag("AttractField"))
+        {
+            attracted = true;
+            attractingTarget = collision.GetComponent<Rigidbody2D>();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (!GameManager.instance.isLive)
+        {
+            return;
+        }
+
+        if (collision.gameObject.CompareTag("AttractField"))
+        {
+            attracted = false;
+            attractingTarget = null;
         }
     }
 

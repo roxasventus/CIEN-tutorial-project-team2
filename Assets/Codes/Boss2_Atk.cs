@@ -1,6 +1,8 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Boss2_Atk : MonoBehaviour
@@ -8,9 +10,12 @@ public class Boss2_Atk : MonoBehaviour
     public float explodeWaitTime;
     public int explosionRingNum;
     public float spinDuration;
+    public float spinWaitTime;
+    public float shootInterval;
 
     public GameObject crack;
     public Transform thrownHammerPos;
+    public GameObject spinBlade;
 
     private float originSpeed;
 
@@ -50,7 +55,20 @@ public class Boss2_Atk : MonoBehaviour
 
     IEnumerator Atk2()
     {
-        yield return new WaitForSeconds(0.1f);
+        originSpeed = boss.speed;
+        boss.speed = 0;
+        GetComponent<Rigidbody2D>().isKinematic = true;
+        boss.isAttacking = true;
+        anim.SetTrigger("Atk2");
+        Instantiate(spinBlade, transform).GetComponent<Spinner>().CallSpinNShoot();
+        
+        yield return new WaitForSeconds(spinWaitTime);
+
+        anim.SetTrigger("Spin");
+
+        yield return new WaitForSeconds(spinDuration);
+
+        anim.SetTrigger("EndSpin");
     }
 
     //used as animation event
@@ -61,11 +79,6 @@ public class Boss2_Atk : MonoBehaviour
         GetComponent<Rigidbody2D>().isKinematic = false;
         foreach (Collider2D coll in colls)
             coll.enabled = true;
-    }
-
-    public void MoveToHammer()
-    {
-        transform.position = thrownHammerPos.position + Vector3.up * 0.7f;
     }
 
     //used as animation event. Make cracks when hammer hits the ground
@@ -93,14 +106,20 @@ public class Boss2_Atk : MonoBehaviour
             
             rings.Add(ring);
 
-            yield return new WaitForSeconds(0.35f);
+            yield return new WaitForSeconds(0.2f);
         }
 
-        yield return new WaitForSeconds(explodeWaitTime + 0.3f);
+        yield return new WaitForSeconds(explodeWaitTime + 0.4f);
 
         anim.SetTrigger("Atk1_End");
         transform.position = thrownHammerPos.position + Vector3.up * 0.7f;
 
         StartMoving();
+    }
+
+    public void MoveShadow()
+    {
+        GetComponentsInChildren<Transform>()[1].position = thrownHammerPos.position;
+        GetComponentsInChildren<Transform>()[2].position = thrownHammerPos.position;
     }
 }
