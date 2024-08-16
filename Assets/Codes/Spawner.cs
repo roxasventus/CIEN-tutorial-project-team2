@@ -1,12 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Potion;
 
 public class Spawner : MonoBehaviour
 {
     public Transform[] spawnPoint;
     public SpawnData[] spawnData;
-    
+    public bool isBossSpawn;
+    public enum SpawnerType { Mob, Boss }
+    public SpawnerType spawnerType;
+
     float timer;
 
     void Awake()
@@ -20,30 +25,66 @@ public class Spawner : MonoBehaviour
         if (!GameManager.instance.isLive)
             return;
 
-        timer += Time.deltaTime;
-        
-
-        if (timer > spawnData[GameManager.instance.stageNum].spawnTime)
+        if (spawnerType == SpawnerType.Mob)
         {
-            timer = 0f;
-            Spawn();
+            timer += Time.deltaTime;
+
+
+            if (timer > spawnData[GameManager.instance.stageNum].spawnTime && GameManager.instance.isStageClear == false)
+            {
+                timer = 0f;
+                Spawn();
+            }
         }
+
+        if (spawnerType == SpawnerType.Boss)
+        {
+            if (GameManager.instance.isStageClear == true && isBossSpawn == false && !GameManager.instance.enemyCleaner.activeSelf)
+            {
+                Spawn();
+                isBossSpawn = true;
+            }
+        }
+
+
+
     }
 
     void Spawn()
     {
-        Transform point = spawnPoint[Random.Range(1, spawnPoint.Length)];
-        SpawnPoint spoint = point.GetComponent<SpawnPoint>();
-
-        while (spoint.noSpawn)
+        if (spawnerType == SpawnerType.Mob)
         {
-            point = spawnPoint[Random.Range(1, spawnPoint.Length)];
-            spoint = point.GetComponent<SpawnPoint>();
+            Transform point = spawnPoint[UnityEngine.Random.Range(1, spawnPoint.Length)];
+            SpawnPoint spoint = point.GetComponent<SpawnPoint>();
+
+            while (spoint.noSpawn)
+            {
+                point = spawnPoint[UnityEngine.Random.Range(1, spawnPoint.Length)];
+                spoint = point.GetComponent<SpawnPoint>();
+            }
+
+            GameObject enemy = GameManager.instance.pool.Get(0);
+            enemy.transform.position = point.position;
+            enemy.GetComponent<Enemy>().Init(spawnData[GameManager.instance.stageNum]);
         }
 
-        GameObject enemy = GameManager.instance.pool.Get(0);
-        enemy.transform.position = point.position;
-        enemy.GetComponent<Enemy>().Init(spawnData[GameManager.instance.stageNum]);
+
+        if (spawnerType == SpawnerType.Boss)
+        {
+            Transform point = spawnPoint[UnityEngine.Random.Range(1, spawnPoint.Length)];
+            SpawnPoint spoint = point.GetComponent<SpawnPoint>();
+
+            while (spoint.noSpawn)
+            {
+                point = spawnPoint[UnityEngine.Random.Range(1, spawnPoint.Length)];
+                spoint = point.GetComponent<SpawnPoint>();
+            }
+
+            GameObject enemy = GameManager.instance.pool.Get(9);
+            enemy.transform.position = point.position;
+            enemy.GetComponent<Enemy>().isBoss = true;
+            enemy.GetComponent<Enemy>().Init(spawnData[GameManager.instance.stageNum]);
+        }
     }
 }
 
