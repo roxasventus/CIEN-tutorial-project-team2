@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class Boss1_Atk : MonoBehaviour
 {
+    [Header("Atk1")]
     public float shootWaitTime;
+    public GameObject beamParent;
+
+    [Header("Atk2")]
     public float explodeWaitTime;
     public int bombNum;
-
-    public GameObject beamParent;
     public GameObject bomb;
 
     private Vector2 dir;

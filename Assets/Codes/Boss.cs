@@ -31,6 +31,7 @@ public class Boss : MonoBehaviour
 
     Boss1_Atk boss1;
     Boss2_Atk boss2;
+    Boss3_Atk boss3;
 
     void Awake()
     {
@@ -49,6 +50,10 @@ public class Boss : MonoBehaviour
         else if(bossNum == 1)
         {
             boss2 = GetComponent<Boss2_Atk>();
+        }
+        else if(bossNum == 2)
+        {
+            boss3 = GetComponent<Boss3_Atk>();
         }
     }
 
@@ -74,10 +79,15 @@ public class Boss : MonoBehaviour
                 if (bossNum == 1)
                     thrownHammerPos.localPosition = new Vector3(3.9f, -0.7f, 0);
             }
+
+            if(bossNum != 2)
+                timer += Time.deltaTime;
+            else if (bossNum == 2 && !boss3.boss3Atk1)
+            {
+                timer += Time.deltaTime;
+            }
         }
        
-        timer += Time.deltaTime;
-
         //do random attack pattern
         if(timer > atkTimer)
         {
@@ -104,6 +114,13 @@ public class Boss : MonoBehaviour
                         boss2.CallAtk2();
                     break;
                 case 2:
+                    //patternNum = Random.Range(0, 2);
+                    patternNum = 0;
+
+                    if (patternNum == 0)
+                        boss3.CallAtk1();
+                    else if (patternNum == 1)
+                        boss2.CallAtk2(); // ------------ CHANGE TO BOSS3 LATER
                     break;
             }
         }
@@ -118,6 +135,12 @@ public class Boss : MonoBehaviour
             return;
         Vector2 dirVec = target.position - rigid.position;
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;
+
+        if (bossNum == 2 && boss3.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Atk1"))
+        {
+            nextVec = (boss3.targetDir + Vector2.down * 0.7f).normalized * 40f * Time.fixedDeltaTime;
+        }
+
         rigid.MovePosition(rigid.position + nextVec);
         rigid.velocity = Vector2.zero;
     }
@@ -166,8 +189,6 @@ public class Boss : MonoBehaviour
 
         if (health > 0)
         {
-            if(!isAttacking)
-                anim.SetTrigger("Hit");
             // 효과음 재생할 부분마다 재생함수 호출
             AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);
 

@@ -7,14 +7,16 @@ using UnityEngine;
 
 public class Boss2_Atk : MonoBehaviour
 {
+    [Header("Atk1")]
     public float explodeWaitTime;
     public int explosionRingNum;
+    public GameObject crack;
+    public Transform thrownHammerPos;
+
+    [Header("Atk2")]
     public float spinDuration;
     public float spinWaitTime;
     public float shootInterval;
-
-    public GameObject crack;
-    public Transform thrownHammerPos;
     public GameObject spinBlade;
 
     private float originSpeed;
