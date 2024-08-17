@@ -80,8 +80,10 @@ public class Boss : MonoBehaviour
                     thrownHammerPos.localPosition = new Vector3(3.9f, -0.7f, 0);
             }
 
-            if(bossNum != 2)
+            if (bossNum != 2)
+            {
                 timer += Time.deltaTime;
+            }
             else if (bossNum == 2 && !boss3.boss3Atk1)
             {
                 timer += Time.deltaTime;
@@ -120,7 +122,7 @@ public class Boss : MonoBehaviour
                     if (patternNum == 0)
                         boss3.CallAtk1();
                     else if (patternNum == 1)
-                        boss2.CallAtk2(); // ------------ CHANGE TO BOSS3 LATER
+                        boss3.CallAtk2(); 
                     break;
             }
         }
