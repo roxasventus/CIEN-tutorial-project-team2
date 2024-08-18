@@ -46,6 +46,8 @@ public class Boss1_Atk : MonoBehaviour
         GetComponent<Rigidbody2D>().isKinematic = true;
         anim.SetTrigger("Atk2");
 
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss1Atk2);
+
         StartCoroutine(SpawnBomb());
     }
 
@@ -87,7 +89,9 @@ public class Boss1_Atk : MonoBehaviour
         //targeting player
 
         anim.SetTrigger("Atk1");
-        while(timer <= shootWaitTime - 1f)
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss1Atk1Target);
+
+        while (timer <= shootWaitTime - 1f)
         {
             timer += Time.fixedDeltaTime;
 
@@ -128,6 +132,8 @@ public class Boss1_Atk : MonoBehaviour
             beams[i].GetComponent<Animator>().SetTrigger("Shoot");
             beams[i].gameObject.tag = "EnemyBullet";
         }
+
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss1Atk1Shoot);
         yield return new WaitForSeconds(0.6f);
 
         //Untag and disable beams

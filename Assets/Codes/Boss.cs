@@ -207,8 +207,22 @@ public class Boss : MonoBehaviour
 
             // 효과음 재생할 부분마다 재생함수 호출
             if (GameManager.instance.isLive)
-                AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
+            {
+                switch (bossNum)
+                {
+                    case 0:
+                        AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss1Dead);
+                        break;
+                    case 1:
+                        AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss2Dead);
+                        break;
+                    case 2:
+                        AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss3Dead);
+                        break;
 
+                }
+            }
+               
         }
     }
 

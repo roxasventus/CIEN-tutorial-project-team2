@@ -72,7 +72,8 @@ public class Boss3_Atk : MonoBehaviour
             anim.SetTrigger("Atk1");
             float timer = 0;
             sliceTarget.gameObject.SetActive(true);
-            
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss3Atk1Target);
+
             while (timer <= dashWaitTime - 1f)
             {
                 timer += Time.fixedDeltaTime;
@@ -114,6 +115,9 @@ public class Boss3_Atk : MonoBehaviour
             anim.SetBool("Slice", true);
             sliceEffect.gameObject.tag = "EnemyBullet";
             damageFlash.CallDamageFlash();
+
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss3Atk1Slice);
+
             yield return new WaitForSeconds(0.25f);
 
             //Untag and disable effect
@@ -187,6 +191,8 @@ public class Boss3_Atk : MonoBehaviour
 
             RecalibrateIndicators();
             anim.SetTrigger("Atk2Wait");
+
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss3Atk2Teleport);
 
             boss.isAttacking = false;
             yield return new WaitForSeconds(0.1f);
@@ -282,7 +288,7 @@ public class Boss3_Atk : MonoBehaviour
 
             enemyBullet.GetComponent<EnemyBullet>().Init(0, targetDir);
 
-            //AudioManager.instance.PlaySfx(AudioManager.Sfx.attack1);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss3Atk2Shoot);
         }
     }
 

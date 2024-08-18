@@ -84,6 +84,8 @@ public class Spinner : MonoBehaviour
             for(int i = 0; i < 4; i++)
                 Shoot();
 
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss2Atk2Swirl);
+
             yield return new WaitForSeconds(bossAtk.shootInterval);
         }
 
@@ -116,7 +118,7 @@ public class Spinner : MonoBehaviour
 
         enemyBullet.GetComponent<EnemyBullet>().Init(0, dir);
 
-        //AudioManager.instance.PlaySfx(AudioManager.Sfx.attack1);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss2Atk2Shoot);
     }
 
     public void Dead()

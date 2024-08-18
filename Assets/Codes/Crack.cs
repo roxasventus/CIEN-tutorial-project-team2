@@ -29,6 +29,7 @@ public class Crack : MonoBehaviour
 
         anim.SetTrigger("Boom");
         tag = "Trap";
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Explosion);
 
         yield return new WaitForSeconds(0.5f);
         tag = "Untagged";

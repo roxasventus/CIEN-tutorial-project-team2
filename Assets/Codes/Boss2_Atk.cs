@@ -46,7 +46,7 @@ public class Boss2_Atk : MonoBehaviour
             coll.enabled = false;
 
         anim.SetTrigger("Atk1");
-
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss2Atk1Jump);
     }
 
     public void CallAtk2()
@@ -91,6 +91,8 @@ public class Boss2_Atk : MonoBehaviour
 
     IEnumerator GroundCrack()
     {
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss2Atk1Hit);
+
         Instantiate(crack, thrownHammerPos).GetComponent<Crack>().CallCrackNBomb();
 
         for(int i = 0; i < explosionRingNum; i++)
