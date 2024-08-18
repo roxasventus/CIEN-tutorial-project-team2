@@ -111,7 +111,7 @@ public class Spinner : MonoBehaviour
     {
         Vector3 dir = Random.insideUnitCircle.normalized;
 
-        Transform enemyBullet = GameManager.instance.pool.Get(9).transform;
+        Transform enemyBullet = GameManager.instance.pool.Get(12).transform;
         enemyBullet.position = transform.position;
 
         enemyBullet.rotation = Quaternion.FromToRotation(Vector3.left, dir);

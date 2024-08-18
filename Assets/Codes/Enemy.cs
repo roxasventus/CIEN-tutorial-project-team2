@@ -13,7 +13,6 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D target;
 
     bool isLive;
-    public bool isBoss;
 
     Rigidbody2D rigid;
     Collider2D coll;
@@ -147,9 +146,6 @@ public class Enemy : MonoBehaviour
             // 효과음 재생할 부분마다 재생함수 호출
             if (GameManager.instance.isLive)
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
-
-            if (isBoss == true)
-                GameManager.instance.GameVictory();
 
         }
     }

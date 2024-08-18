@@ -28,7 +28,8 @@ public class AudioManager : MonoBehaviour
     public enum Sfx { Dead, Hit, LevelUp = 3, Lose, Melee, Range = 7, Select, Win, attack1, attack2, attack3, boomerang, final_attack, potion,
     Explosion, Boss1Atk1Target, Boss1Atk1Shoot, Boss1Atk2, Boss1Dead, //Boss 1
     Boss2Atk1Jump, Boss2Atk1Hit, Boss2Atk2Swirl, Boss2Atk2Shoot, Boss2Dead = 26, //Boss2
-    Boss3Atk1Target, Boss3Atk1Slice = 29, Boss3Atk2Teleport = 32, Boss3Atk2Shoot, Boss3Dead = 36}
+    Boss3Atk1Target, Boss3Atk1Slice = 29, Boss3Atk2Teleport = 32, Boss3Atk2Shoot, Boss3Dead = 36, //Boss3
+    BossAppear }
 
     private void Awake()
     {

@@ -13,6 +13,7 @@ public class Boss : MonoBehaviour
     [Header("Boss Settings")]
     public int bossNum;
     public float atkTimer;
+    public int expPoint = 100;
 
     [Header("Boss2")]
     public Transform thrownHammerPos;
@@ -108,7 +109,7 @@ public class Boss : MonoBehaviour
                     break;
                 case 1:
                     patternNum = Random.Range(0, 2);
-                    //patternNum = 0;
+                    //patternNum = 1;
 
                     if (patternNum == 0)
                         boss2.CallAtk1();
@@ -116,8 +117,8 @@ public class Boss : MonoBehaviour
                         boss2.CallAtk2();
                     break;
                 case 2:
-                    //patternNum = Random.Range(0, 2);
-                    patternNum = 0;
+                    patternNum = Random.Range(0, 2);
+                    //patternNum = 0;
 
                     if (patternNum == 0)
                         boss3.CallAtk1();
@@ -203,7 +204,7 @@ public class Boss : MonoBehaviour
             spriter.sortingOrder = 1;
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
-            GameManager.instance.GetExp();
+            GameManager.instance.GetExp(expPoint);
 
             // 효과음 재생할 부분마다 재생함수 호출
             if (GameManager.instance.isLive)
@@ -226,9 +227,10 @@ public class Boss : MonoBehaviour
         }
     }
 
-    void Dead()
+    public void Dead()
     {
         gameObject.SetActive(false);
+        GameManager.instance.GameVictory();
     }
 
 }

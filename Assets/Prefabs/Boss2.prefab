@@ -53,7 +53,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4728645123114103572
 Transform:
   m_ObjectHideFlags: 0
@@ -241,11 +241,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explodeWaitTime: 1.1
   explosionRingNum: 7
+  crack: {fileID: 5830544059900516951, guid: 32b9b91da462a6b488e073638e2120e5, type: 3}
+  thrownHammerPos: {fileID: 8458449406077371695}
   spinDuration: 5
   spinWaitTime: 1
   shootInterval: 0.4
-  crack: {fileID: 5830544059900516951, guid: 32b9b91da462a6b488e073638e2120e5, type: 3}
-  thrownHammerPos: {fileID: 8458449406077371695}
   spinBlade: {fileID: 5830544059900516951, guid: 77765e6ae19981548aff4fdb493a93d3, type: 3}
 --- !u!114 &5105070990774922608
 MonoBehaviour:

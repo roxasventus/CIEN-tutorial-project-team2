@@ -13,12 +13,14 @@ public class Turret : MonoBehaviour
     float timer = 0f;
 
     Animator anim;
+    SpriteRenderer spriter;
     DamageFlash damageFlash;
     Trap trap;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        spriter = GetComponent<SpriteRenderer>();
         damageFlash = GetComponent<DamageFlash>();
         trap = GetComponentInChildren<Trap>();
     }
@@ -27,6 +29,11 @@ public class Turret : MonoBehaviour
     {
         isLive = true;
         health = maxHealth;
+        
+            
+        if (spriter.material.GetFloat("_FlashAmount") > 0)
+            damageFlash.SetFlashAmount(0);
+        
     }
 
     private void Update()

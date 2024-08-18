@@ -80,10 +80,11 @@ public class Spawner : MonoBehaviour
                 spoint = point.GetComponent<SpawnPoint>();
             }
 
-            GameObject enemy = GameManager.instance.pool.Get(9);
+            GameObject enemy = GameManager.instance.pool.Get(9 + GameManager.instance.stageNum);
             enemy.transform.position = point.position;
-            enemy.GetComponent<Enemy>().isBoss = true;
-            enemy.GetComponent<Enemy>().Init(spawnData[GameManager.instance.stageNum]);
+            enemy.GetComponent<Boss>().Init(spawnData[GameManager.instance.stageNum]);
+
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.BossAppear);
         }
     }
 }

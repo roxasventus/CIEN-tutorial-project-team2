@@ -148,7 +148,7 @@ public class GameManager : MonoBehaviour
     {
         isLive = false;
        
-        enemyCleaner.SetActive(true);
+        //enemyCleaner.SetActive(true);
 
         yield return new WaitForSeconds(1f);
 
@@ -191,14 +191,14 @@ public class GameManager : MonoBehaviour
         }
 
     }
-   
-    public void GetExp()
+
+    public void GetExp(int point = 1)
     {
         if (!isLive)
         {
             return; 
         }
-        exp++;
+        exp += point;
         
         if (exp == nextExp[Mathf.Min(level, nextExp.Length-1)]) { 
             level++;

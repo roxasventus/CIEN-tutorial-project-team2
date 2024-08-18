@@ -195,6 +195,8 @@ MonoBehaviour:
   isAttacking: 0
   bossNum: 0
   atkTimer: 9
+  expPoint: 100
+  thrownHammerPos: {fileID: 0}
 --- !u!114 &7881873046938687265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,9 +257,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootWaitTime: 2.3
+  beamParent: {fileID: 5619856697586666664}
   explodeWaitTime: 0.7
   bombNum: 5
-  beamParent: {fileID: 5619856697586666664}
   bomb: {fileID: 5830544059900516951, guid: d54e8d7bfdee6e04ab3ae78b5614fc95, type: 3}
 --- !u!1 &987020358951880309
 GameObject:
@@ -613,7 +615,7 @@ BoxCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 3072
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -813,7 +815,7 @@ BoxCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 3072
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1046,7 +1048,7 @@ BoxCollider2D:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 3072
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

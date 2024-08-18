@@ -278,7 +278,7 @@ public class Boss3_Atk : MonoBehaviour
         {
             Vector3 rotVec = Vector3.forward * (180 / bulletNum) * i;
 
-            Transform enemyBullet = GameManager.instance.pool.Get(10).transform;
+            Transform enemyBullet = GameManager.instance.pool.Get(13).transform;
             enemyBullet.position = transform.position;
 
             Vector3 targetDir = Quaternion.AngleAxis(-90f + (180 / bulletNum) * i, Vector3.forward) * baseDir;

@@ -36,7 +36,7 @@ public class SecondSliceEffect : MonoBehaviour
 
         anim.SetTrigger("Shoot");
         gameObject.tag = "EnemyBullet";
-        
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Boss3Atk1Slice);
     }
     public void Dead()
     {

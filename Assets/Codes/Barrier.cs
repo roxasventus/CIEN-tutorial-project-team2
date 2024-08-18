@@ -35,6 +35,19 @@ public class Barrier : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            return;
+        }
+
+        else
+        {
+            StartCoroutine(EnemyCollide(duration, collision));
+        }
+    }
+
     IEnumerator EnemyCollide(float duration, Collision2D collision)
     {
 
@@ -48,5 +61,20 @@ public class Barrier : MonoBehaviour
             per = Firstper;
         }
         
+    }
+
+    IEnumerator EnemyCollide(float duration, Collider2D collision)
+    {
+
+        // 관통 값이 하나씩 줄어들면서 -1이 되면 비활성화
+        per--;
+        yield return new WaitForSeconds(duration);
+        if (per < 0)
+        {
+            GameManager.instance.isInvincible = false;
+            gameObject.SetActive(false);
+            per = Firstper;
+        }
+
     }
 }
