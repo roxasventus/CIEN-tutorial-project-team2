@@ -141,7 +141,8 @@ public class Enemy : MonoBehaviour
                 GameManager.instance.GetExp();
 
             if (Random.Range(0.0f, 1.0f) <= percentage) {
-                Instantiate(dropItems[Random.Range(0, 2)], transform.position, Quaternion.identity);
+                if (collision.gameObject.name != "EnemyCleaner")
+                    Instantiate(dropItems[Random.Range(0, 2)], transform.position, Quaternion.identity);
             }
             // 효과음 재생할 부분마다 재생함수 호출
             if (GameManager.instance.isLive)

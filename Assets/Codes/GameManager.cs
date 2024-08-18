@@ -200,7 +200,7 @@ public class GameManager : MonoBehaviour
         }
         exp += point;
         
-        if (exp == nextExp[Mathf.Min(level, nextExp.Length-1)]) { 
+        if (exp >= nextExp[Mathf.Min(level, nextExp.Length-1)]) { 
             level++;
             exp = 0;
             uiLevelUp.Show();

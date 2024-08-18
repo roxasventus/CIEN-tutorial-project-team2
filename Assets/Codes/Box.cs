@@ -46,7 +46,7 @@ public class Box : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Bullet") || !isLive)
+        if (!collision.CompareTag("Bullet") || !isLive || collision.gameObject.name == "EnemyCleaner")
           return;
 
         health -= collision.GetComponent<Bullet>().damage;

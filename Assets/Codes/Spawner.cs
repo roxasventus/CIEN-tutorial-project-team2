@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     public bool isBossSpawn;
     public enum SpawnerType { Mob, Boss }
     public SpawnerType spawnerType;
+    public GameObject uiWarning;
 
     float timer;
 
@@ -85,7 +86,39 @@ public class Spawner : MonoBehaviour
             enemy.GetComponent<Boss>().Init(spawnData[GameManager.instance.stageNum]);
 
             AudioManager.instance.PlaySfx(AudioManager.Sfx.BossAppear);
+
+            StartCoroutine(WarningCoroutine(uiWarning));
         }
+    }
+
+    IEnumerator WarningCoroutine(GameObject uiWarning)
+    {
+
+        float elapsedTime = 0f;
+            // 깜빡거림의 간격 (0.5초로 설정)
+        float blinkInterval = 0.5f;
+
+    // 깜빡거림의 지속 시간 (2초 동안 깜빡거리게 설정)
+        float duration = 2.0f;
+
+        while (elapsedTime < duration)
+        {
+            // UI를 활성화/비활성화
+            uiWarning.SetActive(!uiWarning.activeSelf);
+
+            // blinkInterval만큼 대기
+            yield return new WaitForSeconds(blinkInterval);
+
+            // 경과 시간 업데이트
+            elapsedTime += blinkInterval;
+        }
+
+        // 마지막으로 UI를 원래 상태로 되돌리기
+        uiWarning.SetActive(true);
+        yield return new WaitForSeconds(2.0f);
+        uiWarning.SetActive(false);
+
+
     }
 }
 
@@ -97,3 +130,4 @@ public class SpawnData
     public int health;
     public float speed;
 }
+
