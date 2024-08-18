@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D target;
 
     bool isLive;
+    public bool isBoss;
 
     Rigidbody2D rigid;
     Collider2D coll;
@@ -137,7 +138,8 @@ public class Enemy : MonoBehaviour
             spriter.sortingOrder = 1;
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
-            GameManager.instance.GetExp();
+            if(!GameManager.instance.enemyCleaner.activeSelf)
+                GameManager.instance.GetExp();
 
             if (Random.Range(0.0f, 1.0f) <= percentage) {
                 Instantiate(dropItems[Random.Range(0, 2)], transform.position, Quaternion.identity);
@@ -145,6 +147,9 @@ public class Enemy : MonoBehaviour
             // 효과음 재생할 부분마다 재생함수 호출
             if (GameManager.instance.isLive)
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
+
+            if (isBoss == true)
+                GameManager.instance.GameVictory();
 
         }
     }

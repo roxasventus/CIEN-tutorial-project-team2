@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     
     [Header("# Game control")]
     public bool isLive;
+    public bool isStageClear;
     public float gameTime;
     public float maxGameTime = 2 * 10f;
     public float stageTime; //duration of a stage -sw
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
     public LevelUp uiLevelUp;
     public Result uiResult;
     public GameObject enemyCleaner;
+    public GameObject hitEffect;
 
     public Stage stage; //stage script -sw
 
@@ -58,7 +60,6 @@ public class GameManager : MonoBehaviour
         playerId = id;
         health = maxHealth;
         player.gameObject.SetActive(true);
-        
        
         uiLevelUp.Selected(playerId);
 
@@ -74,6 +75,9 @@ public class GameManager : MonoBehaviour
     {
         health = maxHealth;
         player.gameObject.SetActive(true);
+
+        isStageClear = false;
+        
 
         // 오브젝트 위치 재조정
         GameManager.instance.player.transform.position = new Vector3(13.42f, 7.37f, 0);
@@ -97,6 +101,8 @@ public class GameManager : MonoBehaviour
         GameManager.instance.gameTime = 0;
 
         enemyCleaner.SetActive(false);
+        GameObject.Find("BossSpawner").GetComponent<Spawner>().isBossSpawn = false;
+
 
         // 스테이지 바꾸기
         stage.ChangeStage();
@@ -179,8 +185,9 @@ public class GameManager : MonoBehaviour
         if (gameTime > maxGameTime)
         {
             gameTime = maxGameTime;
-            enemyCleaner.SetActive(true);
-            GameVictory();
+            if(isStageClear == false)
+                StartCoroutine(CleanEnemy());
+            //GameVictory();
         }
 
     }
@@ -212,5 +219,13 @@ public class GameManager : MonoBehaviour
         isLive = true;
 
         Time.timeScale = 1;
+    }
+
+    IEnumerator CleanEnemy()
+    {
+        enemyCleaner.SetActive(true);
+        isStageClear = true;
+        yield return new WaitForSeconds(0.1f);
+        enemyCleaner.SetActive(false);
     }
 }
