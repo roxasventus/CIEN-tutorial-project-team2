@@ -221,6 +221,17 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void QuitGame()
+    {
+        // 에디터 모드에서 작동 확인을 위해 에디터도 종료
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                // 빌드된 게임에서 작동
+                Application.Quit();
+        #endif
+    }
+
     IEnumerator CleanEnemy()
     {
         enemyCleaner.SetActive(true);
