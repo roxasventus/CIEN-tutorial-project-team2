@@ -183,7 +183,7 @@ public class Weapon : MonoBehaviour
                 break;
             // 자동조준
             case 1:
-                speed = 0.3f;
+                speed = 1f;
                 break;
             // 바라보는 방향 조준
             case 2:
