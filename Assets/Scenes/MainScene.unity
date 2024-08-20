@@ -14282,6 +14282,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657452324}
   m_CullTransparentMesh: 1
+--- !u!1 &661427090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 661427092}
+  - component: {fileID: 661427091}
+  m_Layer: 0
+  m_Name: TargetManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &661427091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661427090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3eb1653b19ceb0448761202559b3496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets: []
+  indicatorPrefab: {fileID: 7953282258097405294, guid: cd88347fb937843498ee86751e31967a, type: 3}
+--- !u!4 &661427092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661427090}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.544727, y: 2.4666111, z: -0.16560547}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &663938384
 GameObject:
   m_ObjectHideFlags: 0
@@ -24119,7 +24165,7 @@ MonoBehaviour:
   isLive: 0
   isStageClear: 0
   gameTime: 0
-  maxGameTime: 300
+  maxGameTime: 6
   stageTime: 0
   maxStageNum: 3
   stageNum: 0
@@ -24137,6 +24183,7 @@ MonoBehaviour:
   uiResult: {fileID: 1076082517}
   enemyCleaner: {fileID: 352779079}
   hitEffect: {fileID: 8727724134533345640, guid: f18b897561d437c409ee244163b3fc2c, type: 3}
+  targetManager: {fileID: 661427091}
   stage: {fileID: 857720752}
 --- !u!4 &948724951
 Transform:
@@ -49065,7 +49112,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 34.742855}
-  m_SizeDelta: {x: 185.2, y: 21}
+  m_SizeDelta: {x: 185.2, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2041401848
 MonoBehaviour:
@@ -49087,7 +49134,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d0fff642369ce014d885cf11fd2e1f6c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec47fb22795df624bbd2779456757522, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -50029,6 +50076,7 @@ SceneRoots:
   - {fileID: 948724951}
   - {fileID: 890980515}
   - {fileID: 1525835026}
+  - {fileID: 661427092}
   - {fileID: 857720754}
   - {fileID: 1640165711}
   - {fileID: 2009423092}

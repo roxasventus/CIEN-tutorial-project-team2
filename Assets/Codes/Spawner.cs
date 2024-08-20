@@ -85,6 +85,8 @@ public class Spawner : MonoBehaviour
             enemy.transform.position = point.position;
             enemy.GetComponent<Boss>().Init(spawnData[GameManager.instance.stageNum]);
 
+            GameManager.instance.targetManager.AddTarget(enemy);
+
             AudioManager.instance.PlaySfx(AudioManager.Sfx.BossAppear);
 
             StartCoroutine(WarningCoroutine(uiWarning));

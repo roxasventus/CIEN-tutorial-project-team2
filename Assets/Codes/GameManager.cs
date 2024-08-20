@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     public Result uiResult;
     public GameObject enemyCleaner;
     public GameObject hitEffect;
+    public OffScreenTargetIndicator targetManager;
 
     public Stage stage; //stage script -sw
 
@@ -147,12 +148,14 @@ public class GameManager : MonoBehaviour
     IEnumerator GameVictoryRoutine()
     {
         isLive = false;
-       
+
         //enemyCleaner.SetActive(true);
+        
 
         yield return new WaitForSeconds(1f);
 
         uiResult.gameObject.SetActive(true);
+
 
         if (stageNum == maxStageNum-1)
         {
@@ -238,5 +241,18 @@ public class GameManager : MonoBehaviour
         isStageClear = true;
         yield return new WaitForSeconds(0.1f);
         enemyCleaner.SetActive(false);
+    }
+
+    private void EnemyBulletClean()
+    {
+        Transform[] poolChildren = pool.GetComponentsInChildren<Transform>();
+
+        for(int i = 1; i < poolChildren.Length; i++)
+        {
+            if (poolChildren[i].gameObject.CompareTag("EnemyBullet"))
+            {
+                poolChildren[i].gameObject.SetActive(false);
+            }
+        }
     }
 }
