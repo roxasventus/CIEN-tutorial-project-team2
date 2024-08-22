@@ -58,10 +58,16 @@ public class Gear : MonoBehaviour
                     break;
                 // 원거리 무기
                 case 1:
+                    weapon.speed = 0.7f * (1f - rate);  // 값이 계속 작아진다 -> 더 빨리 발사하게 된다
+                    break;
                 case 2:
+                    weapon.speed = 1f * (1f - rate);
+                    break;
                 case 3:
+                    weapon.speed = 1.5f * (1f - rate);
+                    break;
                 case 4:
-                    weapon.speed = 0.5f * (1f - rate); // 값이 계속 작아진다 -> 더 빨리 발사하게 된다
+                    weapon.speed = 1f * (1f - rate);
                     break;
             }
         }

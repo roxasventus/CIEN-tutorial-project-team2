@@ -183,7 +183,7 @@ public class Weapon : MonoBehaviour
                 break;
             // 자동조준
             case 1:
-                speed = 1f;
+                speed = 0.7f;
                 break;
             // 바라보는 방향 조준
             case 2:
@@ -191,7 +191,7 @@ public class Weapon : MonoBehaviour
                 break;
             // 고정된 방향 조준
             case 3:
-                speed = 1f;
+                speed = 1.5f;
                 break;
             // 부메랑
             case 4:
@@ -288,9 +288,9 @@ public class Weapon : MonoBehaviour
         {
             bullet.rotation = Quaternion.FromToRotation(Vector3.right, dir);
             bullet.GetComponent<Bullet>().Init(damage, count, dir);
-            // 효과음 재생할 부분마다 재생함수 호출
-            AudioManager.instance.PlaySfx(AudioManager.Sfx.attack2);
         }
+        // 효과음 재생할 부분마다 재생함수 호출
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.attack2);
 
     }
     // Fixed direction targeting

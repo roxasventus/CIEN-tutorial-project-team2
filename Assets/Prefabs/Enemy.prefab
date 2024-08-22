@@ -206,7 +206,7 @@ MonoBehaviour:
   dropItems:
   - {fileID: 6324477595779549143, guid: 6272840c1fc0ab843848f42e0728bfde, type: 3}
   - {fileID: 2712549645692607287, guid: e5ce818f0b4cb294e9eec9b9ca2bdf94, type: 3}
-  percentage: 0.15
+  percentage: 0.09
 --- !u!114 &-7734972748842739425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +219,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04372c587fdd5e24ca592be86b446edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trapParent: {fileID: 0}
+  trapActivePer: 0
+  breakableParent: {fileID: 0}
 --- !u!114 &7881873046938687265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,6 +349,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04372c587fdd5e24ca592be86b446edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trapParent: {fileID: 0}
+  trapActivePer: 0
+  breakableParent: {fileID: 0}
 --- !u!1 &4806890501138228511
 GameObject:
   m_ObjectHideFlags: 0
