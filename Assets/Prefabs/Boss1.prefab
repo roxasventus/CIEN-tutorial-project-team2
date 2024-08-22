@@ -196,6 +196,7 @@ MonoBehaviour:
   bossNum: 0
   atkTimer: 9
   expPoint: 100
+  contactDamage: 10
   thrownHammerPos: {fileID: 0}
 --- !u!114 &7881873046938687265
 MonoBehaviour:
@@ -478,6 +479,7 @@ GameObject:
   - component: {fileID: 8191538082138830313}
   - component: {fileID: 4949074395806516761}
   - component: {fileID: 7732702401240557946}
+  - component: {fileID: 623562360870553332}
   m_Layer: 0
   m_Name: Beam (2)
   m_TagString: Untagged
@@ -664,6 +666,21 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_DampingRatio: 0
   m_Frequency: 0
+--- !u!114 &623562360870553332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5182551786249712499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e069603aca5aaef40ad2c3b437905887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  per: -100
+  shotspeed: 0
+  damage: 10
 --- !u!1 &5352666185522806202
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +695,7 @@ GameObject:
   - component: {fileID: 6598102173749715583}
   - component: {fileID: 5277754717603028628}
   - component: {fileID: 6514709542035609346}
+  - component: {fileID: 6496221696997890805}
   m_Layer: 0
   m_Name: Beam (1)
   m_TagString: Untagged
@@ -864,6 +882,21 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_DampingRatio: 0
   m_Frequency: 0
+--- !u!114 &6496221696997890805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5352666185522806202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e069603aca5aaef40ad2c3b437905887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  per: -100
+  shotspeed: 0
+  damage: 10
 --- !u!1 &5619856697586666664
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,6 +944,7 @@ GameObject:
   - component: {fileID: 7988693167167970452}
   - component: {fileID: 981590778314500658}
   - component: {fileID: 6065102137782001030}
+  - component: {fileID: 5421467830884418384}
   m_Layer: 0
   m_Name: Beam
   m_TagString: Untagged
@@ -1078,3 +1112,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3910246, y: 0.15405673}
   m_EdgeRadius: 0
+--- !u!114 &5421467830884418384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6880065637083486094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e069603aca5aaef40ad2c3b437905887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  per: -100
+  shotspeed: 0
+  damage: 10

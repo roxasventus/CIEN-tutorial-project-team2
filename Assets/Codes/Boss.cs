@@ -14,6 +14,7 @@ public class Boss : MonoBehaviour
     public int bossNum;
     public float atkTimer;
     public int expPoint = 100;
+    public int contactDamage = 10;
 
     [Header("Boss2")]
     public Transform thrownHammerPos;
@@ -206,6 +207,20 @@ public class Boss : MonoBehaviour
             GameManager.instance.kill++;
             GameManager.instance.GetExp(expPoint);
 
+            switch (bossNum)
+            {
+                case 0:
+                    boss1.StopAllCoroutines();
+                    break;
+                case 1:
+                    boss2.StopAllCoroutines();
+                    break;
+                case 2:
+                    boss3.StopAllCoroutines();
+                    break;
+
+            }
+           
             EnemyBulletClean();
 
             // 효과음 재생할 부분마다 재생함수 호출
@@ -231,20 +246,31 @@ public class Boss : MonoBehaviour
 
     public void Dead()
     {
-        gameObject.SetActive(false);
         GameManager.instance.targetManager.RemoveTarget(gameObject);
+        Destroy(gameObject);
         GameManager.instance.GameVictory();
     }
 
     private void EnemyBulletClean()
     {
+        Transform[] trapChildren = GetComponentsInChildren<Transform>();
+
+        for(int i = 1; i < trapChildren.Length; i++)
+        {
+            if (trapChildren[i].gameObject.CompareTag("Trap"))
+            {
+                trapChildren[i].gameObject.GetComponent<Collider2D>().enabled = false;
+                trapChildren[i].gameObject.SetActive(false);
+            }
+        }
+
         Transform[] poolChildren = GameManager.instance.pool.GetComponentsInChildren<Transform>();
 
         for (int i = 1; i < poolChildren.Length; i++)
         {
             if (poolChildren[i].gameObject.CompareTag("EnemyBullet"))
             {
-                poolChildren[i].gameObject.SetActive(false);
+                Destroy(poolChildren[i].gameObject);
             }
         }
     }

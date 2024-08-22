@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 315384516645661731}
   - component: {fileID: 693467205898361277}
   - component: {fileID: 8210796378784064116}
+  - component: {fileID: -8728582175229589588}
   m_Layer: 0
   m_Name: Cracking
   m_TagString: Untagged
@@ -183,3 +184,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b512d82ae12c4df4f897b7193f1adcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8728582175229589588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830544059900516951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24901baed474074e9aa7f908ae8f462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 4
+  damage: 10
+  stopTime: 0
+  slowPercentage: 0

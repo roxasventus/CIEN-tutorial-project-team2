@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float health;
     public float maxHealth;
+    public int contactDamage = 10;
     public RuntimeAnimatorController[] animCon1; //cannot serialize 2d array so I just made 3 variables.
     public RuntimeAnimatorController[] animCon2;
     public RuntimeAnimatorController[] animCon3;

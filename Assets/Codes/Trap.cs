@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-    public enum TrapType { Beartrap, Turret, Spikes, Lava}
+    public enum TrapType { Beartrap, Turret, Spikes, Lava, Boss}
     public TrapType type;
+    public int damage;
 
     [Header("Beartrap, Turret, Spikes")]
     public float stopTime;
@@ -46,6 +47,8 @@ public class Trap : MonoBehaviour
             case TrapType.Turret:
                 anim.SetBool("Attack", true);
                 break;
+            default:
+                break;
         }
     }
 
@@ -60,6 +63,9 @@ public class Trap : MonoBehaviour
                
                 GameManager.instance.player.slowPercent = slowPercentage;
                 
+                break;
+
+            default:
                 break;
         }
     }
@@ -76,6 +82,8 @@ public class Trap : MonoBehaviour
                 break;
             case TrapType.Turret:
                 anim.SetBool("Attack", false);
+                break;
+            default:
                 break;
         }
     }

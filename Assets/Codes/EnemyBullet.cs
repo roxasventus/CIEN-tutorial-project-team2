@@ -7,6 +7,7 @@ public class EnemyBullet : MonoBehaviour
 {
     public int per = 0;
     public float shotspeed = 7f;
+    public int damage = 10;
     bool flashing = false;
 
     Rigidbody2D rigid;
@@ -38,7 +39,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Player"))
+        if (!collision.CompareTag("Player") || per == -100)
         {
             return;
         }
@@ -60,7 +61,7 @@ public class EnemyBullet : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
 
-        if (!collision.CompareTag("Area"))
+        if (!collision.CompareTag("Area") || per == -100)
             return;
      
         gameObject.SetActive(false);
@@ -69,7 +70,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void Update()
     {
-        if (!GameManager.instance.isLive || flashing)
+        if (!GameManager.instance.isLive || damageFlash == null || flashing)
             return;
         flashing = true;
         damageFlash.CallDamageFlash();

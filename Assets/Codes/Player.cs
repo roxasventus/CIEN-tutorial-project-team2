@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
 
         Vector2 nextVec = inputVec.normalized * speed * (1f - slowPercent) * Time.fixedDeltaTime;
         Vector2 dirVec = Vector2.zero;
-        if (attracted)
+        if (attracted && attractingTarget != null)
         {
             dirVec = attractingTarget.position - rigid.position;
             dirVec = dirVec.normalized * 1.5f * Time.fixedDeltaTime;
@@ -72,6 +72,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    //for contact with enemy
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (!GameManager.instance.isLive)
@@ -81,10 +82,14 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            GetHit();
+            if(collision.gameObject.GetComponent<Enemy>() != null)
+                GetHit(collision.gameObject.GetComponent<Enemy>().contactDamage);
+            else
+                GetHit(collision.gameObject.GetComponent<Boss>().contactDamage);
         }
     }
 
+    //for area damage or lazers
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (!GameManager.instance.isLive)
@@ -94,10 +99,11 @@ public class Player : MonoBehaviour
        
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
-            GetHit();
+            GetHit(collision.gameObject.GetComponent<EnemyBullet>().damage);
         }
     }
 
+    //for enemy bullets
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!GameManager.instance.isLive)
@@ -107,7 +113,7 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
-            GetHit();
+            GetHit(collision.gameObject.GetComponent<EnemyBullet>().damage);
         }
         else if (collision.gameObject.CompareTag("AttractField"))
         {
@@ -130,11 +136,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void GetHit()
+    public void GetHit(int damage = 10)
     {
         if (GameManager.instance.isInvincible == false)
         {
-            GameManager.instance.health -= Time.fixedDeltaTime * 10;
+            GameManager.instance.health -= Time.fixedDeltaTime * damage;
             //damage flash effect
             damageFlash.CallDamageFlash();
         }

@@ -13,7 +13,7 @@ public class PlayerBase : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Trap"))
         {
-            GameManager.instance.player.GetHit();
+            GameManager.instance.player.GetHit(collision.gameObject.GetComponent<Trap>().damage);
         }
     }
 }

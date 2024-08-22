@@ -22,7 +22,11 @@ public class Reposition : MonoBehaviour
         
         if(transform.tag == "Ground")
         {
-            traps = trapParent.GetComponentsInChildren<Transform>(true);
+            traps = new Transform[trapParent.transform.childCount];
+            for(int i = 0; i < traps.Length; i++)
+            {
+                traps[i] = trapParent.transform.GetChild(i);
+            }
             breakables = breakableParent.GetComponentsInChildren<Transform>(true);
         }
     }
@@ -70,7 +74,7 @@ public class Reposition : MonoBehaviour
                 }
 
                 //trap random activate
-                for(int i = 1; i < traps.Length; i++)
+                for(int i = 0; i < traps.Length; i++)
                 {
                     traps[i].gameObject.SetActive(false);
 

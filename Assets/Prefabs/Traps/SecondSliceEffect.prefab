@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8606414752691417944}
   - component: {fileID: 18113573870757125}
   - component: {fileID: -3757233015803929302}
+  - component: {fileID: -1546157267030668817}
   m_Layer: 0
   m_Name: SecondSliceEffect
   m_TagString: Untagged
@@ -241,3 +242,18 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-1546157267030668817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5660407238222595868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e069603aca5aaef40ad2c3b437905887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  per: -100
+  shotspeed: 0
+  damage: 10

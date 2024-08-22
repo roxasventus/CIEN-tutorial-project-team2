@@ -32,8 +32,10 @@ public class Transparnet : MonoBehaviour
         if (!collision.CompareTag("Player"))
             return;
 
+        /*
         if (player.transform.position.y < transform.position.y) //when player is in front of the pillar
             return;
+        */
 
         if(transform.tag == "Foreground")
         {
