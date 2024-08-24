@@ -2777,7 +2777,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &171486654
 Transform:
   m_ObjectHideFlags: 0
@@ -7038,15 +7038,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: []
   spawnData:
-  - spawnTime: 0.5
+  - spawnTime: 0.9
     spriteType: 0
-    health: 15
+    health: 20
     speed: 2
-  - spawnTime: 0.4
+  - spawnTime: 0.7
     spriteType: 1
-    health: 30
+    health: 40
     speed: 2.3
-  - spawnTime: 0.2
+  - spawnTime: 0.5
     spriteType: 2
     health: 60
     speed: 2.3
@@ -12456,15 +12456,15 @@ MonoBehaviour:
   spawnData:
   - spawnTime: 0
     spriteType: 0
-    health: 100
+    health: 300
     speed: 2
   - spawnTime: 0
     spriteType: 0
-    health: 150
+    health: 400
     speed: 2
   - spawnTime: 0
     spriteType: 0
-    health: 200
+    health: 500
     speed: 2
   isBossSpawn: 0
   spawnerType: 1
@@ -12534,7 +12534,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.736842
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -13482,7 +13482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4a8d70e4454b74983fa9ea328314d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 3.5
   per: -100
   shotspeed: 15
   isBoomerang: 0
@@ -13795,7 +13795,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &640588439
 Transform:
   m_ObjectHideFlags: 0
@@ -15413,7 +15413,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &775195875
 Transform:
   m_ObjectHideFlags: 0
@@ -20619,7 +20619,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &856053476
 Transform:
   m_ObjectHideFlags: 0
@@ -24499,7 +24499,7 @@ MonoBehaviour:
   isLive: 0
   isStageClear: 0
   gameTime: 0
-  maxGameTime: 300
+  maxGameTime: 900
   stageTime: 0
   maxStageNum: 3
   stageNum: 0
@@ -26853,7 +26853,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1127215218
 Transform:
   m_ObjectHideFlags: 0
@@ -38904,7 +38904,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1471735638
 Transform:
   m_ObjectHideFlags: 0
@@ -39832,7 +39832,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1575039709
 Transform:
   m_ObjectHideFlags: 0
@@ -50291,7 +50291,7 @@ GameObject:
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2113090876
 Transform:
   m_ObjectHideFlags: 0

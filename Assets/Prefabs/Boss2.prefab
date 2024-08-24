@@ -221,11 +221,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.7
   health: 0
-  maxHealth: 250
+  maxHealth: 15000
   target: {fileID: 0}
   isAttacking: 0
   bossNum: 1
   atkTimer: 9
+  expPoint: 100
+  contactDamage: 150
   thrownHammerPos: {fileID: 8458449406077371695}
 --- !u!114 &9155121837527535451
 MonoBehaviour:

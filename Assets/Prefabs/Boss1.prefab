@@ -190,13 +190,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   health: 0
-  maxHealth: 200
+  maxHealth: 5000
   target: {fileID: 0}
   isAttacking: 0
   bossNum: 0
   atkTimer: 9
   expPoint: 100
-  contactDamage: 10
+  contactDamage: 100
   thrownHammerPos: {fileID: 0}
 --- !u!114 &7881873046938687265
 MonoBehaviour:

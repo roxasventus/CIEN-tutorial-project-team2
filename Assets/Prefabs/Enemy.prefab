@@ -190,6 +190,7 @@ MonoBehaviour:
   speed: 0
   health: 0
   maxHealth: 0
+  contactDamage: 50
   animCon1:
   - {fileID: 9100000, guid: 30b2658682bfa1344a26f0a291c7db10, type: 2}
   - {fileID: 22100000, guid: d6ce8f152f371bf4b9187357665d0fac, type: 2}

@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 100
+  maxHealth: 15
   dropItems:
   - {fileID: 2712549645692607287, guid: e5ce818f0b4cb294e9eec9b9ca2bdf94, type: 3}
   - {fileID: 6324477595779549143, guid: 6272840c1fc0ab843848f42e0728bfde, type: 3}

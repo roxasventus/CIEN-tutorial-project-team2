@@ -186,6 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   per: 0
   shotspeed: 6
+  damage: 150
 --- !u!114 &1083524779509949928
 MonoBehaviour:
   m_ObjectHideFlags: 0
