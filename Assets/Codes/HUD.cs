@@ -26,7 +26,11 @@ public class HUD : MonoBehaviour
         {
             case InfoType.Exp:
                 float curExp = GameManager.instance.exp;
-                float maxExp = GameManager.instance.nextExp[GameManager.instance.level];
+                float maxExp;
+                if(GameManager.instance.level > 9)
+                    maxExp = GameManager.instance.nextExp[9];
+                else
+                    maxExp = GameManager.instance.nextExp[GameManager.instance.level];
                 mySlider.value = curExp / maxExp;
                 if (mySlider.value == 0 && GameObject.Find("LevelUp").transform.localScale == Vector3.one)
                 {

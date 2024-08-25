@@ -76,7 +76,7 @@ public class Gear : MonoBehaviour
     // 신발의 기능인 이동 속도을 올리는 함수 작성
     void SpeedUp()
     {
-        float speed = 3;
+        float speed = 3.8f;
         GameManager.instance.player.speed = speed + speed * rate;
     }
 }

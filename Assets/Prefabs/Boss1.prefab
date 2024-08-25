@@ -194,7 +194,7 @@ MonoBehaviour:
   target: {fileID: 0}
   isAttacking: 0
   bossNum: 0
-  atkTimer: 9
+  atkTimer: 3
   expPoint: 100
   contactDamage: 100
   thrownHammerPos: {fileID: 0}

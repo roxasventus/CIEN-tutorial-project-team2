@@ -7038,18 +7038,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: []
   spawnData:
-  - spawnTime: 0.9
+  - spawnTime: 0.7
     spriteType: 0
     health: 20
-    speed: 2
-  - spawnTime: 0.7
+    speed: 3.3
+  - spawnTime: 0.5
     spriteType: 1
     health: 40
-    speed: 2.3
-  - spawnTime: 0.5
+    speed: 3.3
+  - spawnTime: 0.3
     spriteType: 2
     health: 60
-    speed: 2.3
+    speed: 3.3
   isBossSpawn: 0
   spawnerType: 0
   uiWarning: {fileID: 0}
@@ -12456,16 +12456,16 @@ MonoBehaviour:
   spawnData:
   - spawnTime: 0
     spriteType: 0
-    health: 300
-    speed: 2
+    health: 1500
+    speed: 3.45
   - spawnTime: 0
     spriteType: 0
-    health: 400
-    speed: 2
+    health: 1750
+    speed: 3.45
   - spawnTime: 0
     spriteType: 0
-    health: 500
-    speed: 2
+    health: 2000
+    speed: 3.45
   isBossSpawn: 0
   spawnerType: 1
   uiWarning: {fileID: 182024123}
@@ -24509,7 +24509,7 @@ MonoBehaviour:
   level: 0
   kill: 0
   exp: 0
-  nextExp: 0a0000001e0000003c0000006400000096000000d20000001801000068010000c2010000f4010000
+  nextExp: 0a0000000f00000019000000280000003c00000055000000690000008c000000b4000000e1000000
   isInvincible: 0
   pool: {fileID: 890980514}
   player: {fileID: 1640165707}
@@ -40769,7 +40769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputVec: {x: 0, y: 0}
-  speed: 3
+  speed: 3.8
   slowPercent: 0
   scanner: {fileID: 0}
   player: {fileID: 0}
