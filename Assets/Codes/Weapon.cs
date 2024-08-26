@@ -64,7 +64,7 @@ public class Weapon : MonoBehaviour
 
                 // speed 보다 커지면 초기화하면서 발사 로직 실행
                 // speed 값은 연사속도를 의미: 적을 수록 많이 발사
-                if (timer > speed && (player.inputVec.x != 0 || player.inputVec.y != 0))
+                if (timer > speed)
                 {
                     timer = 0f;
                     Fire2();
@@ -275,17 +275,19 @@ public class Weapon : MonoBehaviour
 
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.GetComponent<Rigidbody2D>().velocity = transform.forward * speed;
+
+        // 마우스 위치 가져오기
+        Vector3 mousePos = Input.mousePosition;
+
+        // 마우스 위치를 월드 좌표로 변환
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        mousePos.z = 0f; // 2D의 경우 Z값을 0으로 설정
+
+        // 발사 위치와 마우스 위치 간의 방향 계산
+        Vector3 dir = (mousePos - transform.position).normalized;
         bullet.position = transform.position;
 
-        dir = new Vector3(player.inputVec.x, player.inputVec.y, 0);
-
-        if (dir.x != 0)
-        {
-            bullet.rotation = Quaternion.FromToRotation(Vector3.right, dir);
-            bullet.GetComponent<Bullet>().Init(damage, count, dir);
-        }
-        if (dir.y != 0)
-        {
+        if (dir.x != 0 || dir.y != 0) {
             bullet.rotation = Quaternion.FromToRotation(Vector3.right, dir);
             bullet.GetComponent<Bullet>().Init(damage, count, dir);
         }

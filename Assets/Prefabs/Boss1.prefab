@@ -680,7 +680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   per: -100
   shotspeed: 0
-  damage: 100
+  damage: 150
 --- !u!1 &5352666185522806202
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   per: -100
   shotspeed: 0
-  damage: 100
+  damage: 150
 --- !u!1 &5619856697586666664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,4 +1126,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   per: -100
   shotspeed: 0
-  damage: 100
+  damage: 150

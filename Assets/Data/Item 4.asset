@@ -16,10 +16,10 @@ MonoBehaviour:
   itemId: 3
   itemName: "\uB9DD\uC790\uC758 \uD3EC\uD6A8"
   itemDesc: "\uACE0\uC815 \uC870\uC900 \uC6D0\uAC70\uB9AC \uBB34\uAE30\n\uB370\uBBF8\uC9C0
-    {0}% \uC99D\uAC00\n\uB9DD\uC790\uC758 \uD3EC\uD6A8  {1}\uAC1C \uCD94\uAC00"
+    {0}% \uC99D\uAC00\n\uAD00\uD1B5\uB825 {1} \uC99D\uAC00"
   itemIcon: {fileID: 21300000, guid: 4d79ef79b5a264cfd9b4195c5a9760d9, type: 3}
   baseDamage: 7
-  baseCount: 3
+  baseCount: -100
   damages:
   - 0.5
   - 1

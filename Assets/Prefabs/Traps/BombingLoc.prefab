@@ -282,6 +282,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 4
-  damage: 100
+  damage: 150
   stopTime: 0
   slowPercentage: 0
