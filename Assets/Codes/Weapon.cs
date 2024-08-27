@@ -199,11 +199,11 @@ public class Weapon : MonoBehaviour
                 break;
             // 고정 마법진
             case 5:
-                speed = 3f;
+                speed = 5f;
                 break;
             // 랜덤 마법진
             case 6:
-                speed = 3f;
+                speed = 5f;
                 break;
         }
         // 나중에 추가된 무기도 레벨업 된 장비의 영향을 받아야 한다
