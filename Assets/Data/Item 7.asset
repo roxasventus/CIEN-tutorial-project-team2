@@ -29,9 +29,9 @@ MonoBehaviour:
   counts: 0100000001000000010000000100000001000000
   baseMagicCircleWait: 3
   magicCircleWaits:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   projectile: {fileID: 1845000503810146723, guid: 72288692123bbe2439194699ad3fc855, type: 3}

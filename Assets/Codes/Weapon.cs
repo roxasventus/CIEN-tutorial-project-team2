@@ -399,8 +399,6 @@ public class Weapon : MonoBehaviour
             // Translate 함수로 자신의 위쪽으로 이동, 이동 방향은 Space.World 기준으로
             bullet.Translate(bullet.up * 1.5f, Space.World);
 
-            bullet.Rotate(rotVec);
-
 
             // 배치가 완료되었으므로 더 이상 탄환이 플레이어를 따라갈 필요가 없다
             bullet.parent = GameObject.Find("PoolManager").transform; // 다시 poolManager로 부모 변경
@@ -419,7 +417,7 @@ public class Weapon : MonoBehaviour
         if(bullet.localScale != Vector3.zero)
             AudioManager.instance.PlaySfx(AudioManager.Sfx.final_attack);
         yield return new WaitForSeconds(duration);
-        bullet.localScale = Vector3.zero;
+        bullet.gameObject.SetActive(false);
     }
 
 }
