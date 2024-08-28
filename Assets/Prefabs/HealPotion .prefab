@@ -155,5 +155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e5d5eeb2afa724ab12c48d1b77cd22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Heal: 0.2
+  Heal: 0.05
   potionType: 1

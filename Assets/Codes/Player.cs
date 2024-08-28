@@ -136,7 +136,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void GetHit(int damage = 10)
+    public void GetHit(float damage)
     {
         if (GameManager.instance.isInvincible == false)
         {

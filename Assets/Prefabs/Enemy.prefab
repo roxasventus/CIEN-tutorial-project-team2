@@ -190,7 +190,7 @@ MonoBehaviour:
   speed: 0
   health: 0
   maxHealth: 0
-  contactDamage: 50
+  contactDamage: 70
   animCon1:
   - {fileID: 9100000, guid: 30b2658682bfa1344a26f0a291c7db10, type: 2}
   - {fileID: 22100000, guid: d6ce8f152f371bf4b9187357665d0fac, type: 2}
@@ -207,7 +207,7 @@ MonoBehaviour:
   dropItems:
   - {fileID: 6324477595779549143, guid: 6272840c1fc0ab843848f42e0728bfde, type: 3}
   - {fileID: 2712549645692607287, guid: e5ce818f0b4cb294e9eec9b9ca2bdf94, type: 3}
-  percentage: 0.09
+  percentage: 0.05
 --- !u!114 &-7734972748842739425
 MonoBehaviour:
   m_ObjectHideFlags: 0

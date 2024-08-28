@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -7,7 +8,7 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float health;
     public float maxHealth;
-    public int contactDamage = 10;
+    public float contactDamage;
     public RuntimeAnimatorController[] animCon1; //cannot serialize 2d array so I just made 3 variables.
     public RuntimeAnimatorController[] animCon2;
     public RuntimeAnimatorController[] animCon3;
@@ -110,6 +111,7 @@ public class Enemy : MonoBehaviour
         speed = data.speed;
         maxHealth = data.health;
         health = data.health;
+        contactDamage = data.damage;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -141,9 +143,15 @@ public class Enemy : MonoBehaviour
             if(!GameManager.instance.enemyCleaner.activeSelf)
                 GameManager.instance.GetExp();
 
-            if (Random.Range(0.0f, 1.0f) <= percentage) {
+            float per = Random.Range(0.0f, 1.0f);
+            if (per <= percentage) {
                 if (collision.gameObject.name != "EnemyCleaner")
-                    Instantiate(dropItems[Random.Range(0, 2)], transform.position, Quaternion.identity);
+                {
+                    if (per < 0.01)
+                        Instantiate(dropItems[1], transform.position, Quaternion.identity);
+                    else
+                        Instantiate(dropItems[0], transform.position, Quaternion.identity);
+                }
             }
             // 효과음 재생할 부분마다 재생함수 호출
             if (GameManager.instance.isLive)
@@ -157,7 +165,7 @@ public class Enemy : MonoBehaviour
         yield return wait; //delay for the next fixed frame
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 dirVec = transform.position - playerPos;
-        rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
+        rigid.AddForce(dirVec.normalized * 1.8f, ForceMode2D.Impulse);
     }
 
     void Dead()

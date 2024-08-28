@@ -67,9 +67,16 @@ public class Box : MonoBehaviour
             spriter.sortingOrder = 1;
 
 
-            if (Random.Range(0.0f, 1.0f) <= percentage)
+            float per = Random.Range(0.0f, 1.0f);
+            if (per <= percentage)
             {
-                Instantiate(dropItems[Random.Range(0, 2)], transform.position, Quaternion.identity);
+                if (collision.gameObject.name != "EnemyCleaner")
+                {
+                    if (per < 0.01)
+                        Instantiate(dropItems[0], transform.position, Quaternion.identity);
+                    else
+                        Instantiate(dropItems[1], transform.position, Quaternion.identity);
+                }
             }
 
             // 효과음 재생할 부분마다 재생함수 호출

@@ -225,7 +225,7 @@ MonoBehaviour:
   target: {fileID: 0}
   isAttacking: 0
   bossNum: 1
-  atkTimer: 3
+  atkTimer: 2
   expPoint: 100
   contactDamage: 150
   thrownHammerPos: {fileID: 8458449406077371695}
@@ -247,7 +247,7 @@ MonoBehaviour:
   thrownHammerPos: {fileID: 8458449406077371695}
   spinDuration: 5
   spinWaitTime: 1
-  shootInterval: 0.4
+  shootInterval: 0.2
   spinBlade: {fileID: 5830544059900516951, guid: 77765e6ae19981548aff4fdb493a93d3, type: 3}
 --- !u!114 &5105070990774922608
 MonoBehaviour:

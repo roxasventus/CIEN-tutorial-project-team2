@@ -194,7 +194,7 @@ MonoBehaviour:
   target: {fileID: 0}
   isAttacking: 0
   bossNum: 0
-  atkTimer: 3
+  atkTimer: 2
   expPoint: 100
   contactDamage: 100
   thrownHammerPos: {fileID: 0}
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 039797e7b15d7b84ead3f412014608c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootWaitTime: 2.3
+  shootWaitTime: 1.8
   beamParent: {fileID: 5619856697586666664}
   explodeWaitTime: 0.7
   bombNum: 5
