@@ -7,6 +7,7 @@
 **Player:** 적 접촉과 적 공격 트리거를 분리합니다. **Trap:** 발동 감지와 실제 피해를 주는 구간을 구분합니다. 별도 물리 채널 API가 아니라 Unity 충돌 콜백과 태그를 조합하는 구조입니다.
 
 ```mermaid
+%%{init: {"htmlLabels": false, "themeVariables": {"fontFamily": "Arial, sans-serif"}, "flowchart": {"padding": 20, "diagramPadding": 20}, "sequence": {"diagramMarginX": 24, "diagramMarginY": 16, "wrap": true}}}%%
 flowchart LR
   A["적 몸체 · Enemy"] --> B["OnCollisionStay2D"]
   C["적 공격 · EnemyBullet"] --> D["OnTriggerStay2D"]

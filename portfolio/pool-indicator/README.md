@@ -9,6 +9,7 @@
 **Object Pool 패턴**은 팀·학습용 공통 구조입니다. 개인 기여는 이 풀에서 생성한 보스를 스테이지 데이터·인디케이터에 연결하는 확장이며, 풀 자체의 독자 설계로 제시하지 않습니다.
 
 ```mermaid
+%%{init: {"htmlLabels": false, "themeVariables": {"fontFamily": "Arial, sans-serif"}, "flowchart": {"padding": 20, "diagramPadding": 20}, "sequence": {"diagramMarginX": 24, "diagramMarginY": 16, "wrap": true}}}%%
 flowchart LR
   A["Spawner"] --> B["프리팹 종류별 풀"]
   B --> C{"비활성 오브젝트"}

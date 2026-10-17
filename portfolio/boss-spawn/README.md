@@ -9,6 +9,7 @@
 **Component 방식:** Unity 컴포넌트인 보스 본체와 공격 로직의 책임을 나눕니다. 자체 ECS를 구현했다는 의미가 아니며, 코루틴은 단계별 시간 흐름을 제어합니다.
 
 ```mermaid
+%%{init: {"htmlLabels": false, "themeVariables": {"fontFamily": "Arial, sans-serif"}, "flowchart": {"padding": 20, "diagramPadding": 20}, "sequence": {"diagramMarginX": 24, "diagramMarginY": 16, "wrap": true}}}%%
 flowchart LR
   O["보스 GameObject"] --> P["Boss · 체력과 이동 상태"]
   O --> Q["Boss1_Atk · 공격 컴포넌트"]
